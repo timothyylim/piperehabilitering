@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piperehabilitering AS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Piperehabilitering AS",
+        "url": "https://pipe-rehab.no",
+        "description": "Profesjonell rehabilitering av piper og skorsteiner. Trygg pipe — trygt hjem!",
+        "contact": {
+            "@type": "ContactPoint",
+            "contactType": "General",
+            "email": "post@pipe-rehab.no",
+            "telephone": "+4745202013"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #faf8f5;
+            --white: #fff;
+            --text: #2d2a26;
+            --text-light: #5c564e;
+            --border: #ddd5cb;
+            --accent: #c0522e;
+            --accent-hover: #a84324;
+            --accent-light: #fdf0ec;
+            --shadow: rgba(0,0,0,0.06);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.7;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover { color: var(--accent-hover); }
+
+        /* NAV */
+        nav {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5em;
+        }
+
+        .nav-links a {
+            padding: 0.6em 1.2em;
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: var(--text);
+            font-weight: 500;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a:hover {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .nav-links a.cta {
+            background: var(--accent);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .nav-links a.cta:hover {
+            background: var(--accent-hover);
+        }
+
+        /* CONTAINER */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 780px;
+            padding: 2rem;
+            margin: 0 auto;
+        }
+
+        /* HERO */
+        .hero {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 0 0 0.2em;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 1.05em;
+            max-width: 520px;
+            margin-bottom: 2em;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1em 2.5em;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1em;
+            min-height: 52px;
+            transition: all 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: var(--accent-hover);
+            color: var(--white);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(192, 82, 46, 0.25);
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 850px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 0.4em;
+            letter-spacing: -0.01em;
+        }
+
+        .section-sub {
+            color: var(--text-light);
+            margin-bottom: 2em;
+            font-size: 1em;
+        }
+
+        /* SERVICES */
+        .services {
+            display: flex;
+            gap: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .services-item {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5em;
+            text-align: left;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            flex: 1;
+            transition: all 0.2s;
+        }
+
+        .services-item:hover {
+            box-shadow: 0 4px 16px var(--shadow);
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .services-item h3 {
+            font-size: 1.1em;
+            margin: 0 0 0.5em;
+            color: var(--accent);
+        }
+
+        .services-item p {
+            font-size: 0.95em;
+            margin: 0;
+            color: var(--text-light);
+            flex-grow: 1;
+        }
+
+        /* PROSESS */
+        .prosess-grid {
+            display: flex;
+            gap: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .prosess-step {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5em;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: left;
+            flex: 1;
+            transition: all 0.2s;
+        }
+
+        .prosess-step:hover {
+            box-shadow: 0 4px 16px var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .prosess-step .step-num {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.3em;
+        }
+
+        .prosess-step h3 {
+            font-size: 1.05em;
+            margin: 0 0 0.5em;
+        }
+
+        .prosess-step p {
+            font-size: 0.9em;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        /* BOOKING */
+        .booking-section {
+            padding: 4rem 2rem;
+            max-width: 600px;
+        }
+
+        .booking-section h2 {
+            font-size: 2em;
+            margin-bottom: 0.3em;
+        }
+
+        .booking-section .description {
+            margin-bottom: 2em;
+        }
+
+        .booking-form {
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2em;
+        }
+
+        .form-group {
+            margin-bottom: 1.3em;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 0.4em;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9em 1em;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 16px;
+            min-height: 48px;
+            background: var(--bg);
+            color: var(--text);
+            transition: all 0.2s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-light);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .submit-btn {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 1em 2em;
+            cursor: pointer;
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s;
+            width: 100%;
+            min-height: 52px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(192, 82, 46, 0.25);
+        }
+
+        /* KONTAKT */
+        .kontakt {
+            padding: 3rem 2rem;
+            max-width: 600px;
+        }
+
+        .kontakt h2 {
+            font-size: 2em;
+            margin-bottom: 0.3em;
+        }
+
+        .kontakt .kontakt-sub {
+            color: var(--text-light);
+            margin-bottom: 1.5em;
+        }
+
+        .kontakt-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8em;
+            font-size: 1.05em;
+        }
+
+        .kontakt-links a {
+            font-weight: 600;
+            display: block;
+            padding: 1em 1.5em;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--accent);
+            transition: all 0.2s;
+        }
+
+        .kontakt-links a:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 16px var(--shadow);
+            transform: translateY(-1px);
+        }
+
+        /* FOOTER */
+        footer {
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85em;
+            border-top: 1px solid var(--border);
+            margin-top: auto;
+            color: var(--text-light);
+            background: var(--white);
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+
+            .services, .prosess-grid {
+                flex-direction: column;
+            }
+
+            .services-item, .prosess-step {
+                text-align: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section h2, .booking-section h2, .kontakt h2 {
+                font-size: 1.7em;
+            }
+
+            .hero { padding-top: 40px; padding-bottom: 40px; }
+
+            .booking-form { padding: 1.5em; }
+        }
+
+        @media (min-width: 1200px) {
+            nav {
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Piperehabilitering AS</div>
+        <div class="nav-links">
+            <a href="#tjenester">Tjenester</a>
+            <a href="#bestill" class="cta">Bestill befaring</a>
+        </div>
+    </nav>
+
+    <div class="container hero">
+        <h1>Piperehabilitering AS</h1>
+        <div class="tagline">Trygg pipe — trygt hjem!</div>
+        <div class="description">
+            Vi gir nytt liv til gamle piper. Sprekker, fukt og slitasje
+            gjør pipen din til en risiko over tid. Vi fikser det — raskt,
+            ryddig og til fast pris.
+        </div>
+        <a href="#bestill" class="hero-cta">Bestill gratis befaring</a>
+    </div>
+
+    <div id="tjenester" class="container section">
+        <h2>Hva vi gjør</h2>
+        <p class="section-sub">Alt du trenger for en trygg og velfungerende pipe.</p>
+        <div class="services">
+            <div class="services-item">
+                <h3>Rehabilitering</h3>
+                <p>Vi reparerer og fornyer murte piper innvendig og utvendig. Fra små sprekker til full ombygging.</p>
+            </div>
+            <div class="services-item">
+                <h3>Inspeksjon</h3>
+                <p>Videoinspeksjon og tilstandsrapport. Vi finner problemene før de blir farlige.</p>
+            </div>
+            <div class="services-item">
+                <h3>Foring og tetting</h3>
+                <p>Moderne foring av pipeløpet som stopper røyklekkasje og forlenger levetiden med tiår.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2>Slik fungerer det</h2>
+        <p class="section-sub">Enkelt fra start til mål — ingen overraskelser.</p>
+        <div class="prosess-grid">
+            <div class="prosess-step">
+                <div class="step-num">1</div>
+                <h3>Du tar kontakt</h3>
+                <p>Ring oss, send en melding, eller bestill befaring her på siden.</p>
+            </div>
+            <div class="prosess-step">
+                <div class="step-num">2</div>
+                <h3>Vi kommer til deg</h3>
+                <p>Gratis og uforpliktende. Vi ser på pipen og gir deg en ærlig vurdering.</p>
+            </div>
+            <div class="prosess-step">
+                <div class="step-num">3</div>
+                <h3>Fast pris, ferdig jobb</h3>
+                <p>Du vet hva det koster. Vi utfører arbeidet og rydder etter oss.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="bestill" class="container booking-section">
+        <h2>Bestill befaring</h2>
+        <div class="description">
+            Gratis og uforpliktende. Vi tar en titt og gir deg svar på hva pipen din trenger.
+        </div>
+        <form class="booking-form" id="booking-form">
+            <div class="form-group">
+                <label for="navn">Navn</label>
+                <input type="text" id="navn" name="navn" required placeholder="Ditt fulle navn">
+            </div>
+            <div class="form-group">
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" required placeholder="Ditt telefonnummer">
+            </div>
+            <div class="form-group">
+                <label for="epost">E-post</label>
+                <input type="email" id="epost" name="epost" placeholder="Din e-postadresse">
+            </div>
+            <div class="form-group">
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse" placeholder="Hvor er pipen?">
+            </div>
+            <div class="form-group">
+                <label for="beskrivelse">Beskriv problemet</label>
+                <textarea id="beskrivelse" name="beskrivelse" placeholder="F.eks. sprekker i pipen, røyklukt, fuktskader..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send forespørsel</button>
+        </form>
+    </div>
+
+    <div class="container kontakt">
+        <h2>Snakk med oss</h2>
+        <p class="kontakt-sub">Foretrekker du telefon eller e-post? Vi er her for deg.</p>
+        <div class="kontakt-links">
+            <a href="tel:+4745202013">452 02 013</a>
+            <a href="mailto:post@pipe-rehab.no">post@pipe-rehab.no</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; <span id="year"></span> Piperehabilitering AS. Alle rettigheter reservert.
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const f = e.target;
+            const navn = f.navn.value;
+            const telefon = f.telefon.value;
+            const epost = f.epost.value;
+            const adresse = f.adresse.value;
+            const beskrivelse = f.beskrivelse.value;
+
+            const subject = encodeURIComponent('Befaringsforespørsel fra ' + navn);
+            const body = encodeURIComponent(
+                'Navn: ' + navn + '\n' +
+                'Telefon: ' + telefon + '\n' +
+                'E-post: ' + epost + '\n' +
+                'Adresse: ' + adresse + '\n\n' +
+                'Beskrivelse:\n' + beskrivelse
+            );
+
+            window.location.href = 'mailto:post@pipe-rehab.no?subject=' + subject + '&body=' + body;
+        });
+    </script>
+</body>
+
+</html>
