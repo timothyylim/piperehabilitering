@@ -77,9 +77,17 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6em;
             font-size: 1.1em;
             font-weight: 700;
             color: var(--text);
+        }
+
+        .logo img {
+            height: 52px;
+            width: auto;
         }
 
         .nav-links {
@@ -269,27 +277,6 @@
             color: var(--text-light);
         }
 
-        /* BOOKING */
-        .booking-section {
-            padding: 4rem 2rem;
-            max-width: 600px;
-        }
-
-        .booking-section h2 {
-            font-size: 2em;
-            margin-bottom: 0.3em;
-        }
-
-        .booking-section .description {
-            margin-bottom: 2em;
-        }
-
-        .cal-embed {
-            width: 100%;
-            max-width: 600px;
-            min-height: 500px;
-        }
-
         /* KONTAKT */
         .kontakt {
             padding: 3rem 2rem;
@@ -385,7 +372,7 @@
 
 <body>
     <nav>
-        <div class="logo">Piperehabilitering AS</div>
+        <div class="logo"><img src="assets/logo.png" alt="Piperehabilitering AS logo">Piperehabilitering AS</div>
         <div class="nav-links">
             <a href="#tjenester">Tjenester</a>
             <a href="#bestill" class="cta">Bestill befaring</a>
@@ -444,15 +431,7 @@
         </div>
     </div>
 
-    <div id="bestill" class="container booking-section">
-        <h2>Bestill befaring</h2>
-        <div class="description">
-            Gratis og uforpliktende. Vi tar en titt og gir deg svar på hva pipen din trenger.
-        </div>
-        <div class="cal-embed" id="cal-inline"></div>
-    </div>
-
-    <div class="container kontakt">
+    <div id="bestill" class="container kontakt">
         <h2>Snakk med oss</h2>
         <p class="kontakt-sub">Foretrekker du telefon eller e-post? Vi er her for deg.</p>
         <div class="kontakt-links">
@@ -464,19 +443,6 @@
     <footer>
         &copy; <span id="year"></span> Piperehabilitering AS. Alle rettigheter reservert.
     </footer>
-
-    <!-- Cal.com embed -->
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
-        Cal("init", "30min", {origin:"https://cal.eu"});
-        Cal.ns["30min"]("inline", {
-            elementOrSelector: "#cal-inline",
-            calLink: "piperehabilitering/30min",
-            layout: "month_view",
-            config: {"useSlotsViewOnSmallScreen": "true"}
-        });
-        Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
