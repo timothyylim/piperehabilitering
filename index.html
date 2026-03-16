@@ -329,6 +329,38 @@
             background: var(--white);
         }
 
+        /* HAMBURGER */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5em;
+            min-height: 44px;
+            min-width: 44px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
         /* MOBILE */
         @media (max-width: 768px) {
             h1 { font-size: 2em; }
@@ -341,24 +373,49 @@
                 text-align: center;
             }
 
-            nav {
-                flex-wrap: wrap;
+            .hamburger { display: flex; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 1em 2em;
+                gap: 0.5em;
+                box-shadow: 0 8px 24px var(--shadow);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
                 justify-content: center;
-                gap: 0.5rem;
+                font-size: 1.05em;
+                padding: 0.8em 1em;
+            }
+
+            nav {
+                position: sticky;
+                flex-wrap: nowrap;
             }
 
             .logo {
-                width: 100%;
-                text-align: center;
+                justify-content: center;
+                font-size: 1em;
             }
 
-            .section h2, .booking-section h2, .kontakt h2 {
+            .logo img { height: 40px; }
+
+            .section h2, .kontakt h2 {
                 font-size: 1.7em;
             }
 
             .hero { padding-top: 40px; padding-bottom: 40px; }
-
-            .booking-form { padding: 1.5em; }
         }
 
         @media (min-width: 1200px) {
@@ -373,7 +430,10 @@
 <body>
     <nav>
         <div class="logo"><img src="assets/logo.png" alt="Piperehabilitering AS logo">Piperehabilitering AS</div>
-        <div class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Meny">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
             <a href="#tjenester">Tjenester</a>
             <a href="#bestill" class="cta">Bestill befaring</a>
         </div>
@@ -446,6 +506,19 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });
     </script>
 </body>
 
