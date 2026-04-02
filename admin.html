@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin — Piperehabilitering AS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --white: #111111;
+            --text: #e8e4e0;
+            --text-light: #a09a92;
+            --border: #2a2a2a;
+            --accent: #e0663e;
+            --accent-hover: #f07850;
+            --accent-light: rgba(224, 102, 62, 0.12);
+            --shadow: rgba(0,0,0,0.3);
+            --green: #4ade80;
+            --green-bg: rgba(74, 222, 128, 0.1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Password gate */
+        #gate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #gate h1 {
+            font-size: 1.4em;
+            margin: 0;
+        }
+
+        #gate input {
+            padding: 0.8em 1.2em;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-size: 1em;
+            font-family: inherit;
+            width: 260px;
+            text-align: center;
+        }
+
+        #gate input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        #gate .error {
+            color: var(--accent);
+            font-size: 0.9em;
+            min-height: 1.4em;
+        }
+
+        /* Dashboard */
+        #dashboard {
+            display: none;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .dash-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .dash-header h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .btn {
+            padding: 0.6em 1.2em;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-size: 0.9em;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+            color: #fff;
+        }
+
+        .auth-section {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .auth-section p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Metric cards */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5em;
+        }
+
+        .metric-card .label {
+            font-size: 0.85em;
+            color: var(--text-light);
+            margin-bottom: 0.3em;
+        }
+
+        .metric-card .value {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .metric-card .value.accent {
+            color: var(--accent);
+        }
+
+        .metric-card .value.green {
+            color: var(--green);
+        }
+
+        .metric-card .sub {
+            font-size: 0.8em;
+            color: var(--text-light);
+            margin-top: 0.2em;
+        }
+
+        /* Tables */
+        .panel {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5em;
+            margin-bottom: 1.5rem;
+        }
+
+        .panel h2 {
+            font-size: 1.1em;
+            margin: 0 0 1em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.6em 0.8em;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9em;
+        }
+
+        th {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        th.num {
+            text-align: right;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-light);
+        }
+
+        .period-selector {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .period-selector .btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            #dashboard { padding: 1rem; }
+            .metrics { grid-template-columns: 1fr 1fr; }
+            .metric-card .value { font-size: 1.6em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Password gate -->
+<div id="gate">
+    <h1>Admin</h1>
+    <input type="password" id="password" placeholder="Passord" autofocus>
+    <div class="error" id="gate-error"></div>
+</div>
+
+<!-- Dashboard (hidden until authenticated) -->
+<div id="dashboard">
+    <div class="dash-header">
+        <h1>Analytics</h1>
+        <div>
+            <span id="user-email" style="color: var(--text-light); font-size: 0.9em; margin-right: 1rem;"></span>
+            <button class="btn" id="sign-out-btn" style="display:none" onclick="handleSignOut()">Logg ut</button>
+        </div>
+    </div>
+
+    <div id="auth-prompt" class="auth-section">
+        <p>Logg inn med Google-kontoen som har tilgang til Google Analytics.</p>
+        <button class="btn btn-primary" id="sign-in-btn" onclick="handleSignIn()">Logg inn med Google</button>
+    </div>
+
+    <div id="stats" style="display:none">
+        <div class="period-selector">
+            <button class="btn active" data-days="7" onclick="changePeriod(7, this)">7 dager</button>
+            <button class="btn" data-days="14" onclick="changePeriod(14, this)">14 dager</button>
+            <button class="btn" data-days="30" onclick="changePeriod(30, this)">30 dager</button>
+            <button class="btn" data-days="90" onclick="changePeriod(90, this)">90 dager</button>
+        </div>
+
+        <div class="metrics">
+            <div class="metric-card">
+                <div class="label">Besokende</div>
+                <div class="value accent" id="m-users">—</div>
+                <div class="sub" id="m-users-sub"></div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Sidevisninger</div>
+                <div class="value" id="m-views">—</div>
+                <div class="sub" id="m-views-sub"></div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Okter</div>
+                <div class="value" id="m-sessions">—</div>
+                <div class="sub" id="m-sessions-sub"></div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Snitt varighet</div>
+                <div class="value green" id="m-duration">—</div>
+                <div class="sub">per okt</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Topp sider</h2>
+            <table>
+                <thead>
+                    <tr><th>Side</th><th class="num">Visninger</th><th class="num">Besokende</th></tr>
+                </thead>
+                <tbody id="top-pages"></tbody>
+            </table>
+        </div>
+
+        <div class="panel">
+            <h2>Trafikkilder</h2>
+            <table>
+                <thead>
+                    <tr><th>Kilde</th><th class="num">Okter</th><th class="num">Besokende</th></tr>
+                </thead>
+                <tbody id="traffic-sources"></tbody>
+            </table>
+        </div>
+
+        <div class="panel">
+            <h2>Enheter</h2>
+            <table>
+                <thead>
+                    <tr><th>Enhet</th><th class="num">Besokende</th><th class="num">%</th></tr>
+                </thead>
+                <tbody id="devices"></tbody>
+            </table>
+        </div>
+
+        <div class="panel">
+            <h2>Daglig oversikt</h2>
+            <table>
+                <thead>
+                    <tr><th>Dato</th><th class="num">Besokende</th><th class="num">Visninger</th><th class="num">Okter</th></tr>
+                </thead>
+                <tbody id="daily-table"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // CONFIGURATION — update these values
+    // ============================================================
+    // 1. Set a simple admin password (just a basic gate, not real security)
+    const ADMIN_PASSWORD = 'pipe2024';
+
+    // 2. Your GA4 property ID (from Google Analytics)
+    const GA4_PROPERTY_ID = '531068491';
+
+    // 3. Your Google Cloud OAuth Client ID
+    //    Create one at: https://console.cloud.google.com/apis/credentials
+    //    - Type: Web application
+    //    - Authorized JS origins: your domain + http://localhost:8000
+    //    - Enable "Google Analytics Data API" in your GCP project
+    const CLIENT_ID = '1019169154680-ne34pvoevieacvn804cc1hkmgbjvb5o2.apps.googleusercontent.com';
+    // ============================================================
+
+    let tokenClient;
+    let accessToken = null;
+    let currentDays = 7;
+
+    // --- Password gate ---
+    document.getElementById('password').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            if (this.value === ADMIN_PASSWORD) {
+                document.getElementById('gate').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                initGoogleAuth();
+            } else {
+                document.getElementById('gate-error').textContent = 'Feil passord';
+                this.value = '';
+            }
+        }
+    });
+
+    // --- Google Auth (using Google Identity Services) ---
+    function initGoogleAuth() {
+        const script = document.createElement('script');
+        script.src = 'https://accounts.google.com/gsi/client';
+        script.onload = function() {
+            tokenClient = google.accounts.oauth2.initTokenClient({
+                client_id: CLIENT_ID,
+                scope: 'https://www.googleapis.com/auth/analytics.readonly',
+                callback: onTokenResponse,
+            });
+        };
+        document.head.appendChild(script);
+    }
+
+    function handleSignIn() {
+        tokenClient.requestAccessToken();
+    }
+
+    function handleSignOut() {
+        accessToken = null;
+        google.accounts.oauth2.revoke(accessToken);
+        document.getElementById('auth-prompt').style.display = '';
+        document.getElementById('stats').style.display = 'none';
+        document.getElementById('sign-out-btn').style.display = 'none';
+        document.getElementById('user-email').textContent = '';
+    }
+
+    function onTokenResponse(response) {
+        if (response.error) return;
+        accessToken = response.access_token;
+        document.getElementById('auth-prompt').style.display = 'none';
+        document.getElementById('stats').style.display = '';
+        document.getElementById('sign-out-btn').style.display = '';
+
+        // Fetch user info for display
+        fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
+            headers: { Authorization: 'Bearer ' + accessToken }
+        }).then(r => r.json()).then(info => {
+            document.getElementById('user-email').textContent = info.email || '';
+        });
+
+        fetchAllData();
+    }
+
+    // --- GA4 Data API ---
+    function gaFetch(body) {
+        return fetch(
+            `https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY_ID}:runReport`,
+            {
+                method: 'POST',
+                headers: {
+                    Authorization: 'Bearer ' + accessToken,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body),
+            }
+        ).then(r => r.json());
+    }
+
+    function dateStr(daysAgo) {
+        const d = new Date();
+        d.setDate(d.getDate() - daysAgo);
+        return d.toISOString().split('T')[0];
+    }
+
+    function changePeriod(days, btn) {
+        currentDays = days;
+        document.querySelectorAll('.period-selector .btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        fetchAllData();
+    }
+
+    function fetchAllData() {
+        const startDate = dateStr(currentDays);
+        const endDate = dateStr(0);
+
+        // Overview metrics
+        gaFetch({
+            dateRanges: [{ startDate, endDate }],
+            metrics: [
+                { name: 'totalUsers' },
+                { name: 'screenPageViews' },
+                { name: 'sessions' },
+                { name: 'averageSessionDuration' },
+            ],
+        }).then(data => {
+            const row = data.rows?.[0]?.metricValues || [];
+            document.getElementById('m-users').textContent = Number(row[0]?.value || 0).toLocaleString('nb');
+            document.getElementById('m-views').textContent = Number(row[1]?.value || 0).toLocaleString('nb');
+            document.getElementById('m-sessions').textContent = Number(row[2]?.value || 0).toLocaleString('nb');
+            const dur = parseFloat(row[3]?.value || 0);
+            const mins = Math.floor(dur / 60);
+            const secs = Math.round(dur % 60);
+            document.getElementById('m-duration').textContent = mins + ':' + String(secs).padStart(2, '0');
+            document.getElementById('m-users-sub').textContent = `siste ${currentDays} dager`;
+            document.getElementById('m-views-sub').textContent = `siste ${currentDays} dager`;
+            document.getElementById('m-sessions-sub').textContent = `siste ${currentDays} dager`;
+        });
+
+        // Top pages
+        gaFetch({
+            dateRanges: [{ startDate, endDate }],
+            dimensions: [{ name: 'pagePath' }],
+            metrics: [
+                { name: 'screenPageViews' },
+                { name: 'totalUsers' },
+            ],
+            orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+            limit: 10,
+        }).then(data => {
+            const tbody = document.getElementById('top-pages');
+            tbody.innerHTML = '';
+            (data.rows || []).forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${escHtml(row.dimensionValues[0].value)}</td>
+                    <td class="num">${Number(row.metricValues[0].value).toLocaleString('nb')}</td>
+                    <td class="num">${Number(row.metricValues[1].value).toLocaleString('nb')}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
+        });
+
+        // Traffic sources
+        gaFetch({
+            dateRanges: [{ startDate, endDate }],
+            dimensions: [{ name: 'sessionSource' }],
+            metrics: [
+                { name: 'sessions' },
+                { name: 'totalUsers' },
+            ],
+            orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+            limit: 10,
+        }).then(data => {
+            const tbody = document.getElementById('traffic-sources');
+            tbody.innerHTML = '';
+            (data.rows || []).forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${escHtml(row.dimensionValues[0].value)}</td>
+                    <td class="num">${Number(row.metricValues[0].value).toLocaleString('nb')}</td>
+                    <td class="num">${Number(row.metricValues[1].value).toLocaleString('nb')}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
+        });
+
+        // Devices
+        gaFetch({
+            dateRanges: [{ startDate, endDate }],
+            dimensions: [{ name: 'deviceCategory' }],
+            metrics: [{ name: 'totalUsers' }],
+            orderBys: [{ metric: { metricName: 'totalUsers' }, desc: true }],
+        }).then(data => {
+            const tbody = document.getElementById('devices');
+            tbody.innerHTML = '';
+            const total = (data.rows || []).reduce((s, r) => s + Number(r.metricValues[0].value), 0);
+            (data.rows || []).forEach(row => {
+                const users = Number(row.metricValues[0].value);
+                const pct = total > 0 ? ((users / total) * 100).toFixed(1) : '0';
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${escHtml(row.dimensionValues[0].value)}</td>
+                    <td class="num">${users.toLocaleString('nb')}</td>
+                    <td class="num">${pct}%</td>
+                `;
+                tbody.appendChild(tr);
+            });
+            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
+        });
+
+        // Daily breakdown
+        gaFetch({
+            dateRanges: [{ startDate, endDate }],
+            dimensions: [{ name: 'date' }],
+            metrics: [
+                { name: 'totalUsers' },
+                { name: 'screenPageViews' },
+                { name: 'sessions' },
+            ],
+            orderBys: [{ dimension: { dimensionName: 'date' }, desc: true }],
+        }).then(data => {
+            const tbody = document.getElementById('daily-table');
+            tbody.innerHTML = '';
+            (data.rows || []).forEach(row => {
+                const raw = row.dimensionValues[0].value; // YYYYMMDD
+                const formatted = raw.slice(0,4) + '-' + raw.slice(4,6) + '-' + raw.slice(6,8);
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${formatted}</td>
+                    <td class="num">${Number(row.metricValues[0].value).toLocaleString('nb')}</td>
+                    <td class="num">${Number(row.metricValues[1].value).toLocaleString('nb')}</td>
+                    <td class="num">${Number(row.metricValues[2].value).toLocaleString('nb')}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="4" style="color:var(--text-light)">Ingen data</td></tr>';
+        });
+    }
+
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+</script>
+
+</body>
+</html>
