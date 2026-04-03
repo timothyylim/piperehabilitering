@@ -299,6 +299,11 @@
 </div>
 
 <script>
+    // Redirect non-www to www to avoid OAuth origin mismatch
+    if (location.hostname === 'pipe-rehab.no') {
+        location.href = 'https://www.pipe-rehab.no' + location.pathname + location.search + location.hash;
+    }
+
     const GA4_PROPERTY_ID = '531068491';
     const CLIENT_ID = '1019169154680-ne34pvoevieacvn804cc1hkmgbjvb5o2.apps.googleusercontent.com';
 
@@ -306,8 +311,38 @@
     let accessToken = null;
     let currentDays = 7;
 
-    // Init Google Auth on page load
+    // Check if we have a token from a redirect flow (hash fragment)
+    function checkHashToken() {
+        const hash = location.hash.substring(1);
+        if (!hash) return false;
+        const params = new URLSearchParams(hash);
+        const token = params.get('access_token');
+        if (token) {
+            accessToken = token;
+            location.hash = '';
+            showLoggedIn();
+            return true;
+        }
+        return false;
+    }
+
+    function showLoggedIn() {
+        document.getElementById('auth-prompt').style.display = 'none';
+        document.getElementById('stats').style.display = '';
+        document.getElementById('sign-out-btn').style.display = '';
+
+        fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
+            headers: { Authorization: 'Bearer ' + accessToken }
+        }).then(r => r.json()).then(info => {
+            document.getElementById('user-email').textContent = info.email || '';
+        });
+
+        fetchAllData();
+    }
+
     function initGoogleAuth() {
+        if (checkHashToken()) return;
+
         const script = document.createElement('script');
         script.src = 'https://accounts.google.com/gsi/client';
         script.onload = function() {
@@ -321,12 +356,24 @@
     }
 
     function handleSignIn() {
-        tokenClient.requestAccessToken();
+        if (tokenClient) {
+            tokenClient.requestAccessToken();
+        } else {
+            // Fallback: redirect-based OAuth for mobile
+            const redirectUri = location.origin + location.pathname;
+            const authUrl = 'https://accounts.google.com/o/oauth2/v2/auth'
+                + '?client_id=' + encodeURIComponent(CLIENT_ID)
+                + '&redirect_uri=' + encodeURIComponent(redirectUri)
+                + '&response_type=token'
+                + '&scope=' + encodeURIComponent('https://www.googleapis.com/auth/analytics.readonly');
+            location.href = authUrl;
+        }
     }
 
     function handleSignOut() {
+        const token = accessToken;
         accessToken = null;
-        google.accounts.oauth2.revoke(accessToken);
+        if (token) google.accounts.oauth2.revoke(token);
         document.getElementById('auth-prompt').style.display = '';
         document.getElementById('stats').style.display = 'none';
         document.getElementById('sign-out-btn').style.display = 'none';
@@ -336,18 +383,7 @@
     function onTokenResponse(response) {
         if (response.error) return;
         accessToken = response.access_token;
-        document.getElementById('auth-prompt').style.display = 'none';
-        document.getElementById('stats').style.display = '';
-        document.getElementById('sign-out-btn').style.display = '';
-
-        // Fetch user info for display
-        fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
-            headers: { Authorization: 'Bearer ' + accessToken }
-        }).then(r => r.json()).then(info => {
-            document.getElementById('user-email').textContent = info.email || '';
-        });
-
-        fetchAllData();
+        showLoggedIn();
     }
 
     // --- GA4 Data API ---
