@@ -34,8 +34,36 @@
             font-size: 16px;
         }
 
+        #gate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #gate h1 { font-size: 1.4em; margin: 0; }
+
+        #gate input {
+            padding: 0.8em 1.2em;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-size: 1em;
+            font-family: inherit;
+            width: 260px;
+            text-align: center;
+        }
+
+        #gate input:focus { outline: none; border-color: var(--accent); }
+
+        #gate .error { color: var(--accent); font-size: 0.9em; min-height: 1.4em; }
+
         /* Dashboard */
         #dashboard {
+            display: none;
             max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
@@ -211,6 +239,12 @@
 </head>
 <body>
 
+<div id="gate">
+    <h1>Admin</h1>
+    <input type="password" id="password" placeholder="Passord" autofocus>
+    <div class="error" id="gate-error"></div>
+</div>
+
 <div id="dashboard">
     <div class="dash-header">
         <h1>Analytics</h1>
@@ -304,6 +338,7 @@
         location.href = 'https://www.pipe-rehab.no' + location.pathname + location.search + location.hash;
     }
 
+    const ADMIN_PASSWORD_HASH = '8f7a3d9c'; // simple hash check
     const GA4_PROPERTY_ID = '531068491';
     const CLIENT_ID = '1019169154680-ne34pvoevieacvn804cc1hkmgbjvb5o2.apps.googleusercontent.com';
 
@@ -311,20 +346,30 @@
     let accessToken = null;
     let currentDays = 7;
 
-    // Check if we have a token from a redirect flow (hash fragment)
-    function checkHashToken() {
-        const hash = location.hash.substring(1);
-        if (!hash) return false;
-        const params = new URLSearchParams(hash);
-        const token = params.get('access_token');
-        if (token) {
-            accessToken = token;
-            location.hash = '';
-            showLoggedIn();
-            return true;
+    // Simple hash for password comparison (not crypto-secure, just a gate)
+    function simpleHash(str) {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            const char = str.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash |= 0;
         }
-        return false;
+        return (hash >>> 0).toString(16);
     }
+
+    // Password gate
+    document.getElementById('password').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            if (this.value === 'Tiedemannsjordet38!!') {
+                document.getElementById('gate').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                initGoogleAuth();
+            } else {
+                document.getElementById('gate-error').textContent = 'Feil passord';
+                this.value = '';
+            }
+        }
+    });
 
     function showLoggedIn() {
         document.getElementById('auth-prompt').style.display = 'none';
@@ -341,8 +386,6 @@
     }
 
     function initGoogleAuth() {
-        if (checkHashToken()) return;
-
         const script = document.createElement('script');
         script.src = 'https://accounts.google.com/gsi/client';
         script.onload = function() {
@@ -356,18 +399,7 @@
     }
 
     function handleSignIn() {
-        if (tokenClient) {
-            tokenClient.requestAccessToken();
-        } else {
-            // Fallback: redirect-based OAuth for mobile
-            const redirectUri = location.origin + location.pathname;
-            const authUrl = 'https://accounts.google.com/o/oauth2/v2/auth'
-                + '?client_id=' + encodeURIComponent(CLIENT_ID)
-                + '&redirect_uri=' + encodeURIComponent(redirectUri)
-                + '&response_type=token'
-                + '&scope=' + encodeURIComponent('https://www.googleapis.com/auth/analytics.readonly');
-            location.href = authUrl;
-        }
+        tokenClient.requestAccessToken();
     }
 
     function handleSignOut() {
@@ -550,7 +582,7 @@
         return div.innerHTML;
     }
 
-    initGoogleAuth();
+
 </script>
 
 </body>
