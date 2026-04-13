@@ -3,7 +3,7 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RJX14G2J6"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-9RJX14G2J6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -15,28 +15,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
 
-    <title>Piperehabilitering – Fast pris & gratis befaring | Piperehabilitering AS</title>
-    <meta name="description" content="Profesjonell rehabilitering av piper og skorsteiner. Fast pris, gratis befaring, rask utførelse. Trygg pipe — trygt hjem. Ring oss i dag for en uforpliktende sjekk.">
+    <title>Piperehabilitering Skien & Porsgrunn – Fast pris & gratis befaring | Piperehabilitering AS</title>
+    <meta name="description" content="Piperehabilitering i Skien og Porsgrunn. Fast pris, gratis befaring, rask utførelse. Trygg pipe, trygt hjem. Ring oss i dag for en uforpliktende sjekk.">
     <link rel="canonical" href="https://pipe-rehab.no/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pipe-rehab.no/">
-    <meta property="og:title" content="Piperehabilitering – Fast pris & gratis befaring">
-    <meta property="og:description" content="Profesjonell rehabilitering av piper og skorsteiner. Fast pris, gratis befaring, rask utførelse. Trygg pipe — trygt hjem.">
+    <meta property="og:title" content="Piperehabilitering Skien & Porsgrunn – Fast pris & gratis befaring">
+    <meta property="og:description" content="Piperehabilitering i Skien og Porsgrunn. Fast pris, gratis befaring, rask utførelse. Trygg pipe, trygt hjem.">
     <meta property="og:image" content="https://pipe-rehab.no/assets/logo.png">
     <meta property="og:locale" content="nb_NO">
     <meta property="og:site_name" content="Piperehabilitering AS">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Piperehabilitering – Fast pris & gratis befaring">
-    <meta name="twitter:description" content="Profesjonell rehabilitering av piper og skorsteiner. Fast pris, gratis befaring, rask utførelse.">
+    <meta name="twitter:title" content="Piperehabilitering Skien & Porsgrunn – Fast pris & gratis befaring">
+    <meta name="twitter:description" content="Piperehabilitering i Skien og Porsgrunn. Fast pris, gratis befaring, rask utførelse.">
     <meta name="twitter:image" content="https://pipe-rehab.no/assets/logo.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="/assets/photos/piperehabilitering-skien-prosjekt-bolighus.webp" type="image/webp" fetchpriority="high">
 
     <script type="application/ld+json">
     {
@@ -46,7 +45,7 @@
         "url": "https://pipe-rehab.no",
         "image": "https://pipe-rehab.no/assets/logo.png",
         "logo": "https://pipe-rehab.no/assets/logo.png",
-        "description": "Profesjonell rehabilitering av piper og skorsteiner i Grenland. Fast pris, gratis befaring, rask utførelse. Trygg pipe — trygt hjem.",
+        "description": "Profesjonell rehabilitering av piper og skorsteiner i Skien og Porsgrunn, og ellers i Telemark og Vestfold. Fast pris, gratis befaring, rask utførelse. Trygg pipe, trygt hjem.",
         "telephone": "+4745202013",
         "email": "post@pipe-rehab.no",
         "priceRange": "$$",
@@ -67,10 +66,8 @@
         "areaServed": [
             { "@type": "City", "name": "Skien" },
             { "@type": "City", "name": "Porsgrunn" },
-            { "@type": "City", "name": "Bamble" },
-            { "@type": "City", "name": "Siljan" },
-            { "@type": "City", "name": "Drangedal" },
-            { "@type": "City", "name": "Kragerø" }
+            { "@type": "AdministrativeArea", "name": "Telemark" },
+            { "@type": "AdministrativeArea", "name": "Vestfold" }
         ],
         "openingHoursSpecification": [{
             "@type": "OpeningHoursSpecification",
@@ -83,6 +80,15 @@
     </script>
 
     <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('/assets/fonts/inter-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
         :root {
             --bg: #000000;
             --white: #111111;
@@ -193,6 +199,53 @@
         .hero {
             padding-top: 70px;
             padding-bottom: 70px;
+            max-width: 1180px;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            width: 100%;
+        }
+        .hero-text {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .hero-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+            background: #000;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+        .hero-image picture {
+            display: block;
+        }
+        .hero-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: contain;
+        }
+        .hero-caption {
+            padding: 0.7em 1em 0.9em;
+            font-size: 0.85em;
+            color: var(--text-light);
+            text-align: left;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            line-height: 1.45;
+        }
+        @media (max-width: 860px) {
+            .hero { padding-top: 40px; padding-bottom: 50px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+            .hero-text { text-align: center; align-items: center; }
+            .hero-image { order: -1; }
         }
 
         h1 {
@@ -265,6 +318,57 @@
             color: var(--text-light);
             margin-bottom: 2em;
             font-size: 1em;
+        }
+
+        /* GALLERY */
+        .section.gallery-section {
+            max-width: 1180px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 1.5em;
+            align-items: start;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .gallery-item picture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: #000;
+            max-height: 480px;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            max-height: 480px;
+            height: auto;
+        }
+        .gallery-caption {
+            padding: 0.9em 1.1em 1.1em;
+            font-size: 0.95em;
+            color: var(--text-light);
+            line-height: 1.5;
+            text-align: left;
+        }
+        .gallery-item.gallery-wide {
+            grid-column: 1 / -1;
+        }
+        @media (max-width: 760px) {
+            .section.gallery-section { padding: 3rem 1rem; }
+            .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .gallery-caption { padding: 0.8em 1em 1em; font-size: 0.92em; }
         }
 
         /* SERVICES */
@@ -562,18 +666,28 @@
     </nav>
 
     <div class="container hero">
-        <h1>Piperehabilitering i Skien og Grenland</h1>
-        <div class="tagline">Trygg pipe — trygt hjem!</div>
-        <div class="service-region">
-            Vi rehabiliterer piper og skorsteiner i
-            <strong>Skien · Porsgrunn · Bamble · Siljan · Drangedal · Kragerø</strong>
+        <div class="hero-grid">
+            <div class="hero-text">
+                <h1>Piperehabilitering i Skien og Porsgrunn</h1>
+                <div class="tagline">Trygg pipe, trygt hjem!</div>
+                <div class="service-region">
+                    Vi rehabiliterer piper og skorsteiner i <strong>Skien</strong> og <strong>Porsgrunn</strong>, og ellers i <strong>Telemark</strong> og <strong>Vestfold</strong>.
+                </div>
+                <div class="description">
+                    Vi gir nytt liv til gamle piper. Sprekker, fukt og slitasje
+                    gjør pipen din til en risiko over tid. Vi fikser det raskt,
+                    ryddig og til fast pris.
+                </div>
+                <a href="#bestill" class="hero-cta">Bestill gratis befaring</a>
+            </div>
+            <figure class="hero-image">
+                <picture>
+                    <source srcset="/assets/photos/piperehabilitering-skien-prosjekt-bolighus.webp" type="image/webp">
+                    <img src="/assets/photos/piperehabilitering-skien-prosjekt-bolighus.jpg" alt="Piperehabilitering av enebolig på Østre Tromøyvei, Kongshavn, stillas reist mot pipen i skumringen" width="1075" height="1400" fetchpriority="high">
+                </picture>
+                <figcaption class="hero-caption">Pågående prosjekt: <strong>Østre Tromøyvei, Kongshavn</strong>. Komplett piperehabilitering av enebolig.</figcaption>
+            </figure>
         </div>
-        <div class="description">
-            Vi gir nytt liv til gamle piper. Sprekker, fukt og slitasje
-            gjør pipen din til en risiko over tid. Vi fikser det — raskt,
-            ryddig og til fast pris.
-        </div>
-        <a href="#bestill" class="hero-cta">Bestill gratis befaring</a>
     </div>
 
     <div id="tjenester" class="container section">
@@ -597,7 +711,7 @@
 
     <div class="container section">
         <h2>Slik fungerer det</h2>
-        <p class="section-sub">Enkelt fra start til mål — ingen overraskelser.</p>
+        <p class="section-sub">Enkelt fra start til mål, ingen overraskelser.</p>
         <div class="prosess-grid">
             <div class="prosess-step">
                 <div class="step-num">1</div>
@@ -614,6 +728,28 @@
                 <h3>Fast pris, ferdig jobb</h3>
                 <p>Du vet hva det koster. Vi utfører arbeidet og rydder etter oss.</p>
             </div>
+        </div>
+    </div>
+
+    <div id="prosjekter" class="container section gallery-section">
+        <h2>Prosjekter fra Skien og Porsgrunn</h2>
+        <p class="section-sub">Ekte arbeid fra ekte kunder. Foring av stålpipe, montering på tak og innvendig pipearbeid.</p>
+        <p class="section-sub" style="margin-top: -1.5em;">Siste prosjekt: <strong>Østre Tromøyvei, Kongshavn</strong>.</p>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <picture>
+                    <source srcset="/assets/photos/foring-stalpipe-skien-montering.webp" type="image/webp">
+                    <img src="/assets/photos/foring-stalpipe-skien-montering.jpg" alt="Montør hever foring av stålpipe ned i pipeløpet på tak på Østre Tromøyvei, Kongshavn" loading="lazy" width="1062" height="1400">
+                </picture>
+                <figcaption class="gallery-caption">Foring av stålpipe heves på plass over pipeløpet. Arbeid utføres med full fallsikring.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <picture>
+                    <source srcset="/assets/photos/piperehabilitering-as-innvendig-arbeid.webp" type="image/webp">
+                    <img src="/assets/photos/piperehabilitering-as-innvendig-arbeid.jpg" alt="Tekniker fra Piperehabilitering AS utfører innvendig pipearbeid hos kunde i Skien" loading="lazy" width="823" height="1400">
+                </picture>
+                <figcaption class="gallery-caption">Innvendig tilpasning av pipeløp hos kunde. Vi rydder etter oss.</figcaption>
+            </figure>
         </div>
     </div>
 
