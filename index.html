@@ -45,7 +45,7 @@
         "url": "https://pipe-rehab.no",
         "image": "https://pipe-rehab.no/assets/logo.png",
         "logo": "https://pipe-rehab.no/assets/logo.png",
-        "description": "Profesjonell rehabilitering av piper og skorsteiner i Skien og Porsgrunn, og ellers i Telemark og Vestfold. Fast pris, gratis befaring, rask utførelse. Trygg pipe, trygt hjem.",
+        "description": "Profesjonell rehabilitering av piper og skorsteiner i Skien og Porsgrunn, og ellers i Telemark, Vestfold og Agder. Fast pris, gratis befaring, rask utførelse. Trygg pipe, trygt hjem.",
         "telephone": "+4745202013",
         "email": "post@pipe-rehab.no",
         "priceRange": "$$",
@@ -67,7 +67,8 @@
             { "@type": "City", "name": "Skien" },
             { "@type": "City", "name": "Porsgrunn" },
             { "@type": "AdministrativeArea", "name": "Telemark" },
-            { "@type": "AdministrativeArea", "name": "Vestfold" }
+            { "@type": "AdministrativeArea", "name": "Vestfold" },
+            { "@type": "AdministrativeArea", "name": "Agder" }
         ],
         "openingHoursSpecification": [{
             "@type": "OpeningHoursSpecification",
@@ -215,22 +216,22 @@
             align-items: flex-start;
         }
         .hero-image {
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
-            background: #000;
-            max-width: 460px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.25);
+            background: var(--white);
+            max-width: 400px;
             margin: 0 auto;
         }
         .hero-image picture {
             display: block;
+            line-height: 0;
         }
         .hero-image img {
             display: block;
             width: 100%;
             height: auto;
-            max-height: 520px;
-            object-fit: contain;
         }
         .hero-caption {
             padding: 0.7em 1em 0.9em;
@@ -245,7 +246,6 @@
             .hero { padding-top: 40px; padding-bottom: 50px; }
             .hero-grid { grid-template-columns: 1fr; gap: 1.8rem; }
             .hero-text { text-align: center; align-items: center; }
-            .hero-image { order: -1; }
         }
 
         h1 {
@@ -327,8 +327,9 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
+            gap: 1.5rem;
             margin-top: 1.5em;
+            justify-items: center;
             align-items: start;
         }
         .gallery-item {
@@ -336,23 +337,19 @@
             flex-direction: column;
             background: var(--white);
             border: 1px solid var(--border);
-            border-radius: 10px;
+            border-radius: 14px;
             overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: 360px;
         }
         .gallery-item picture {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            background: #000;
-            max-height: 480px;
-            overflow: hidden;
+            display: block;
+            line-height: 0;
         }
         .gallery-item img {
             display: block;
-            width: auto;
-            max-width: 100%;
-            max-height: 480px;
+            width: 100%;
             height: auto;
         }
         .gallery-caption {
@@ -671,7 +668,7 @@
                 <h1>Piperehabilitering i Skien og Porsgrunn</h1>
                 <div class="tagline">Trygg pipe, trygt hjem!</div>
                 <div class="service-region">
-                    Vi rehabiliterer piper og skorsteiner i <strong>Skien</strong> og <strong>Porsgrunn</strong>, og ellers i <strong>Telemark</strong> og <strong>Vestfold</strong>.
+                    Lokale håndverkere med base i <strong>Skien</strong> og <strong>Porsgrunn</strong>. Vi tar oppdrag i hele <strong>Telemark</strong>, <strong>Vestfold</strong> og <strong>Agder</strong>.
                 </div>
                 <div class="description">
                     Vi gir nytt liv til gamle piper. Sprekker, fukt og slitasje
@@ -683,9 +680,9 @@
             <figure class="hero-image">
                 <picture>
                     <source srcset="/assets/photos/piperehabilitering-skien-prosjekt-bolighus.webp" type="image/webp">
-                    <img src="/assets/photos/piperehabilitering-skien-prosjekt-bolighus.jpg" alt="Piperehabilitering av enebolig på Østre Tromøyvei, Kongshavn, stillas reist mot pipen i skumringen" width="1075" height="1400" fetchpriority="high">
+                    <img src="/assets/photos/piperehabilitering-skien-prosjekt-bolighus.jpg" alt="Piperehabilitering av tomannsbolig på Østre Tromøyvei, Kongshavn, stillas reist mot pipen i skumringen" width="1075" height="1400" fetchpriority="high">
                 </picture>
-                <figcaption class="hero-caption">Pågående prosjekt: <strong>Østre Tromøyvei, Kongshavn</strong>. Komplett piperehabilitering av enebolig.</figcaption>
+                <figcaption class="hero-caption">Pågående prosjekt: <strong>Østre Tromøyvei, Kongshavn</strong>. Komplett piperehabilitering av tomannsbolig.</figcaption>
             </figure>
         </div>
     </div>
