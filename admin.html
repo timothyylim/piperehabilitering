@@ -6,6 +6,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Admin — Piperehabilitering AS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
     <style>
         :root {
             --bg: #000000;
@@ -15,10 +16,8 @@
             --border: #2a2a2a;
             --accent: #e0663e;
             --accent-hover: #f07850;
-            --accent-light: rgba(224, 102, 62, 0.12);
             --shadow: rgba(0,0,0,0.3);
             --green: #4ade80;
-            --green-bg: rgba(74, 222, 128, 0.1);
         }
 
         *, *::before, *::after { box-sizing: border-box; }
@@ -58,10 +57,8 @@
         }
 
         #gate input:focus { outline: none; border-color: var(--accent); }
-
         #gate .error { color: var(--accent); font-size: 0.9em; min-height: 1.4em; }
 
-        /* Dashboard */
         #dashboard {
             display: none;
             max-width: 900px;
@@ -78,10 +75,7 @@
             gap: 1rem;
         }
 
-        .dash-header h1 {
-            font-size: 1.5em;
-            margin: 0;
-        }
+        .dash-header h1 { font-size: 1.5em; margin: 0; }
 
         .btn {
             padding: 0.6em 1.2em;
@@ -95,35 +89,8 @@
             transition: all 0.2s;
         }
 
-        .btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
+        .btn:hover { border-color: var(--accent); color: var(--accent); }
 
-        .btn-primary {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            border-color: var(--accent-hover);
-            color: #fff;
-        }
-
-        .auth-section {
-            text-align: center;
-            padding: 3rem 1rem;
-        }
-
-        .auth-section p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Metric cards */
         .metrics {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -138,33 +105,12 @@
             padding: 1.5em;
         }
 
-        .metric-card .label {
-            font-size: 0.85em;
-            color: var(--text-light);
-            margin-bottom: 0.3em;
-        }
+        .metric-card .label { font-size: 0.85em; color: var(--text-light); margin-bottom: 0.3em; }
+        .metric-card .value { font-size: 2em; font-weight: 700; color: var(--text); }
+        .metric-card .value.accent { color: var(--accent); }
+        .metric-card .value.green { color: var(--green); }
+        .metric-card .sub { font-size: 0.8em; color: var(--text-light); margin-top: 0.2em; }
 
-        .metric-card .value {
-            font-size: 2em;
-            font-weight: 700;
-            color: var(--text);
-        }
-
-        .metric-card .value.accent {
-            color: var(--accent);
-        }
-
-        .metric-card .value.green {
-            color: var(--green);
-        }
-
-        .metric-card .sub {
-            font-size: 0.8em;
-            color: var(--text-light);
-            margin-top: 0.2em;
-        }
-
-        /* Tables */
         .panel {
             background: var(--white);
             border: 1px solid var(--border);
@@ -173,15 +119,9 @@
             margin-bottom: 1.5rem;
         }
 
-        .panel h2 {
-            font-size: 1.1em;
-            margin: 0 0 1em;
-        }
+        .panel h2 { font-size: 1.1em; margin: 0 0 1em; }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+        table { width: 100%; border-collapse: collapse; }
 
         th, td {
             text-align: left;
@@ -198,31 +138,13 @@
             letter-spacing: 0.05em;
         }
 
-        tr:last-child td {
-            border-bottom: none;
-        }
+        tr:last-child td { border-bottom: none; }
+        td.num, th.num { text-align: right; }
+        td.num { font-variant-numeric: tabular-nums; }
 
-        td.num {
-            text-align: right;
-            font-variant-numeric: tabular-nums;
-        }
+        .loading { text-align: center; padding: 3rem; color: var(--text-light); }
 
-        th.num {
-            text-align: right;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-light);
-        }
-
-        .period-selector {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
+        .period-selector { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
 
         .period-selector .btn.active {
             background: var(--accent);
@@ -248,341 +170,286 @@
 <div id="dashboard">
     <div class="dash-header">
         <h1>Analytics</h1>
-        <div>
-            <span id="user-email" style="color: var(--text-light); font-size: 0.9em; margin-right: 1rem;"></span>
-            <button class="btn" id="sign-out-btn" style="display:none" onclick="handleSignOut()">Logg ut</button>
+    </div>
+
+    <div class="period-selector">
+        <button class="btn active" onclick="changePeriod(7, this)">7 dager</button>
+        <button class="btn" onclick="changePeriod(14, this)">14 dager</button>
+        <button class="btn" onclick="changePeriod(30, this)">30 dager</button>
+        <button class="btn" onclick="changePeriod(90, this)">90 dager</button>
+    </div>
+
+    <div class="metrics">
+        <div class="metric-card">
+            <div class="label">Besokende</div>
+            <div class="value accent" id="m-users">—</div>
+            <div class="sub" id="m-users-sub"></div>
+        </div>
+        <div class="metric-card">
+            <div class="label">Sidevisninger</div>
+            <div class="value" id="m-views">—</div>
+            <div class="sub" id="m-views-sub"></div>
+        </div>
+        <div class="metric-card">
+            <div class="label">Okter</div>
+            <div class="value" id="m-sessions">—</div>
+            <div class="sub" id="m-sessions-sub"></div>
+        </div>
+        <div class="metric-card">
+            <div class="label">Snitt varighet</div>
+            <div class="value green" id="m-duration">—</div>
+            <div class="sub">per okt</div>
         </div>
     </div>
 
-    <div id="auth-prompt" class="auth-section">
-        <p>Logg inn med Google-kontoen som har tilgang til Google Analytics.</p>
-        <button class="btn btn-primary" id="sign-in-btn" onclick="handleSignIn()">Logg inn med Google</button>
+    <div class="panel">
+        <h2>Topp sider</h2>
+        <table>
+            <thead><tr><th>Side</th><th class="num">Visninger</th><th class="num">Besokende</th></tr></thead>
+            <tbody id="top-pages"></tbody>
+        </table>
     </div>
 
-    <div id="stats" style="display:none">
-        <div class="period-selector">
-            <button class="btn active" data-days="7" onclick="changePeriod(7, this)">7 dager</button>
-            <button class="btn" data-days="14" onclick="changePeriod(14, this)">14 dager</button>
-            <button class="btn" data-days="30" onclick="changePeriod(30, this)">30 dager</button>
-            <button class="btn" data-days="90" onclick="changePeriod(90, this)">90 dager</button>
-        </div>
+    <div class="panel">
+        <h2>Trafikkilder</h2>
+        <table>
+            <thead><tr><th>Kilde</th><th class="num">Okter</th><th class="num">Besokende</th></tr></thead>
+            <tbody id="traffic-sources"></tbody>
+        </table>
+    </div>
 
-        <div class="metrics">
-            <div class="metric-card">
-                <div class="label">Besokende</div>
-                <div class="value accent" id="m-users">—</div>
-                <div class="sub" id="m-users-sub"></div>
-            </div>
-            <div class="metric-card">
-                <div class="label">Sidevisninger</div>
-                <div class="value" id="m-views">—</div>
-                <div class="sub" id="m-views-sub"></div>
-            </div>
-            <div class="metric-card">
-                <div class="label">Okter</div>
-                <div class="value" id="m-sessions">—</div>
-                <div class="sub" id="m-sessions-sub"></div>
-            </div>
-            <div class="metric-card">
-                <div class="label">Snitt varighet</div>
-                <div class="value green" id="m-duration">—</div>
-                <div class="sub">per okt</div>
-            </div>
-        </div>
+    <div class="panel">
+        <h2>Enheter</h2>
+        <table>
+            <thead><tr><th>Enhet</th><th class="num">Besokende</th><th class="num">%</th></tr></thead>
+            <tbody id="devices"></tbody>
+        </table>
+    </div>
 
-        <div class="panel">
-            <h2>Topp sider</h2>
-            <table>
-                <thead>
-                    <tr><th>Side</th><th class="num">Visninger</th><th class="num">Besokende</th></tr>
-                </thead>
-                <tbody id="top-pages"></tbody>
-            </table>
-        </div>
+    <div class="panel">
+        <h2>Daglig trafikk</h2>
+        <div style="position:relative;height:280px"><canvas id="daily-chart"></canvas></div>
+    </div>
 
-        <div class="panel">
-            <h2>Trafikkilder</h2>
-            <table>
-                <thead>
-                    <tr><th>Kilde</th><th class="num">Okter</th><th class="num">Besokende</th></tr>
-                </thead>
-                <tbody id="traffic-sources"></tbody>
-            </table>
-        </div>
-
-        <div class="panel">
-            <h2>Enheter</h2>
-            <table>
-                <thead>
-                    <tr><th>Enhet</th><th class="num">Besokende</th><th class="num">%</th></tr>
-                </thead>
-                <tbody id="devices"></tbody>
-            </table>
-        </div>
-
-        <div class="panel">
-            <h2>Daglig oversikt</h2>
-            <table>
-                <thead>
-                    <tr><th>Dato</th><th class="num">Besokende</th><th class="num">Visninger</th><th class="num">Okter</th></tr>
-                </thead>
-                <tbody id="daily-table"></tbody>
-            </table>
-        </div>
+    <div class="panel">
+        <h2>Daglig oversikt</h2>
+        <table>
+            <thead><tr><th>Dato</th><th class="num">Besokende</th><th class="num">Visninger</th><th class="num">Okter</th></tr></thead>
+            <tbody id="daily-table"></tbody>
+        </table>
     </div>
 </div>
 
 <script>
-    // Redirect non-www to www to avoid OAuth origin mismatch
-    if (location.hostname === 'pipe-rehab.no') {
-        location.href = 'https://www.pipe-rehab.no' + location.pathname + location.search + location.hash;
-    }
-
-    const ADMIN_PASSWORD_HASH = '8f7a3d9c'; // simple hash check
-    const GA4_PROPERTY_ID = '531068491';
-    const CLIENT_ID = '1019169154680-ne34pvoevieacvn804cc1hkmgbjvb5o2.apps.googleusercontent.com';
-
-    let tokenClient;
-    let accessToken = null;
+    let adminPassword = localStorage.getItem('adminPassword') || '';
     let currentDays = 7;
 
-    // Simple hash for password comparison (not crypto-secure, just a gate)
-    function simpleHash(str) {
-        let hash = 0;
-        for (let i = 0; i < str.length; i++) {
-            const char = str.charCodeAt(i);
-            hash = ((hash << 5) - hash) + char;
-            hash |= 0;
-        }
-        return (hash >>> 0).toString(16);
+    // Auto-login if password is stored
+    if (adminPassword) {
+        document.getElementById('gate').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        fetchData(7).then(result => {
+            if (result === 'wrong_password') {
+                localStorage.removeItem('adminPassword');
+                adminPassword = '';
+                document.getElementById('gate').style.display = '';
+                document.getElementById('dashboard').style.display = 'none';
+            }
+        });
     }
 
-    // Password gate
     document.getElementById('password').addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
-            if (this.value === 'Tiedemannsjordet38!!') {
-                document.getElementById('gate').style.display = 'none';
-                document.getElementById('dashboard').style.display = 'block';
-                initGoogleAuth();
-            } else {
-                document.getElementById('gate-error').textContent = 'Feil passord';
-                this.value = '';
-            }
+            adminPassword = this.value;
+            // Try fetching — if password is wrong the API returns 401
+            fetchData(7).then(result => {
+                if (result === 'ok') {
+                    localStorage.setItem('adminPassword', adminPassword);
+                    document.getElementById('gate').style.display = 'none';
+                    document.getElementById('dashboard').style.display = 'block';
+                } else if (result === 'wrong_password') {
+                    document.getElementById('gate-error').textContent = 'Feil passord';
+                    this.value = '';
+                    adminPassword = '';
+                } else {
+                    localStorage.setItem('adminPassword', adminPassword);
+                    document.getElementById('gate-error').textContent = 'Serverfeil — sjekk loggene';
+                    document.getElementById('gate').style.display = 'none';
+                    document.getElementById('dashboard').style.display = 'block';
+                }
+            });
         }
     });
-
-    function showLoggedIn() {
-        document.getElementById('auth-prompt').style.display = 'none';
-        document.getElementById('stats').style.display = '';
-        document.getElementById('sign-out-btn').style.display = '';
-
-        fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
-            headers: { Authorization: 'Bearer ' + accessToken }
-        }).then(r => r.json()).then(info => {
-            document.getElementById('user-email').textContent = info.email || '';
-        });
-
-        fetchAllData();
-    }
-
-    function initGoogleAuth() {
-        const script = document.createElement('script');
-        script.src = 'https://accounts.google.com/gsi/client';
-        script.onload = function() {
-            tokenClient = google.accounts.oauth2.initTokenClient({
-                client_id: CLIENT_ID,
-                scope: 'https://www.googleapis.com/auth/analytics.readonly',
-                callback: onTokenResponse,
-            });
-        };
-        document.head.appendChild(script);
-    }
-
-    function handleSignIn() {
-        tokenClient.requestAccessToken();
-    }
-
-    function handleSignOut() {
-        const token = accessToken;
-        accessToken = null;
-        if (token) google.accounts.oauth2.revoke(token);
-        document.getElementById('auth-prompt').style.display = '';
-        document.getElementById('stats').style.display = 'none';
-        document.getElementById('sign-out-btn').style.display = 'none';
-        document.getElementById('user-email').textContent = '';
-    }
-
-    function onTokenResponse(response) {
-        if (response.error) return;
-        accessToken = response.access_token;
-        showLoggedIn();
-    }
-
-    // --- GA4 Data API ---
-    function gaFetch(body) {
-        return fetch(
-            `https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY_ID}:runReport`,
-            {
-                method: 'POST',
-                headers: {
-                    Authorization: 'Bearer ' + accessToken,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(body),
-            }
-        ).then(r => r.json());
-    }
-
-    function dateStr(daysAgo) {
-        const d = new Date();
-        d.setDate(d.getDate() - daysAgo);
-        return d.toISOString().split('T')[0];
-    }
 
     function changePeriod(days, btn) {
         currentDays = days;
         document.querySelectorAll('.period-selector .btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        fetchAllData();
+        fetchData(days);
     }
 
-    function fetchAllData() {
-        const startDate = dateStr(currentDays);
-        const endDate = dateStr(0);
+    async function fetchData(days) {
+        try {
+            const res = await fetch(`/api/stats?days=${days}`, {
+                headers: { 'X-Admin-Password': adminPassword }
+            });
+            if (res.status === 401) return 'wrong_password';
+            if (!res.ok) return 'error';
+            const data = await res.json();
+            renderData(data);
+            return 'ok';
+        } catch (err) {
+            console.error(err);
+            return 'error';
+        }
+    }
 
-        // Overview metrics
-        gaFetch({
-            dateRanges: [{ startDate, endDate }],
-            metrics: [
-                { name: 'totalUsers' },
-                { name: 'screenPageViews' },
-                { name: 'sessions' },
-                { name: 'averageSessionDuration' },
-            ],
-        }).then(data => {
-            const row = data.rows?.[0]?.metricValues || [];
-            document.getElementById('m-users').textContent = Number(row[0]?.value || 0).toLocaleString('nb');
-            document.getElementById('m-views').textContent = Number(row[1]?.value || 0).toLocaleString('nb');
-            document.getElementById('m-sessions').textContent = Number(row[2]?.value || 0).toLocaleString('nb');
-            const dur = parseFloat(row[3]?.value || 0);
-            const mins = Math.floor(dur / 60);
-            const secs = Math.round(dur % 60);
-            document.getElementById('m-duration').textContent = mins + ':' + String(secs).padStart(2, '0');
-            document.getElementById('m-users-sub').textContent = `siste ${currentDays} dager`;
-            document.getElementById('m-views-sub').textContent = `siste ${currentDays} dager`;
-            document.getElementById('m-sessions-sub').textContent = `siste ${currentDays} dager`;
-        });
+    function renderData(data) {
+        // Overview
+        const row = data.overview?.rows?.[0]?.metricValues || [];
+        document.getElementById('m-users').textContent = Number(row[0]?.value || 0).toLocaleString('nb');
+        document.getElementById('m-views').textContent = Number(row[1]?.value || 0).toLocaleString('nb');
+        document.getElementById('m-sessions').textContent = Number(row[2]?.value || 0).toLocaleString('nb');
+        const dur = parseFloat(row[3]?.value || 0);
+        const mins = Math.floor(dur / 60);
+        const secs = Math.round(dur % 60);
+        document.getElementById('m-duration').textContent = mins + ':' + String(secs).padStart(2, '0');
+        const label = `siste ${data.days} dager`;
+        document.getElementById('m-users-sub').textContent = label;
+        document.getElementById('m-views-sub').textContent = label;
+        document.getElementById('m-sessions-sub').textContent = label;
 
         // Top pages
-        gaFetch({
-            dateRanges: [{ startDate, endDate }],
-            dimensions: [{ name: 'pagePath' }],
-            metrics: [
-                { name: 'screenPageViews' },
-                { name: 'totalUsers' },
-            ],
-            orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-            limit: 10,
-        }).then(data => {
-            const tbody = document.getElementById('top-pages');
-            tbody.innerHTML = '';
-            (data.rows || []).forEach(row => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${escHtml(row.dimensionValues[0].value)}</td>
-                    <td class="num">${Number(row.metricValues[0].value).toLocaleString('nb')}</td>
-                    <td class="num">${Number(row.metricValues[1].value).toLocaleString('nb')}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
-        });
+        renderTable('top-pages', data.pages, 3);
 
         // Traffic sources
-        gaFetch({
-            dateRanges: [{ startDate, endDate }],
-            dimensions: [{ name: 'sessionSource' }],
-            metrics: [
-                { name: 'sessions' },
-                { name: 'totalUsers' },
-            ],
-            orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
-            limit: 10,
-        }).then(data => {
-            const tbody = document.getElementById('traffic-sources');
-            tbody.innerHTML = '';
-            (data.rows || []).forEach(row => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${escHtml(row.dimensionValues[0].value)}</td>
-                    <td class="num">${Number(row.metricValues[0].value).toLocaleString('nb')}</td>
-                    <td class="num">${Number(row.metricValues[1].value).toLocaleString('nb')}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
-        });
+        renderTable('traffic-sources', data.sources, 3);
 
         // Devices
-        gaFetch({
-            dateRanges: [{ startDate, endDate }],
-            dimensions: [{ name: 'deviceCategory' }],
-            metrics: [{ name: 'totalUsers' }],
-            orderBys: [{ metric: { metricName: 'totalUsers' }, desc: true }],
-        }).then(data => {
-            const tbody = document.getElementById('devices');
-            tbody.innerHTML = '';
-            const total = (data.rows || []).reduce((s, r) => s + Number(r.metricValues[0].value), 0);
-            (data.rows || []).forEach(row => {
-                const users = Number(row.metricValues[0].value);
-                const pct = total > 0 ? ((users / total) * 100).toFixed(1) : '0';
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${escHtml(row.dimensionValues[0].value)}</td>
-                    <td class="num">${users.toLocaleString('nb')}</td>
-                    <td class="num">${pct}%</td>
-                `;
-                tbody.appendChild(tr);
-            });
-            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
+        const deviceBody = document.getElementById('devices');
+        deviceBody.innerHTML = '';
+        const total = (data.devices?.rows || []).reduce((s, r) => s + Number(r.metricValues[0].value), 0);
+        (data.devices?.rows || []).forEach(r => {
+            const users = Number(r.metricValues[0].value);
+            const pct = total > 0 ? ((users / total) * 100).toFixed(1) : '0';
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${esc(r.dimensionValues[0].value)}</td><td class="num">${users.toLocaleString('nb')}</td><td class="num">${pct}%</td>`;
+            deviceBody.appendChild(tr);
         });
+        if (!data.devices?.rows?.length) deviceBody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
 
-        // Daily breakdown
-        gaFetch({
-            dateRanges: [{ startDate, endDate }],
-            dimensions: [{ name: 'date' }],
-            metrics: [
-                { name: 'totalUsers' },
-                { name: 'screenPageViews' },
-                { name: 'sessions' },
-            ],
-            orderBys: [{ dimension: { dimensionName: 'date' }, desc: true }],
-        }).then(data => {
-            const tbody = document.getElementById('daily-table');
-            tbody.innerHTML = '';
-            (data.rows || []).forEach(row => {
-                const raw = row.dimensionValues[0].value; // YYYYMMDD
-                const formatted = raw.slice(0,4) + '-' + raw.slice(4,6) + '-' + raw.slice(6,8);
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${formatted}</td>
-                    <td class="num">${Number(row.metricValues[0].value).toLocaleString('nb')}</td>
-                    <td class="num">${Number(row.metricValues[1].value).toLocaleString('nb')}</td>
-                    <td class="num">${Number(row.metricValues[2].value).toLocaleString('nb')}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-            if (!data.rows?.length) tbody.innerHTML = '<tr><td colspan="4" style="color:var(--text-light)">Ingen data</td></tr>';
+        // Daily chart
+        renderChart(data.daily);
+
+        // Daily table
+        const dailyBody = document.getElementById('daily-table');
+        dailyBody.innerHTML = '';
+        (data.daily?.rows || []).forEach(r => {
+            const raw = r.dimensionValues[0].value;
+            const formatted = raw.slice(0,4) + '-' + raw.slice(4,6) + '-' + raw.slice(6,8);
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${formatted}</td><td class="num">${Number(r.metricValues[0].value).toLocaleString('nb')}</td><td class="num">${Number(r.metricValues[1].value).toLocaleString('nb')}</td><td class="num">${Number(r.metricValues[2].value).toLocaleString('nb')}</td>`;
+            dailyBody.appendChild(tr);
+        });
+        if (!data.daily?.rows?.length) dailyBody.innerHTML = '<tr><td colspan="4" style="color:var(--text-light)">Ingen data</td></tr>';
+    }
+
+    function renderTable(id, report, cols) {
+        const tbody = document.getElementById(id);
+        tbody.innerHTML = '';
+        (report?.rows || []).forEach(r => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${esc(r.dimensionValues[0].value)}</td>` +
+                r.metricValues.map(m => `<td class="num">${Number(m.value).toLocaleString('nb')}</td>`).join('');
+            tbody.appendChild(tr);
+        });
+        if (!report?.rows?.length) tbody.innerHTML = `<tr><td colspan="${cols}" style="color:var(--text-light)">Ingen data</td></tr>`;
+    }
+
+    let dailyChart = null;
+
+    function renderChart(daily) {
+        const rows = (daily?.rows || []).slice().reverse();
+        if (!rows.length) return;
+
+        const labels = rows.map(r => {
+            const d = r.dimensionValues[0].value;
+            return d.slice(6, 8) + '/' + d.slice(4, 6);
+        });
+        const users = rows.map(r => Number(r.metricValues[0].value));
+        const views = rows.map(r => Number(r.metricValues[1].value));
+
+        if (dailyChart) {
+            dailyChart.data.labels = labels;
+            dailyChart.data.datasets[0].data = users;
+            dailyChart.data.datasets[1].data = views;
+            dailyChart.update();
+            return;
+        }
+
+        dailyChart = new Chart(document.getElementById('daily-chart'), {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Besokende',
+                        data: users,
+                        borderColor: '#e0663e',
+                        backgroundColor: 'rgba(224,102,62,0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                    },
+                    {
+                        label: 'Visninger',
+                        data: views,
+                        borderColor: '#a09a92',
+                        backgroundColor: 'rgba(160,154,146,0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'index', intersect: false },
+                plugins: {
+                    legend: {
+                        labels: { color: '#a09a92', font: { family: 'Inter', size: 12 } }
+                    },
+                    tooltip: {
+                        backgroundColor: '#1a1a1a',
+                        titleColor: '#e8e4e0',
+                        bodyColor: '#e8e4e0',
+                        borderColor: '#2a2a2a',
+                        borderWidth: 1,
+                    },
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } },
+                        grid: { color: '#2a2a2a' },
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 }, precision: 0 },
+                        grid: { color: '#2a2a2a' },
+                    },
+                },
+            },
         });
     }
 
-    function escHtml(str) {
+    function esc(str) {
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
     }
-
-
 </script>
 
 </body>
