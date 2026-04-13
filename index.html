@@ -2,6 +2,16 @@
 <html lang="no">
 
 <head>
+    <!-- GA opt-out: ?optout=1 disables tracking on this device, ?optout=0 re-enables -->
+    <script>
+      (function() {
+        var p = new URLSearchParams(location.search).get('optout');
+        if (p === '1') localStorage.gaOptOut = '1';
+        if (p === '0') localStorage.removeItem('gaOptOut');
+        if (localStorage.gaOptOut === '1') window['ga-disable-G-9RJX14G2J6'] = true;
+      })();
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-9RJX14G2J6"></script>
     <script>
