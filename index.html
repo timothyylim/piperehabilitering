@@ -387,6 +387,55 @@
             background: var(--white);
         }
 
+        .footer-legal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.2rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-size: 0.82em;
+        }
+
+        .footer-legal span {
+            white-space: nowrap;
+        }
+
+        .footer-legal .sep {
+            color: var(--border);
+        }
+
+        .footer-copy {
+            color: var(--text-light);
+            opacity: 0.8;
+        }
+
+        /* TRUST BADGE */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.9rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 0.78em;
+            color: var(--text-light);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .trust-badge .check {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         /* HAMBURGER */
         .hamburger {
             display: none;
@@ -559,10 +608,25 @@
             <a href="tel:+4745202013">452 02 013</a>
             <a href="mailto:post@pipe-rehab.no">post@pipe-rehab.no</a>
         </div>
+
+        <div class="trust-badges" aria-label="Sertifisering og registrering">
+            <span class="trust-badge"><span class="check">✓</span> Registrert i Foretaksregisteret</span>
+            <span class="trust-badge"><span class="check">✓</span> MVA-registrert</span>
+            <span class="trust-badge"><span class="check">✓</span> Fast pris &amp; gratis befaring</span>
+        </div>
     </div>
 
     <footer>
-        &copy; <span id="year"></span> Piperehabilitering AS. Alle rettigheter reservert.
+        <div class="footer-legal">
+            <span>Piperehabilitering AS</span>
+            <span class="sep">·</span>
+            <span>Org.nr 935 662 834</span>
+            <span class="sep">·</span>
+            <span>MVA-registrert</span>
+            <span class="sep">·</span>
+            <span>Skien, Norge</span>
+        </div>
+        <div class="footer-copy">&copy; <span id="year"></span> Piperehabilitering AS. Alle rettigheter reservert.</div>
     </footer>
 
     <script>
