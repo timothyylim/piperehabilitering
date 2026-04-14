@@ -40,11 +40,11 @@
         body,html{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.7;font-size:17px}
         a{color:var(--accent);text-decoration:none}
         a:hover{color:var(--accent-hover)}
-        nav{padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;background:var(--card);border-bottom:1px solid var(--border)}
-        nav a{color:var(--text)}
-        nav .logo{display:flex;align-items:center;gap:0.6rem;font-weight:600;text-decoration:none}
-        nav .logo:hover{opacity:0.85}
-        nav .logo img{height:32px;width:auto}
+        nav.topnav{padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;background:var(--card);border-bottom:1px solid var(--border)}
+        nav.topnav a{color:var(--text)}
+        nav.topnav .logo{display:flex;align-items:center;gap:0.6rem;font-weight:600;text-decoration:none;transition:opacity 0.2s}
+        nav.topnav .logo:hover{opacity:0.85}
+        nav.topnav .logo img{height:32px;width:auto}
         main{max-width:760px;margin:0 auto;padding:3rem 1.5rem}
         h1{font-size:2rem;margin:0 0 0.6em;line-height:1.25}
         h2{font-size:1.25rem;margin:2em 0 0.5em}
@@ -61,11 +61,23 @@
         .cta h2{margin-top:0}
         .cta-button{display:inline-block;margin-top:1em;padding:0.9em 1.8em;background:var(--accent);color:#fff;border-radius:8px;font-weight:600;transition:background 0.2s}
         .cta-button:hover{background:var(--accent-hover);color:#fff}
-        footer{padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:0.85em;border-top:1px solid var(--border);margin-top:3rem}
+
+        /* SERVICE AREAS NAV (matches homepage) */
+        .service-areas{padding:3rem 2rem 2rem;border-top:1px solid var(--border);background:var(--bg);text-align:center}
+        .service-areas h2{font-size:1.1rem;font-weight:600;color:var(--muted);margin:0 0 1.4em}
+        .service-areas-list{list-style:none;padding:0;margin:0 auto;max-width:960px;display:flex;flex-wrap:wrap;justify-content:center;gap:0.4em 1em;font-size:0.9rem}
+        .service-areas-list a{color:var(--muted);text-decoration:none;padding:0.25em 0;transition:color 0.2s}
+        .service-areas-list a:hover{color:var(--accent)}
+
+        /* FULL FOOTER (matches homepage) */
+        footer.site-footer{padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:0.85em;border-top:1px solid var(--border)}
+        footer.site-footer .footer-legal{display:flex;flex-wrap:wrap;justify-content:center;gap:0.4em 0.6em;margin-bottom:0.5em}
+        footer.site-footer .footer-legal .sep{color:var(--border)}
+        footer.site-footer .footer-copy{color:var(--muted);font-size:0.85em;opacity:0.8}
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="topnav">
         <a href="/" class="logo" aria-label="Tilbake til forsiden"><img src="/assets/logo.png" alt="">Piperehabilitering AS</a>
         <a href="/#bestill">Kontakt</a>
     </nav>
@@ -112,8 +124,35 @@
 
         <p style="margin-top:2em"><a href="/">Tilbake til forsiden</a> for full tjenesteoversikt, prosjektbilder og mer informasjon.</p>
     </main>
-    <footer>
-        Piperehabilitering AS &middot; Org.nr 935 662 834 &middot; MVA-registrert &middot; Skien, Norge
+
+    <nav class="service-areas" aria-label="Tjenesteområder">
+        <h2>Vi jobber over hele Telemark, Vestfold og Agder</h2>
+        <ul class="service-areas-list">
+            <li><a href="/piperehabilitering-skien">Piperehabilitering Skien</a></li>
+            <li><a href="/piperehabilitering-porsgrunn">Piperehabilitering Porsgrunn</a></li>
+            <li><a href="/piperehabilitering-bamble">Piperehabilitering Bamble</a></li>
+            <li><a href="/piperehabilitering-siljan">Piperehabilitering Siljan</a></li>
+            <li><a href="/piperehabilitering-kragero">Piperehabilitering Kragerø</a></li>
+            <li><a href="/piperehabilitering-drangedal">Piperehabilitering Drangedal</a></li>
+            <li><a href="/piperehabilitering-nome">Piperehabilitering Nome</a></li>
+            <li><a href="/piperehabilitering-notodden">Piperehabilitering Notodden</a></li>
+            <li><a href="/piperehabilitering-larvik">Piperehabilitering Larvik</a></li>
+            <li><a href="/piperehabilitering-sandefjord">Piperehabilitering Sandefjord</a></li>
+            <li><a href="/piperehabilitering-tonsberg">Piperehabilitering Tønsberg</a></li>
+        </ul>
+    </nav>
+
+    <footer class="site-footer">
+        <div class="footer-legal">
+            <span>Piperehabilitering AS</span>
+            <span class="sep">·</span>
+            <span>Org.nr 935 662 834</span>
+            <span class="sep">·</span>
+            <span>MVA-registrert</span>
+            <span class="sep">·</span>
+            <span>Skien, Norge</span>
+        </div>
+        <div class="footer-copy">&copy; 2026 Piperehabilitering AS. Alle rettigheter reservert.</div>
     </footer>
 </body>
 </html>
