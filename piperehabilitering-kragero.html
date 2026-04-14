@@ -338,6 +338,114 @@
             .logo { font-size: 1em; }
             .logo img { height: 40px; }
         }
+    
+        /* REVIEWS (google-style cards) — injected by scripts/add-reviews-markers.py */
+        .reviews-section {
+            margin: 2.5em 0 1em;
+            padding: 1.4em 1.6em;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+        .reviews-section h2 {
+            margin: 0 0 0.6em;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        .reviews-summary {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0 0 1.3em;
+            flex-wrap: wrap;
+        }
+        .reviews-summary .reviews-score {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1;
+        }
+        .reviews-summary .reviews-stars {
+            color: #fbbc04;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            line-height: 1;
+        }
+        .reviews-summary .reviews-count {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem;
+            text-align: left;
+            margin: 0;
+        }
+        .google-review {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1em 1.1em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7em;
+            margin: 0;
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 0.7em;
+        }
+        .review-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+        .review-meta {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+        .review-name {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+        .review-date {
+            color: var(--text-light);
+            font-size: 0.78rem;
+            margin-top: 0.1em;
+        }
+        .review-stars {
+            color: #fbbc04;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+        .review-text {
+            color: var(--text);
+            margin: 0;
+            line-height: 1.55;
+            font-size: 0.88rem;
+        }
+        .reviews-link {
+            text-align: right;
+            margin: 1em 0 0;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 600px) {
+            .reviews-grid { grid-template-columns: 1fr; }
+            .reviews-section { padding: 1.2em 1.3em; }
+        }
     </style>
 </head>
 <body>
@@ -394,6 +502,62 @@
         <h2>Lokalt i Kragerø</h2>
         <p>Vi er lokale håndverkere med base i Skien og dekker Telemark og nabokommunene. Kort vei til deg betyr rask befaring og lavere total kostnad.</p>
 
+        
+        <!-- REVIEWS:BEGIN — regenerated daily from Google Places API, do not edit by hand -->
+        <section class="reviews-section" aria-label="Anmeldelser">
+            <h2>Hva kundene sier</h2>
+            <div class="reviews-summary">
+                <span class="reviews-score">5,0</span>
+                <span class="reviews-stars" aria-label="5 av 5 stjerner">★★★★★</span>
+                <span class="reviews-count">basert på 4 Google-anmeldelser</span>
+            </div>
+            <div class="reviews-grid">
+            <article class="google-review">
+                <header class="review-header">
+                    <div class="review-avatar" style="background:#546e7a">M</div>
+                    <div class="review-meta">
+                        <div class="review-name">Mats Gripsgård</div>
+                        <div class="review-date">april 2026</div>
+                    </div>
+                </header>
+                <div class="review-stars" aria-label="5 av 5 stjerner">★★★★★</div>
+                <p class="review-text">Alt som avtalt og veldig fornøyd med utførelse og sluttresultat! Hadde røyklukt i boligen, men nå er det borte og har aldri hatt så bra trekk i pipa som nå 😊 Anbefales</p>
+            </article>
+            <article class="google-review">
+                <header class="review-header">
+                    <div class="review-avatar" style="background:#2e7d32">C</div>
+                    <div class="review-meta">
+                        <div class="review-name">Chris Staulen</div>
+                        <div class="review-date">oktober 2025</div>
+                    </div>
+                </header>
+                <div class="review-stars" aria-label="5 av 5 stjerner">★★★★★</div>
+                <p class="review-text">Ryddig og profft firma. Kom til tiden, arbeid utført hurtig. Super Fornøyd 🙌</p>
+            </article>
+            <article class="google-review">
+                <header class="review-header">
+                    <div class="review-avatar" style="background:#9c27b0">T</div>
+                    <div class="review-meta">
+                        <div class="review-name">Terje Jakobsen</div>
+                        <div class="review-date">oktober 2025</div>
+                    </div>
+                </header>
+                <div class="review-stars" aria-label="5 av 5 stjerner">★★★★★</div>
+            </article>
+            <article class="google-review">
+                <header class="review-header">
+                    <div class="review-avatar" style="background:#f4511e">J</div>
+                    <div class="review-meta">
+                        <div class="review-name">Johnny Seppola</div>
+                        <div class="review-date">oktober 2025</div>
+                    </div>
+                </header>
+                <div class="review-stars" aria-label="5 av 5 stjerner">★★★★★</div>
+            </article>
+            </div>
+            <p class="reviews-link"><a href="https://share.google/wmMDkxCAsKE5tbgh4" target="_blank" rel="noopener">Se alle anmeldelser på Google</a></p>
+        </section>
+        <!-- REVIEWS:END -->
         <div class="cta-card">
             <h2>Bestill gratis befaring</h2>
             <p>Ring, send e-post, eller bestill befaring. Vi kommer uforpliktende på befaring i Kragerø og gir deg fast pris før arbeidet starter.</p>
