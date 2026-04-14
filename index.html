@@ -245,7 +245,10 @@
             font-size: 1.1em;
             font-weight: 700;
             color: var(--text);
+            text-decoration: none;
+            transition: opacity 0.2s;
         }
+        .logo:hover { opacity: 0.85; color: var(--text); }
 
         .logo img {
             height: 52px;
@@ -464,6 +467,144 @@
             .section.gallery-section { padding: 3rem 1rem; }
             .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
             .gallery-caption { padding: 0.8em 1em 1em; font-size: 0.92em; }
+        }
+
+        /* REVIEWS (google-style cards) */
+        .reviews-section { padding: 4rem 2rem; }
+        .reviews-summary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            margin: 0 auto 2.2rem;
+            flex-wrap: wrap;
+        }
+        .reviews-summary .reviews-score {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1;
+        }
+        .reviews-summary .reviews-stars {
+            color: #fbbc04;
+            font-size: 1.25rem;
+            letter-spacing: 0.08em;
+            line-height: 1;
+        }
+        .reviews-summary .reviews-count {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            width: 100%;
+            text-align: center;
+            margin-top: 0.2rem;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .google-review {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5em 1.3em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85em;
+            margin: 0;
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8em;
+        }
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.05rem;
+            flex-shrink: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .review-meta {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+        .review-name {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.96rem;
+        }
+        .review-date {
+            color: var(--text-light);
+            font-size: 0.82rem;
+            margin-top: 0.1em;
+        }
+        .review-stars {
+            color: #fbbc04;
+            font-size: 1.05rem;
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+        .review-text {
+            color: var(--text);
+            margin: 0;
+            line-height: 1.55;
+            font-size: 0.95rem;
+        }
+        .reviews-link {
+            text-align: center;
+            margin-top: 2.2rem;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 760px) {
+            .reviews-section { padding: 3rem 1rem; }
+            .reviews-grid { grid-template-columns: 1fr; gap: 1rem; }
+        }
+
+        /* SERVICE AREAS NAV */
+        .service-areas {
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid var(--border);
+            background: var(--bg);
+            text-align: center;
+        }
+        .service-areas h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin: 0 0 1.4em;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        .service-areas-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 960px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4em 1em;
+            font-size: 0.9rem;
+        }
+        .service-areas-list a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.25em 0;
+            transition: color 0.2s;
+        }
+        .service-areas-list a:hover {
+            color: var(--accent);
         }
 
         /* SERVICES */
@@ -748,7 +889,7 @@
 
 <body>
     <nav>
-        <div class="logo"><img src="assets/logo.png" alt="Piperehabilitering AS logo">Piperehabilitering AS</div>
+        <a href="/" class="logo" aria-label="Tilbake til forsiden"><img src="assets/logo.png" alt="Piperehabilitering AS logo">Piperehabilitering AS</a>
         <button class="hamburger" id="hamburger" aria-label="Meny">
             <span></span>
             <span></span>
@@ -810,6 +951,9 @@
 
         <p>Piperehabilitering betyr å reparere, fornye eller bytte ut innsiden av en murt skorstein slik at den igjen er trygg å bruke. Over tid sprekker pussen i pipeløpet, fugene løsner, og ildfast mur brytes ned av varme, kondens og røykgass. Resultatet er røyklekkasje, brannfare og dårlig trekk. En rehabilitering gjør pipen tett og trygg uten at du må rive den ned.</p>
 
+        <!--
+        Commented out 2026-04-14 — keeping the explainer minimal for now.
+
         <h3>Når trenger du det?</h3>
         <p>De vanligste tegnene er at feieren har gitt fyringsforbud, at du ser sotflekker på loftet eller i rommene rundt pipen, at det lukter røyk inne, eller at du skal kjøpe eller selge en bolig fra før 1985. En kamerainspeksjon viser om pipen kan reddes eller om den må bygges om.</p>
 
@@ -823,6 +967,7 @@
 
         <h3>Hva kan du forvente?</h3>
         <p>Typiske jobber er ferdige på 1 til 2 dager. En riktig utført piperehabilitering har lang levetid, ofte 20 til 40 år avhengig av metode og bruk. Du får skriftlig tilstandsrapport, garanti på arbeidet, og vi rydder etter oss. Befaring og pristilbud er alltid gratis.</p>
+        -->
     </div>
 
     <div class="container section">
@@ -869,6 +1014,56 @@
         </div>
     </div>
 
+    <div id="anmeldelser" class="container section reviews-section">
+        <h2>Hva kundene sier</h2>
+
+        <div class="reviews-summary">
+            <span class="reviews-score">5,0</span>
+            <span class="reviews-stars" aria-label="5 av 5 stjerner">★★★★★</span>
+            <span class="reviews-count">Basert på 3 anmeldelser på Google</span>
+        </div>
+
+        <div class="reviews-grid">
+            <article class="google-review">
+                <header class="review-header">
+                    <div class="review-avatar" style="background:#e0663e">C</div>
+                    <div class="review-meta">
+                        <div class="review-name">Chris Staulen</div>
+                        <div class="review-date">oktober 2025</div>
+                    </div>
+                </header>
+                <div class="review-stars" aria-label="5 av 5 stjerner">★★★★★</div>
+                <p class="review-text">Ryddig og profft firma. Kom til tiden, arbeid utført hurtig. Super fornøyd.</p>
+            </article>
+
+            <article class="google-review">
+                <header class="review-header">
+                    <div class="review-avatar" style="background:#1a73e8">T</div>
+                    <div class="review-meta">
+                        <div class="review-name">Terje Jakobsen</div>
+                        <div class="review-date">oktober 2025</div>
+                    </div>
+                </header>
+                <div class="review-stars" aria-label="5 av 5 stjerner">★★★★★</div>
+            </article>
+
+            <article class="google-review">
+                <header class="review-header">
+                    <div class="review-avatar" style="background:#9c27b0">J</div>
+                    <div class="review-meta">
+                        <div class="review-name">Johnny Seppola</div>
+                        <div class="review-date">oktober 2025</div>
+                    </div>
+                </header>
+                <div class="review-stars" aria-label="5 av 5 stjerner">★★★★★</div>
+            </article>
+        </div>
+
+        <p class="reviews-link">
+            <a href="https://share.google/wmMDkxCAsKE5tbgh4" target="_blank" rel="noopener">Se alle anmeldelser på Google</a>
+        </p>
+    </div>
+
     <div id="bestill" class="container kontakt">
         <h2>Snakk med oss</h2>
         <p class="kontakt-sub">Foretrekker du telefon eller e-post? Vi er her for deg.</p>
@@ -883,6 +1078,24 @@
             <span class="trust-badge"><span class="check">✓</span> Fast pris &amp; gratis befaring</span>
         </div>
     </div>
+
+    <nav class="service-areas" aria-label="Tjenesteområder">
+        <h2>Vi jobber over hele Telemark, Vestfold og Agder</h2>
+        <ul class="service-areas-list">
+            <li><a href="/piperehabilitering-skien">Piperehabilitering Skien</a></li>
+            <li><a href="/piperehabilitering-porsgrunn">Piperehabilitering Porsgrunn</a></li>
+            <li><a href="/piperehabilitering-bamble">Piperehabilitering Bamble</a></li>
+            <li><a href="/piperehabilitering-siljan">Piperehabilitering Siljan</a></li>
+            <li><a href="/piperehabilitering-kragero">Piperehabilitering Kragerø</a></li>
+            <li><a href="/piperehabilitering-drangedal">Piperehabilitering Drangedal</a></li>
+            <li><a href="/piperehabilitering-nome">Piperehabilitering Nome</a></li>
+            <li><a href="/piperehabilitering-notodden">Piperehabilitering Notodden</a></li>
+            <li><a href="/piperehabilitering-larvik">Piperehabilitering Larvik</a></li>
+            <li><a href="/piperehabilitering-sandefjord">Piperehabilitering Sandefjord</a></li>
+            <li><a href="/piperehabilitering-tonsberg">Piperehabilitering Tønsberg</a></li>
+            <li><a href="/piperehabilitering-arendal">Piperehabilitering Arendal</a></li>
+        </ul>
+    </nav>
 
     <footer>
         <div class="footer-legal">
