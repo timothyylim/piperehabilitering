@@ -99,8 +99,29 @@ module.exports = async function handler(req, res) {
     const adminPw = req.headers['x-admin-password'];
     const isCron = process.env.CRON_SECRET && auth === `Bearer ${process.env.CRON_SECRET}`;
     const isAdmin = process.env.ADMIN_PASSWORD && adminPw === process.env.ADMIN_PASSWORD;
+
+    console.log('[gsc-snapshot] invoked', {
+        time: new Date().toISOString(),
+        isCron,
+        isAdmin,
+        hasCronSecret: !!process.env.CRON_SECRET,
+        query: req.query,
+        userAgent: req.headers['user-agent'],
+    });
+
     if (!isCron && !isAdmin) {
+        console.warn('[gsc-snapshot] unauthorized');
         return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    // Health check mode — returns auth status without fetching or writing
+    if (req.query.test === '1') {
+        return res.status(200).json({
+            ok: true,
+            mode: 'test',
+            authMethod: isCron ? 'cron' : 'admin',
+            time: new Date().toISOString(),
+        });
     }
 
     try {
@@ -120,12 +141,20 @@ module.exports = async function handler(req, res) {
             (s) => s.range?.startDate === snapshot.range.startDate && s.range?.endDate === snapshot.range.endDate
         );
         if (alreadyCaptured) {
+            console.log('[gsc-snapshot] skipped — already captured', snapshot.range);
             return res.status(200).json({ ok: true, skipped: 'already captured', range: snapshot.range });
         }
 
         history.push(snapshot);
         const newContent = JSON.stringify(history, null, 2);
         await ghPut(DATA_PATH, `gsc snapshot ${snapshot.range.endDate}`, newContent, sha);
+
+        console.log('[gsc-snapshot] completed', {
+            range: snapshot.range,
+            clicks: snapshot.overall.clicks,
+            impressions: snapshot.overall.impressions,
+            historyCount: history.length,
+        });
 
         return res.status(200).json({
             ok: true,
@@ -136,7 +165,7 @@ module.exports = async function handler(req, res) {
             totalSnapshots: history.length,
         });
     } catch (err) {
-        console.error(err);
+        console.error('[gsc-snapshot] error', err);
         return res.status(500).json({ error: err.message });
     }
 };

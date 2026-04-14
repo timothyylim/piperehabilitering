@@ -166,8 +166,29 @@ module.exports = async function handler(req, res) {
     const adminPw = req.headers['x-admin-password'];
     const isCron = process.env.CRON_SECRET && auth === `Bearer ${process.env.CRON_SECRET}`;
     const isAdmin = process.env.ADMIN_PASSWORD && adminPw === process.env.ADMIN_PASSWORD;
+
+    console.log('[ga-snapshot] invoked', {
+        time: new Date().toISOString(),
+        isCron,
+        isAdmin,
+        hasCronSecret: !!process.env.CRON_SECRET,
+        query: req.query,
+        userAgent: req.headers['user-agent'],
+    });
+
     if (!isCron && !isAdmin) {
+        console.warn('[ga-snapshot] unauthorized');
         return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    // Health check mode — returns auth status without fetching or writing
+    if (req.query.test === '1') {
+        return res.status(200).json({
+            ok: true,
+            mode: 'test',
+            authMethod: isCron ? 'cron' : 'admin',
+            time: new Date().toISOString(),
+        });
     }
 
     try {
@@ -224,6 +245,12 @@ module.exports = async function handler(req, res) {
             : `ga snapshot ${captured[0].endDate}`;
         await ghPut(DATA_PATH, msg, newContent, sha);
 
+        console.log('[ga-snapshot] completed', {
+            mode: backfill ? 'backfill' : 'weekly',
+            capturedCount: captured.length,
+            historyCount: history.length,
+        });
+
         return res.status(200).json({
             ok: true,
             mode: backfill ? 'backfill' : 'weekly',
@@ -231,7 +258,7 @@ module.exports = async function handler(req, res) {
             historyCount: history.length,
         });
     } catch (err) {
-        console.error(err);
+        console.error('[ga-snapshot] error', err);
         return res.status(500).json({ error: err.message });
     }
 };
