@@ -34,6 +34,17 @@
         ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Hjem", "item": "https://www.pipe-rehab.no/" },
+            { "@type": "ListItem", "position": 2, "name": "Tjenesteområder", "item": "https://www.pipe-rehab.no/#tjenesteomrader" },
+            { "@type": "ListItem", "position": 3, "name": "Piperehabilitering Siljan" }
+        ]
+    }
+    </script>
     <style>
         :root {
             --bg: #000000;
@@ -66,7 +77,7 @@
         a:hover { color: var(--accent-hover); }
 
         /* NAV identical to index.html */
-        nav {
+        nav.topnav {
             width: 100%;
             padding: 1.2rem 2rem;
             display: flex;
@@ -90,18 +101,9 @@
             transition: opacity 0.2s;
         }
         .logo:hover { opacity: 0.85; color: var(--text); }
+        .logo img { height: 52px; width: auto; filter: invert(1); }
 
-        .logo img {
-            height: 52px;
-            width: auto;
-            filter: invert(1);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 0.5em;
-        }
-
+        .nav-links { display: flex; gap: 0.5em; }
         .nav-links a {
             padding: 0.6em 1.2em;
             border-radius: 8px;
@@ -112,21 +114,9 @@
             display: flex;
             align-items: center;
         }
-
-        .nav-links a:hover {
-            background: var(--accent-light);
-            color: var(--accent);
-        }
-
-        .nav-links a.cta {
-            background: var(--accent);
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        .nav-links a.cta:hover {
-            background: var(--accent-hover);
-        }
+        .nav-links a:hover { background: var(--accent-light); color: var(--accent); }
+        .nav-links a.cta { background: var(--accent); color: var(--white); font-weight: 600; }
+        .nav-links a.cta:hover { background: var(--accent-hover); }
 
         .hamburger {
             display: none;
@@ -157,9 +147,28 @@
             flex: 1;
             max-width: 760px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 1.5rem 1.5rem 3rem;
             width: 100%;
         }
+
+        /* BREADCRUMBS */
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4em;
+            align-items: center;
+        }
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { color: var(--accent); }
+        .breadcrumb .bc-sep { opacity: 0.5; }
+        .breadcrumb .bc-current { color: var(--text); }
+
         h1 { font-size: 2rem; margin: 0 0 0.6em; line-height: 1.25; }
         h2 { font-size: 1.25rem; margin: 2em 0 0.5em; }
         p.lede { font-size: 1.08rem; }
@@ -205,6 +214,30 @@
             transition: background 0.2s;
         }
         .cta-button:hover { background: var(--accent-hover); color: #fff; }
+
+        /* NEARBY CITIES */
+        .nearby {
+            margin: 2.5em 0 1em;
+            padding: 1.4em 1.6em;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+        .nearby h2 {
+            margin: 0 0 0.6em;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        .nearby ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4em 1em;
+            font-size: 0.92rem;
+        }
 
         /* SERVICE AREAS NAV identical to index.html */
         .service-areas {
@@ -269,14 +302,8 @@
             h1 { font-size: 1.7em; }
             .city-gallery { grid-template-columns: 1fr; }
             .city-photo img { height: 260px; }
-
-            nav {
-                position: sticky;
-                flex-wrap: nowrap;
-            }
-
+            nav.topnav { position: sticky; flex-wrap: nowrap; }
             .hamburger { display: flex; }
-
             .nav-links {
                 display: none;
                 position: absolute;
@@ -290,24 +317,15 @@
                 gap: 0.5em;
                 box-shadow: 0 8px 24px var(--shadow);
             }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-links a {
-                justify-content: center;
-                font-size: 1.05em;
-                padding: 0.8em 1em;
-            }
-
+            .nav-links.open { display: flex; }
+            .nav-links a { justify-content: center; font-size: 1.05em; padding: 0.8em 1em; }
             .logo { font-size: 1em; }
             .logo img { height: 40px; }
         }
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="topnav">
         <a href="/" class="logo" aria-label="Tilbake til forsiden"><img src="/assets/logo.png" alt="Piperehabilitering AS logo">Piperehabilitering AS</a>
         <button class="hamburger" id="hamburger" aria-label="Meny">
             <span></span>
@@ -321,6 +339,12 @@
     </nav>
 
     <main>
+        <nav class="breadcrumb" aria-label="Brødsmuler">
+            <a href="/">Hjem</a>
+            <span class="bc-sep">›</span>
+            <span class="bc-current">Piperehabilitering Siljan</span>
+        </nav>
+
         <h1>Piperehabilitering i Siljan</h1>
         <p class="lede">Trygg og godkjent pipe i Siljan. Vi rehabiliterer, forer og inspiserer piper og skorsteiner for eneboliger, tomannsboliger og bygårder. Fast pris, gratis befaring.</p>
 
@@ -360,6 +384,15 @@
             <a class="cta-button" href="tel:+4745202013">Ring +47 452 02 013</a>
             <p style="margin-top:1em"><a href="mailto:post@pipe-rehab.no">post@pipe-rehab.no</a></p>
         </div>
+
+        <section class="nearby" aria-label="Nabokommuner">
+            <h2>Vi jobber også i nabokommunene</h2>
+            <ul>
+            <li><a href="/piperehabilitering-skien">Piperehabilitering Skien</a></li>
+            <li><a href="/piperehabilitering-porsgrunn">Piperehabilitering Porsgrunn</a></li>
+            <li><a href="/piperehabilitering-nome">Piperehabilitering Nome</a></li>
+            </ul>
+        </section>
 
         <p style="margin-top:2em"><a href="/">Tilbake til forsiden</a> for full tjenesteoversikt, prosjektbilder og mer informasjon.</p>
     </main>
