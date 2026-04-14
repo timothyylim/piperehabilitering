@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://www.pipe-rehab.no/piperehabilitering-tonsberg">
     <meta property="og:title" content="Piperehabilitering Tønsberg | Fast pris og gratis befaring">
     <meta property="og:description" content="Piperehabilitering i Tønsberg. Foring, stålpipe, kamerainspeksjon. Fast pris, gratis befaring.">
-    <meta property="og:image" content="https://www.pipe-rehab.no/assets/logo.png">
+    <meta property="og:image" content="https://www.pipe-rehab.no/assets/photos/piperehabilitering-as-innvendig-arbeid.jpg">
     <meta property="og:locale" content="nb_NO">
     <meta property="og:site_name" content="Piperehabilitering AS">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -27,7 +27,11 @@
         "provider": { "@id": "https://www.pipe-rehab.no/#piperehabilitering-as" },
         "areaServed": { "@type": "City", "name": "Tønsberg" },
         "offers": { "@type": "Offer", "priceCurrency": "NOK", "description": "Fast pris etter gratis befaring" },
-        "url": "https://www.pipe-rehab.no/piperehabilitering-tonsberg"
+        "url": "https://www.pipe-rehab.no/piperehabilitering-tonsberg",
+        "image": [
+            "https://www.pipe-rehab.no/assets/photos/piperehabilitering-as-innvendig-arbeid.jpg",
+            "https://www.pipe-rehab.no/assets/photos/foring-stalpipe-skien-montering.jpg"
+        ]
     }
     </script>
     <style>
@@ -38,7 +42,8 @@
         a:hover{color:var(--accent-hover)}
         nav{padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;background:var(--card);border-bottom:1px solid var(--border)}
         nav a{color:var(--text)}
-        nav .logo{display:flex;align-items:center;gap:0.6rem;font-weight:600}
+        nav .logo{display:flex;align-items:center;gap:0.6rem;font-weight:600;text-decoration:none}
+        nav .logo:hover{opacity:0.85}
         nav .logo img{height:32px;width:auto}
         main{max-width:760px;margin:0 auto;padding:3rem 1.5rem}
         h1{font-size:2rem;margin:0 0 0.6em;line-height:1.25}
@@ -46,6 +51,12 @@
         p.lede{font-size:1.08rem}
         ul{padding-left:1.2em}
         ul li{margin:0.3em 0}
+        .city-gallery{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5em 0 0}
+        .city-photo{margin:0;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+        .city-photo picture{display:block;background:var(--bg)}
+        .city-photo img{display:block;width:100%;height:320px;object-fit:cover}
+        .city-photo figcaption{padding:0.8em 1em;color:var(--muted);font-size:0.85rem;line-height:1.4}
+        @media (max-width:600px){.city-gallery{grid-template-columns:1fr}.city-photo img{height:260px}}
         .cta{margin:2.5em 0 1em;padding:1.6em;background:var(--card);border:1px solid var(--border);border-radius:12px;text-align:center}
         .cta h2{margin-top:0}
         .cta-button{display:inline-block;margin-top:1em;padding:0.9em 1.8em;background:var(--accent);color:#fff;border-radius:8px;font-weight:600;transition:background 0.2s}
@@ -55,7 +66,7 @@
 </head>
 <body>
     <nav>
-        <a href="/" class="logo"><img src="/assets/logo.png" alt="">Piperehabilitering AS</a>
+        <a href="/" class="logo" aria-label="Tilbake til forsiden"><img src="/assets/logo.png" alt="">Piperehabilitering AS</a>
         <a href="/#bestill">Kontakt</a>
     </nav>
     <main>
@@ -70,6 +81,24 @@
             <li>Kamerainspeksjon med skriftlig tilstandsrapport</li>
             <li>Rehabilitering og tetting av ildsted</li>
         </ul>
+
+        <h2>Bilder fra våre prosjekter</h2>
+        <div class="city-gallery">
+            <figure class="city-photo">
+                <picture>
+                    <source srcset="/assets/photos/piperehabilitering-as-innvendig-arbeid.webp" type="image/webp">
+                    <img src="/assets/photos/piperehabilitering-as-innvendig-arbeid.jpg" alt="Tekniker fra Piperehabilitering AS utfører innvendig pipearbeid" loading="lazy" width="823" height="1400">
+                </picture>
+                <figcaption>Innvendig tilpasning av pipeløp hos kunde.</figcaption>
+            </figure>
+            <figure class="city-photo">
+                <picture>
+                    <source srcset="/assets/photos/foring-stalpipe-skien-montering.webp" type="image/webp">
+                    <img src="/assets/photos/foring-stalpipe-skien-montering.jpg" alt="Montør hever foring av stålpipe ned i pipeløpet på tak" loading="lazy" width="1062" height="1400">
+                </picture>
+                <figcaption>Foring av stålpipe heves på plass med fallsikring.</figcaption>
+            </figure>
+        </div>
 
         <h2>Lokalt i Tønsberg</h2>
         <p>Vi er lokale håndverkere med base i Skien og dekker Vestfold og nabokommunene. Kort vei til deg betyr rask befaring og lavere total kostnad.</p>
