@@ -246,6 +246,18 @@
             <tbody id="daily-table"></tbody>
         </table>
     </div>
+
+    <div class="panel" id="history-ga-panel" style="display:none">
+        <h2>Historisk utvikling — GA4 (ukentlig)</h2>
+        <div style="position:relative;height:280px"><canvas id="history-ga-chart"></canvas></div>
+        <div class="sub" id="history-ga-meta" style="margin-top:0.6em;color:var(--text-light);font-size:0.8em"></div>
+    </div>
+
+    <div class="panel" id="history-gsc-panel" style="display:none">
+        <h2>Historisk utvikling — Google Search Console (ukentlig)</h2>
+        <div style="position:relative;height:280px"><canvas id="history-gsc-chart"></canvas></div>
+        <div class="sub" id="history-gsc-meta" style="margin-top:0.6em;color:var(--text-light);font-size:0.8em"></div>
+    </div>
 </div>
 
 <script>
@@ -264,6 +276,7 @@
                 document.getElementById('dashboard').style.display = 'none';
             }
         });
+        loadHistoryCharts();
     }
 
     document.getElementById('password').addEventListener('keydown', function(e) {
@@ -275,6 +288,7 @@
                     localStorage.setItem('adminPassword', adminPassword);
                     document.getElementById('gate').style.display = 'none';
                     document.getElementById('dashboard').style.display = 'block';
+                    loadHistoryCharts();
                 } else if (result === 'wrong_password') {
                     document.getElementById('gate-error').textContent = 'Feil passord';
                     this.value = '';
@@ -457,6 +471,136 @@
                 },
             },
         });
+    }
+
+    let historyGaChart = null;
+    let historyGscChart = null;
+
+    async function loadHistoryCharts() {
+        try {
+            const [gaRes, gscRes] = await Promise.all([
+                fetch('/data/ga-history.json', { cache: 'no-store' }).catch(() => null),
+                fetch('/data/gsc-history.json', { cache: 'no-store' }).catch(() => null),
+            ]);
+
+            if (gaRes && gaRes.ok) {
+                const gaHistory = await gaRes.json();
+                maybeRenderGaHistory(gaHistory);
+            }
+            if (gscRes && gscRes.ok) {
+                const gscHistory = await gscRes.json();
+                maybeRenderGscHistory(gscHistory);
+            }
+        } catch (e) {
+            console.error('history fetch failed', e);
+        }
+    }
+
+    function maybeRenderGaHistory(history) {
+        if (!Array.isArray(history) || history.length < 2) return;
+
+        // Pull the three headline metrics out of each snapshot's overall array.
+        // Index 0 = totalUsers, 1 = screenPageViews, 2 = sessions (matches ga-snapshot.js metric order).
+        const rows = history
+            .slice()
+            .sort((a, b) => (a.range?.startDate || '').localeCompare(b.range?.startDate || ''));
+
+        const labels = rows.map(r => r.range?.startDate || '');
+        const users = rows.map(r => Number(r.overall?.[0]?.value || 0));
+        const views = rows.map(r => Number(r.overall?.[1]?.value || 0));
+        const sessions = rows.map(r => Number(r.overall?.[2]?.value || 0));
+
+        // Hide the panel if everything is zero (site launched but no real traffic yet)
+        const totalActivity = users.reduce((s, v) => s + v, 0) + views.reduce((s, v) => s + v, 0);
+        if (totalActivity === 0) return;
+
+        document.getElementById('history-ga-panel').style.display = '';
+        document.getElementById('history-ga-meta').textContent =
+            `${rows.length} ukers historikk · ${labels[0]} → ${labels[labels.length - 1]}`;
+
+        const ctx = document.getElementById('history-ga-chart');
+        if (historyGaChart) historyGaChart.destroy();
+        historyGaChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [
+                    { label: 'Besokende', data: users, borderColor: '#e0663e',
+                      backgroundColor: 'rgba(224,102,62,0.1)', fill: true, tension: 0.3 },
+                    { label: 'Visninger', data: views, borderColor: '#4ade80',
+                      backgroundColor: 'rgba(74,222,128,0.1)', fill: true, tension: 0.3 },
+                    { label: 'Okter', data: sessions, borderColor: '#a09a92',
+                      backgroundColor: 'rgba(160,154,146,0.1)', fill: true, tension: 0.3 },
+                ],
+            },
+            options: historyChartOptions(),
+        });
+    }
+
+    function maybeRenderGscHistory(history) {
+        if (!Array.isArray(history) || history.length < 2) return;
+
+        const rows = history
+            .slice()
+            .sort((a, b) => (a.range?.startDate || '').localeCompare(b.range?.startDate || ''));
+
+        const labels = rows.map(r => r.range?.startDate || '');
+        const clicks = rows.map(r => Number(r.overall?.clicks || 0));
+        const impressions = rows.map(r => Number(r.overall?.impressions || 0));
+        const position = rows.map(r => Number(r.overall?.position || 0));
+
+        // Hide if GSC hasn't reported anything meaningful yet
+        const totalActivity = clicks.reduce((s, v) => s + v, 0) + impressions.reduce((s, v) => s + v, 0);
+        if (totalActivity === 0) return;
+
+        document.getElementById('history-gsc-panel').style.display = '';
+        document.getElementById('history-gsc-meta').textContent =
+            `${rows.length} ukers historikk · ${labels[0]} → ${labels[labels.length - 1]}`;
+
+        const ctx = document.getElementById('history-gsc-chart');
+        if (historyGscChart) historyGscChart.destroy();
+        historyGscChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [
+                    { label: 'Klikk', data: clicks, borderColor: '#e0663e',
+                      backgroundColor: 'rgba(224,102,62,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
+                    { label: 'Visninger (impr.)', data: impressions, borderColor: '#4ade80',
+                      backgroundColor: 'rgba(74,222,128,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
+                    { label: 'Snitt posisjon', data: position, borderColor: '#a09a92',
+                      backgroundColor: 'rgba(160,154,146,0.0)', fill: false, tension: 0.3, yAxisID: 'y1', borderDash: [4, 4] },
+                ],
+            },
+            options: {
+                ...historyChartOptions(),
+                scales: {
+                    x: { ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } }, grid: { color: '#2a2a2a' } },
+                    y: { beginAtZero: true, ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 }, precision: 0 }, grid: { color: '#2a2a2a' } },
+                    y1: { position: 'right', reverse: true, beginAtZero: false,
+                          ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } }, grid: { drawOnChartArea: false } },
+                },
+            },
+        });
+    }
+
+    function historyChartOptions() {
+        return {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: { labels: { color: '#a09a92', font: { family: 'Inter', size: 12 } } },
+                tooltip: {
+                    backgroundColor: '#1a1a1a', titleColor: '#e8e4e0', bodyColor: '#e8e4e0',
+                    borderColor: '#2a2a2a', borderWidth: 1,
+                },
+            },
+            scales: {
+                x: { ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } }, grid: { color: '#2a2a2a' } },
+                y: { beginAtZero: true, ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 }, precision: 0 }, grid: { color: '#2a2a2a' } },
+            },
+        };
     }
 
     function renderDelta(id, current, previous) {
