@@ -1,0 +1,514 @@
+[
+  {
+    "capturedAt": "2026-04-14T07:17:38.122Z",
+    "range": {
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-07"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:38.362Z",
+    "range": {
+      "startDate": "2026-01-08",
+      "endDate": "2026-01-14"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:38.647Z",
+    "range": {
+      "startDate": "2026-01-15",
+      "endDate": "2026-01-21"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:38.880Z",
+    "range": {
+      "startDate": "2026-01-22",
+      "endDate": "2026-01-28"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:39.094Z",
+    "range": {
+      "startDate": "2026-01-29",
+      "endDate": "2026-02-04"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:39.417Z",
+    "range": {
+      "startDate": "2026-02-05",
+      "endDate": "2026-02-11"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:39.640Z",
+    "range": {
+      "startDate": "2026-02-12",
+      "endDate": "2026-02-18"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:39.876Z",
+    "range": {
+      "startDate": "2026-02-19",
+      "endDate": "2026-02-25"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:40.054Z",
+    "range": {
+      "startDate": "2026-02-26",
+      "endDate": "2026-03-04"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:40.228Z",
+    "range": {
+      "startDate": "2026-03-05",
+      "endDate": "2026-03-11"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:40.686Z",
+    "range": {
+      "startDate": "2026-03-12",
+      "endDate": "2026-03-18"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:40.932Z",
+    "range": {
+      "startDate": "2026-03-19",
+      "endDate": "2026-03-25"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:41.168Z",
+    "range": {
+      "startDate": "2026-03-26",
+      "endDate": "2026-04-01"
+    },
+    "overall": [],
+    "pages": [],
+    "sources": [],
+    "devices": [],
+    "countries": [],
+    "daily": []
+  },
+  {
+    "capturedAt": "2026-04-14T07:17:41.832Z",
+    "range": {
+      "startDate": "2026-04-02",
+      "endDate": "2026-04-08"
+    },
+    "overall": [
+      {
+        "value": "20"
+      },
+      {
+        "value": "54"
+      },
+      {
+        "value": "36"
+      },
+      {
+        "value": "156.1900745"
+      },
+      {
+        "value": "0.44444444444444442"
+      },
+      {
+        "value": "0.55555555555555558"
+      }
+    ],
+    "pages": [
+      {
+        "dimensionValues": [
+          {
+            "value": "/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "54"
+          },
+          {
+            "value": "20"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "dimensionValues": [
+          {
+            "value": "(direct)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "19"
+          },
+          {
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "google"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "15"
+          },
+          {
+            "value": "8"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "chatgpt.com"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      }
+    ],
+    "devices": [
+      {
+        "dimensionValues": [
+          {
+            "value": "mobile"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "11"
+          },
+          {
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "desktop"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "9"
+          },
+          {
+            "value": "11"
+          }
+        ]
+      }
+    ],
+    "countries": [
+      {
+        "dimensionValues": [
+          {
+            "value": "Norway"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "13"
+          },
+          {
+            "value": "27"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Netherlands"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Malaysia"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Indonesia"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Morocco"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "daily": [
+      {
+        "dimensionValues": [
+          {
+            "value": "20260402"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260403"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "8"
+          },
+          {
+            "value": "26"
+          },
+          {
+            "value": "15"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260404"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "6"
+          },
+          {
+            "value": "12"
+          },
+          {
+            "value": "8"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260405"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260406"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260407"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "6"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260408"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      }
+    ]
+  }
+]
