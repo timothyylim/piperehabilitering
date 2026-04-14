@@ -110,6 +110,10 @@
         .metric-card .value.accent { color: var(--accent); }
         .metric-card .value.green { color: var(--green); }
         .metric-card .sub { font-size: 0.8em; color: var(--text-light); margin-top: 0.2em; }
+        .metric-card .delta { font-size: 0.8em; font-weight: 600; margin-top: 0.3em; }
+        .metric-card .delta.up { color: var(--green); }
+        .metric-card .delta.down { color: var(--accent); }
+        .metric-card .delta.flat { color: var(--text-light); }
 
         .panel {
             background: var(--white);
@@ -184,21 +188,25 @@
             <div class="label">Besokende</div>
             <div class="value accent" id="m-users">—</div>
             <div class="sub" id="m-users-sub"></div>
+            <div class="delta" id="m-users-delta"></div>
         </div>
         <div class="metric-card">
             <div class="label">Sidevisninger</div>
             <div class="value" id="m-views">—</div>
             <div class="sub" id="m-views-sub"></div>
+            <div class="delta" id="m-views-delta"></div>
         </div>
         <div class="metric-card">
             <div class="label">Okter</div>
             <div class="value" id="m-sessions">—</div>
             <div class="sub" id="m-sessions-sub"></div>
+            <div class="delta" id="m-sessions-delta"></div>
         </div>
         <div class="metric-card">
             <div class="label">Snitt varighet</div>
             <div class="value green" id="m-duration">—</div>
             <div class="sub">per okt</div>
+            <div class="delta" id="m-duration-delta"></div>
         </div>
     </div>
 
@@ -307,6 +315,7 @@
     function renderData(data) {
         // Overview
         const row = data.overview?.rows?.[0]?.metricValues || [];
+        const prev = data.overviewPrev?.rows?.[0]?.metricValues || [];
         document.getElementById('m-users').textContent = Number(row[0]?.value || 0).toLocaleString('nb');
         document.getElementById('m-views').textContent = Number(row[1]?.value || 0).toLocaleString('nb');
         document.getElementById('m-sessions').textContent = Number(row[2]?.value || 0).toLocaleString('nb');
@@ -318,6 +327,11 @@
         document.getElementById('m-users-sub').textContent = label;
         document.getElementById('m-views-sub').textContent = label;
         document.getElementById('m-sessions-sub').textContent = label;
+
+        renderDelta('m-users-delta', Number(row[0]?.value || 0), Number(prev[0]?.value || 0));
+        renderDelta('m-views-delta', Number(row[1]?.value || 0), Number(prev[1]?.value || 0));
+        renderDelta('m-sessions-delta', Number(row[2]?.value || 0), Number(prev[2]?.value || 0));
+        renderDelta('m-duration-delta', dur, parseFloat(prev[3]?.value || 0));
 
         // Top pages
         renderTable('top-pages', data.pages, 3);
@@ -443,6 +457,23 @@
                 },
             },
         });
+    }
+
+    function renderDelta(id, current, previous) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (!previous) {
+            el.textContent = current ? '— (ingen forrige periode)' : '';
+            el.className = 'delta flat';
+            return;
+        }
+        const pct = ((current - previous) / previous) * 100;
+        const rounded = Math.abs(pct) < 0.05 ? 0 : pct;
+        const arrow = rounded > 0 ? '▲' : rounded < 0 ? '▼' : '■';
+        const cls = rounded > 0 ? 'up' : rounded < 0 ? 'down' : 'flat';
+        const sign = rounded > 0 ? '+' : '';
+        el.textContent = `${arrow} ${sign}${rounded.toFixed(1)}% vs forrige periode`;
+        el.className = 'delta ' + cls;
     }
 
     function esc(str) {

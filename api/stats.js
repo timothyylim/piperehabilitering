@@ -38,19 +38,27 @@ module.exports = async function handler(req, res) {
     const days = parseInt(req.query.days) || 7;
     const startDate = dateStr(days);
     const endDate = dateStr(0);
+    const prevStartDate = dateStr(days * 2 + 1);
+    const prevEndDate = dateStr(days + 1);
 
     try {
         const client = await getAuthClient();
 
-        const [overview, pages, sources, devices, daily] = await Promise.all([
+        const overviewMetrics = [
+            { name: 'totalUsers' },
+            { name: 'screenPageViews' },
+            { name: 'sessions' },
+            { name: 'averageSessionDuration' },
+        ];
+
+        const [overview, overviewPrev, pages, sources, devices, daily] = await Promise.all([
             gaFetch(client, {
                 dateRanges: [{ startDate, endDate }],
-                metrics: [
-                    { name: 'totalUsers' },
-                    { name: 'screenPageViews' },
-                    { name: 'sessions' },
-                    { name: 'averageSessionDuration' },
-                ],
+                metrics: overviewMetrics,
+            }),
+            gaFetch(client, {
+                dateRanges: [{ startDate: prevStartDate, endDate: prevEndDate }],
+                metrics: overviewMetrics,
             }),
             gaFetch(client, {
                 dateRanges: [{ startDate, endDate }],
@@ -81,7 +89,7 @@ module.exports = async function handler(req, res) {
         ]);
 
         res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=600');
-        return res.status(200).json({ overview, pages, sources, devices, daily, days });
+        return res.status(200).json({ overview, overviewPrev, pages, sources, devices, daily, days });
     } catch (err) {
         console.error(err);
         return res.status(500).json({ error: 'Failed to fetch analytics data' });
