@@ -3,6 +3,10 @@
     {
       "path": "/api/gsc-snapshot",
       "schedule": "0 6 * * 1"
+    },
+    {
+      "path": "/api/ga-snapshot",
+      "schedule": "0 7 * * 1"
     }
   ]
 }
