@@ -510,5 +510,378 @@
         ]
       }
     ]
+  },
+  {
+    "capturedAt": "2026-04-20T07:57:14.905Z",
+    "range": {
+      "startDate": "2026-04-11",
+      "endDate": "2026-04-17"
+    },
+    "overall": [
+      {
+        "value": "42"
+      },
+      {
+        "value": "258"
+      },
+      {
+        "value": "86"
+      },
+      {
+        "value": "300.30627562790693"
+      },
+      {
+        "value": "0.44186046511627908"
+      },
+      {
+        "value": "0.55813953488372092"
+      }
+    ],
+    "pages": [
+      {
+        "dimensionValues": [
+          {
+            "value": "/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "258"
+          },
+          {
+            "value": "42"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "dimensionValues": [
+          {
+            "value": "google"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "44"
+          },
+          {
+            "value": "27"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(direct)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "41"
+          },
+          {
+            "value": "16"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "bing"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "devices": [
+      {
+        "dimensionValues": [
+          {
+            "value": "mobile"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "25"
+          },
+          {
+            "value": "42"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "desktop"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "16"
+          },
+          {
+            "value": "43"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "tablet"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "countries": [
+      {
+        "dimensionValues": [
+          {
+            "value": "Norway"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "33"
+          },
+          {
+            "value": "56"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Indonesia"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "4"
+          },
+          {
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Thailand"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Ireland"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Türkiye"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Vanuatu"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "daily": [
+      {
+        "dimensionValues": [
+          {
+            "value": "20260411"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260412"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260413"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "15"
+          },
+          {
+            "value": "161"
+          },
+          {
+            "value": "33"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260414"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "11"
+          },
+          {
+            "value": "59"
+          },
+          {
+            "value": "17"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260415"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "6"
+          },
+          {
+            "value": "9"
+          },
+          {
+            "value": "9"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260416"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "7"
+          },
+          {
+            "value": "11"
+          },
+          {
+            "value": "11"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260417"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "11"
+          },
+          {
+            "value": "13"
+          },
+          {
+            "value": "11"
+          }
+        ]
+      }
+    ]
   }
 ]
