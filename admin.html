@@ -15,96 +15,60 @@
             --text-light: #a09a92;
             --border: #2a2a2a;
             --accent: #e0663e;
-            --accent-hover: #f07850;
-            --shadow: rgba(0,0,0,0.3);
             --green: #4ade80;
         }
 
         *, *::before, *::after { box-sizing: border-box; }
 
         body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: var(--bg);
-            color: var(--text);
+            margin: 0; padding: 0; min-height: 100vh;
+            background: var(--bg); color: var(--text);
             font-family: 'Inter', -apple-system, sans-serif;
-            line-height: 1.6;
-            font-size: 16px;
+            line-height: 1.6; font-size: 16px;
         }
 
         #gate {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            flex-direction: column;
-            gap: 1rem;
+            display: flex; align-items: center; justify-content: center;
+            min-height: 100vh; flex-direction: column; gap: 1rem;
         }
-
         #gate h1 { font-size: 1.4em; margin: 0; }
-
         #gate input {
-            padding: 0.8em 1.2em;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--white);
-            color: var(--text);
-            font-size: 1em;
-            font-family: inherit;
-            width: 260px;
-            text-align: center;
+            padding: 0.8em 1.2em; border-radius: 8px;
+            border: 1px solid var(--border); background: var(--white);
+            color: var(--text); font-size: 1em; font-family: inherit;
+            width: 260px; text-align: center;
         }
-
         #gate input:focus { outline: none; border-color: var(--accent); }
         #gate .error { color: var(--accent); font-size: 0.9em; min-height: 1.4em; }
 
         #dashboard {
-            display: none;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
+            display: none; max-width: 900px;
+            margin: 0 auto; padding: 2rem;
         }
 
-        .dash-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
+        .dash-header { margin-bottom: 1.5rem; }
         .dash-header h1 { font-size: 1.5em; margin: 0; }
 
         .btn {
-            padding: 0.6em 1.2em;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--white);
-            color: var(--text);
-            font-size: 0.9em;
-            font-family: inherit;
-            cursor: pointer;
-            transition: all 0.2s;
+            padding: 0.6em 1.2em; border-radius: 8px;
+            border: 1px solid var(--border); background: var(--white);
+            color: var(--text); font-size: 0.9em; font-family: inherit;
+            cursor: pointer; transition: all 0.2s;
         }
-
         .btn:hover { border-color: var(--accent); color: var(--accent); }
+
+        .period-selector { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .period-selector .btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
         .metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem; margin-bottom: 1.5rem;
         }
-
         .metric-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5em;
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1.5em;
         }
-
         .metric-card .label { font-size: 0.85em; color: var(--text-light); margin-bottom: 0.3em; }
         .metric-card .value { font-size: 2em; font-weight: 700; color: var(--text); }
         .metric-card .value.accent { color: var(--accent); }
@@ -116,50 +80,40 @@
         .metric-card .delta.flat { color: var(--text-light); }
 
         .panel {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5em;
-            margin-bottom: 1.5rem;
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1.5em; margin-bottom: 1.5rem;
         }
-
         .panel h2 { font-size: 1.1em; margin: 0 0 1em; }
+        .panel-meta { margin-top: 0.6em; color: var(--text-light); font-size: 0.8em; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
 
         table { width: 100%; border-collapse: collapse; }
-
-        th, td {
-            text-align: left;
-            padding: 0.6em 0.8em;
-            border-bottom: 1px solid var(--border);
-            font-size: 0.9em;
-        }
-
-        th {
-            color: var(--text-light);
-            font-weight: 500;
-            font-size: 0.8em;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
+        th, td { text-align: left; padding: 0.6em 0.8em; border-bottom: 1px solid var(--border); font-size: 0.9em; }
+        th { color: var(--text-light); font-weight: 500; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.05em; }
         tr:last-child td { border-bottom: none; }
         td.num, th.num { text-align: right; }
         td.num { font-variant-numeric: tabular-nums; }
 
-        .loading { text-align: center; padding: 3rem; color: var(--text-light); }
+        .stat-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5em; }
+        .stat-chip {
+            flex: 1; min-width: 110px; background: var(--bg);
+            border-radius: 8px; padding: 0.8em 1em;
+        }
+        .stat-chip .label { font-size: 0.75em; color: var(--text-light); margin-bottom: 0.3em; }
+        .stat-chip .value { font-size: 1.6em; font-weight: 600; }
+        .stat-chip .hint { font-size: 0.7em; color: #555; margin-top: 0.2em; }
 
-        .period-selector { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-
-        .period-selector .btn.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #fff;
+        .section-label {
+            font-size: 0.75em; font-weight: 600; color: var(--text-light);
+            text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6em;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             #dashboard { padding: 1rem; }
             .metrics { grid-template-columns: 1fr 1fr; }
             .metric-card .value { font-size: 1.6em; }
+            .two-col { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -172,10 +126,16 @@
 </div>
 
 <div id="dashboard">
-    <div class="dash-header">
-        <h1>Analytics</h1>
+    <div class="dash-header"><h1>Analytics</h1></div>
+
+    <!-- 1. Long-term trend (hidden until data accrues) -->
+    <div class="panel" id="history-ga-panel" style="display:none">
+        <h2>Trafikktrend (ukentlig)</h2>
+        <div style="position:relative;height:260px"><canvas id="history-ga-chart"></canvas></div>
+        <div class="panel-meta" id="history-ga-meta"></div>
     </div>
 
+    <!-- 2. This period -->
     <div class="period-selector">
         <button class="btn active" onclick="changePeriod(7, this)">7 dager</button>
         <button class="btn" onclick="changePeriod(14, this)">14 dager</button>
@@ -197,74 +157,49 @@
             <div class="delta" id="m-views-delta"></div>
         </div>
         <div class="metric-card">
-            <div class="label">Okter</div>
-            <div class="value" id="m-sessions">—</div>
-            <div class="sub" id="m-sessions-sub"></div>
-            <div class="delta" id="m-sessions-delta"></div>
-        </div>
-        <div class="metric-card">
             <div class="label">Snitt varighet</div>
             <div class="value green" id="m-duration">—</div>
-            <div class="sub">per okt</div>
+            <div class="sub">per økt</div>
             <div class="delta" id="m-duration-delta"></div>
         </div>
     </div>
 
-    <div class="panel">
-        <h2>Topp sider</h2>
-        <table>
-            <thead><tr><th>Side</th><th class="num">Visninger</th><th class="num">Besokende</th></tr></thead>
-            <tbody id="top-pages"></tbody>
-        </table>
-    </div>
-
-    <div class="panel">
-        <h2>Trafikkilder</h2>
-        <table>
-            <thead><tr><th>Kilde</th><th class="num">Okter</th><th class="num">Besokende</th></tr></thead>
-            <tbody id="traffic-sources"></tbody>
-        </table>
-    </div>
-
-    <div class="panel">
-        <h2>Enheter</h2>
-        <table>
-            <thead><tr><th>Enhet</th><th class="num">Besokende</th><th class="num">%</th></tr></thead>
-            <tbody id="devices"></tbody>
-        </table>
-    </div>
-
+    <!-- 3. Daily chart -->
     <div class="panel">
         <h2>Daglig trafikk</h2>
-        <div style="position:relative;height:280px"><canvas id="daily-chart"></canvas></div>
+        <div style="position:relative;height:260px"><canvas id="daily-chart"></canvas></div>
     </div>
 
-    <div class="panel">
-        <h2>Daglig oversikt</h2>
-        <table>
-            <thead><tr><th>Dato</th><th class="num">Besokende</th><th class="num">Visninger</th><th class="num">Okter</th></tr></thead>
-            <tbody id="daily-table"></tbody>
-        </table>
-    </div>
-
-    <div class="panel" id="history-ga-panel" style="display:none">
-        <h2>Historisk utvikling — GA4 (ukentlig)</h2>
-        <div style="position:relative;height:280px"><canvas id="history-ga-chart"></canvas></div>
-        <div class="sub" id="history-ga-meta" style="margin-top:0.6em;color:var(--text-light);font-size:0.8em"></div>
-    </div>
-
-    <div class="panel" id="history-gsc-panel" style="display:none">
-        <h2>Historisk utvikling — Google Search Console (ukentlig)</h2>
-        <div style="position:relative;height:280px"><canvas id="history-gsc-chart"></canvas></div>
-        <div style="display:flex;gap:1.5em;margin-top:1em;flex-wrap:wrap" id="gsc-stats-row"></div>
-        <div id="gsc-keywords-panel" style="margin-top:1.5em;display:none">
-            <h3 style="font-size:0.85em;font-weight:600;color:var(--text-light);margin-bottom:0.6em;text-transform:uppercase;letter-spacing:0.05em">Søkeord — siste uke</h3>
+    <!-- 4. Google search (hidden until data accrues) -->
+    <div class="panel" id="gsc-panel" style="display:none">
+        <h2>Google søk</h2>
+        <div class="stat-row" id="gsc-stats-row"></div>
+        <div id="gsc-keywords-panel" style="display:none">
+            <div class="section-label">Søkeord — siste uke</div>
             <table>
                 <thead><tr><th>Søkeord</th><th class="num">Posisjon</th><th class="num">Visninger</th><th class="num">Klikk</th></tr></thead>
                 <tbody id="gsc-keywords-body"></tbody>
             </table>
         </div>
-        <div class="sub" id="history-gsc-meta" style="margin-top:0.6em;color:var(--text-light);font-size:0.8em"></div>
+        <div class="panel-meta" id="history-gsc-meta"></div>
+    </div>
+
+    <!-- 5. Breakdowns -->
+    <div class="two-col">
+        <div class="panel" style="margin-bottom:0">
+            <h2>Topp sider</h2>
+            <table>
+                <thead><tr><th>Side</th><th class="num">Visninger</th><th class="num">Besokende</th></tr></thead>
+                <tbody id="top-pages"></tbody>
+            </table>
+        </div>
+        <div class="panel" style="margin-bottom:0">
+            <h2>Trafikkilder</h2>
+            <table>
+                <thead><tr><th>Kilde</th><th class="num">Okter</th><th class="num">Besokende</th></tr></thead>
+                <tbody id="traffic-sources"></tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -272,7 +207,6 @@
     let adminPassword = localStorage.getItem('adminPassword') || '';
     let currentDays = 7;
 
-    // Auto-login if password is stored
     if (adminPassword) {
         document.getElementById('gate').style.display = 'none';
         document.getElementById('dashboard').style.display = 'block';
@@ -290,7 +224,6 @@
     document.getElementById('password').addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
             adminPassword = this.value;
-            // Try fetching — if password is wrong the API returns 401
             fetchData(7).then(result => {
                 if (result === 'ok') {
                     localStorage.setItem('adminPassword', adminPassword);
@@ -325,8 +258,7 @@
             });
             if (res.status === 401) return 'wrong_password';
             if (!res.ok) return 'error';
-            const data = await res.json();
-            renderData(data);
+            renderData(await res.json());
             return 'ok';
         } catch (err) {
             console.error(err);
@@ -335,12 +267,10 @@
     }
 
     function renderData(data) {
-        // Overview
         const row = data.overview?.rows?.[0]?.metricValues || [];
         const prev = data.overviewPrev?.rows?.[0]?.metricValues || [];
         document.getElementById('m-users').textContent = Number(row[0]?.value || 0).toLocaleString('nb');
         document.getElementById('m-views').textContent = Number(row[1]?.value || 0).toLocaleString('nb');
-        document.getElementById('m-sessions').textContent = Number(row[2]?.value || 0).toLocaleString('nb');
         const dur = parseFloat(row[3]?.value || 0);
         const mins = Math.floor(dur / 60);
         const secs = Math.round(dur % 60);
@@ -348,46 +278,14 @@
         const label = `siste ${data.days} dager`;
         document.getElementById('m-users-sub').textContent = label;
         document.getElementById('m-views-sub').textContent = label;
-        document.getElementById('m-sessions-sub').textContent = label;
 
         renderDelta('m-users-delta', Number(row[0]?.value || 0), Number(prev[0]?.value || 0));
         renderDelta('m-views-delta', Number(row[1]?.value || 0), Number(prev[1]?.value || 0));
-        renderDelta('m-sessions-delta', Number(row[2]?.value || 0), Number(prev[2]?.value || 0));
         renderDelta('m-duration-delta', dur, parseFloat(prev[3]?.value || 0));
 
-        // Top pages
         renderTable('top-pages', data.pages, 3);
-
-        // Traffic sources
         renderTable('traffic-sources', data.sources, 3);
-
-        // Devices
-        const deviceBody = document.getElementById('devices');
-        deviceBody.innerHTML = '';
-        const total = (data.devices?.rows || []).reduce((s, r) => s + Number(r.metricValues[0].value), 0);
-        (data.devices?.rows || []).forEach(r => {
-            const users = Number(r.metricValues[0].value);
-            const pct = total > 0 ? ((users / total) * 100).toFixed(1) : '0';
-            const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${esc(r.dimensionValues[0].value)}</td><td class="num">${users.toLocaleString('nb')}</td><td class="num">${pct}%</td>`;
-            deviceBody.appendChild(tr);
-        });
-        if (!data.devices?.rows?.length) deviceBody.innerHTML = '<tr><td colspan="3" style="color:var(--text-light)">Ingen data</td></tr>';
-
-        // Daily chart
         renderChart(data.daily);
-
-        // Daily table
-        const dailyBody = document.getElementById('daily-table');
-        dailyBody.innerHTML = '';
-        (data.daily?.rows || []).forEach(r => {
-            const raw = r.dimensionValues[0].value;
-            const formatted = raw.slice(0,4) + '-' + raw.slice(4,6) + '-' + raw.slice(6,8);
-            const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${formatted}</td><td class="num">${Number(r.metricValues[0].value).toLocaleString('nb')}</td><td class="num">${Number(r.metricValues[1].value).toLocaleString('nb')}</td><td class="num">${Number(r.metricValues[2].value).toLocaleString('nb')}</td>`;
-            dailyBody.appendChild(tr);
-        });
-        if (!data.daily?.rows?.length) dailyBody.innerHTML = '<tr><td colspan="4" style="color:var(--text-light)">Ingen data</td></tr>';
     }
 
     function renderTable(id, report, cols) {
@@ -407,11 +305,7 @@
     function renderChart(daily) {
         const rows = (daily?.rows || []).slice().reverse();
         if (!rows.length) return;
-
-        const labels = rows.map(r => {
-            const d = r.dimensionValues[0].value;
-            return d.slice(6, 8) + '/' + d.slice(4, 6);
-        });
+        const labels = rows.map(r => { const d = r.dimensionValues[0].value; return d.slice(6,8)+'/'+d.slice(4,6); });
         const users = rows.map(r => Number(r.metricValues[0].value));
         const views = rows.map(r => Number(r.metricValues[1].value));
 
@@ -422,67 +316,22 @@
             dailyChart.update();
             return;
         }
-
         dailyChart = new Chart(document.getElementById('daily-chart'), {
             type: 'line',
             data: {
                 labels,
                 datasets: [
-                    {
-                        label: 'Besokende',
-                        data: users,
-                        borderColor: '#e0663e',
-                        backgroundColor: 'rgba(224,102,62,0.1)',
-                        fill: true,
-                        tension: 0.3,
-                        pointRadius: 4,
-                        pointHoverRadius: 6,
-                    },
-                    {
-                        label: 'Visninger',
-                        data: views,
-                        borderColor: '#a09a92',
-                        backgroundColor: 'rgba(160,154,146,0.1)',
-                        fill: true,
-                        tension: 0.3,
-                        pointRadius: 4,
-                        pointHoverRadius: 6,
-                    },
+                    { label: 'Besokende', data: users, borderColor: '#e0663e',
+                      backgroundColor: 'rgba(224,102,62,0.1)', fill: true, tension: 0.3, pointRadius: 3 },
+                    { label: 'Visninger', data: views, borderColor: '#a09a92',
+                      backgroundColor: 'rgba(160,154,146,0.08)', fill: true, tension: 0.3, pointRadius: 3 },
                 ],
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                interaction: { mode: 'index', intersect: false },
-                plugins: {
-                    legend: {
-                        labels: { color: '#a09a92', font: { family: 'Inter', size: 12 } }
-                    },
-                    tooltip: {
-                        backgroundColor: '#1a1a1a',
-                        titleColor: '#e8e4e0',
-                        bodyColor: '#e8e4e0',
-                        borderColor: '#2a2a2a',
-                        borderWidth: 1,
-                    },
-                },
-                scales: {
-                    x: {
-                        ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } },
-                        grid: { color: '#2a2a2a' },
-                    },
-                    y: {
-                        beginAtZero: true,
-                        ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 }, precision: 0 },
-                        grid: { color: '#2a2a2a' },
-                    },
-                },
-            },
+            options: chartOptions(),
         });
     }
 
     let historyGaChart = null;
-    let historyGscChart = null;
 
     async function loadHistoryCharts() {
         try {
@@ -490,15 +339,8 @@
                 fetch('/data/ga-history.json', { cache: 'no-store' }).catch(() => null),
                 fetch('/data/gsc-history.json', { cache: 'no-store' }).catch(() => null),
             ]);
-
-            if (gaRes && gaRes.ok) {
-                const gaHistory = await gaRes.json();
-                maybeRenderGaHistory(gaHistory);
-            }
-            if (gscRes && gscRes.ok) {
-                const gscHistory = await gscRes.json();
-                maybeRenderGscHistory(gscHistory);
-            }
+            if (gaRes && gaRes.ok) maybeRenderGaHistory(await gaRes.json());
+            if (gscRes && gscRes.ok) maybeRenderGscPanel(await gscRes.json());
         } catch (e) {
             console.error('history fetch failed', e);
         }
@@ -506,25 +348,15 @@
 
     function maybeRenderGaHistory(history) {
         if (!Array.isArray(history) || history.length < 2) return;
-
-        // Pull the three headline metrics out of each snapshot's overall array.
-        // Index 0 = totalUsers, 1 = screenPageViews, 2 = sessions (matches ga-snapshot.js metric order).
-        const rows = history
-            .slice()
-            .sort((a, b) => (a.range?.startDate || '').localeCompare(b.range?.startDate || ''));
-
-        const labels = rows.map(r => r.range?.startDate || '');
+        const rows = history.slice().sort((a, b) => (a.range?.startDate||'').localeCompare(b.range?.startDate||''));
         const users = rows.map(r => Number(r.overall?.[0]?.value || 0));
         const views = rows.map(r => Number(r.overall?.[1]?.value || 0));
-        const sessions = rows.map(r => Number(r.overall?.[2]?.value || 0));
+        if (users.reduce((s,v)=>s+v,0) + views.reduce((s,v)=>s+v,0) === 0) return;
 
-        // Hide the panel if everything is zero (site launched but no real traffic yet)
-        const totalActivity = users.reduce((s, v) => s + v, 0) + views.reduce((s, v) => s + v, 0);
-        if (totalActivity === 0) return;
-
+        const labels = rows.map(r => r.range?.startDate || '');
         document.getElementById('history-ga-panel').style.display = '';
         document.getElementById('history-ga-meta').textContent =
-            `${rows.length} ukers historikk · ${labels[0]} → ${labels[labels.length - 1]}`;
+            `${rows.length} ukers historikk · ${labels[0]} → ${labels[labels.length-1]}`;
 
         const ctx = document.getElementById('history-ga-chart');
         if (historyGaChart) historyGaChart.destroy();
@@ -536,98 +368,62 @@
                     { label: 'Besokende', data: users, borderColor: '#e0663e',
                       backgroundColor: 'rgba(224,102,62,0.1)', fill: true, tension: 0.3 },
                     { label: 'Visninger', data: views, borderColor: '#4ade80',
-                      backgroundColor: 'rgba(74,222,128,0.1)', fill: true, tension: 0.3 },
-                    { label: 'Okter', data: sessions, borderColor: '#a09a92',
-                      backgroundColor: 'rgba(160,154,146,0.1)', fill: true, tension: 0.3 },
+                      backgroundColor: 'rgba(74,222,128,0.08)', fill: true, tension: 0.3 },
                 ],
             },
-            options: historyChartOptions(),
+            options: chartOptions(),
         });
     }
 
-    function maybeRenderGscHistory(history) {
-        if (!Array.isArray(history) || history.length < 2) return;
-
-        const rows = history
-            .slice()
-            .sort((a, b) => (a.range?.startDate || '').localeCompare(b.range?.startDate || ''));
-
-        const labels = rows.map(r => r.range?.startDate || '');
-        const clicks = rows.map(r => Number(r.overall?.clicks || 0));
-        const impressions = rows.map(r => Number(r.overall?.impressions || 0));
-        const position = rows.map(r => Number(r.overall?.position || 0));
-
-        // Hide if GSC hasn't reported anything meaningful yet
-        const totalActivity = clicks.reduce((s, v) => s + v, 0) + impressions.reduce((s, v) => s + v, 0);
-        if (totalActivity === 0) return;
-
-        document.getElementById('history-gsc-panel').style.display = '';
-        document.getElementById('history-gsc-meta').textContent =
-            `${rows.length} ukers historikk · ${labels[0]} → ${labels[labels.length - 1]}`;
-
-        // Latest-week stat cards (clicks, impressions, avg position)
+    function maybeRenderGscPanel(history) {
+        if (!Array.isArray(history) || history.length < 1) return;
+        const rows = history.slice().sort((a, b) => (a.range?.startDate||'').localeCompare(b.range?.startDate||''));
         const latest = rows[rows.length - 1];
-        const latestClicks = Number(latest.overall?.clicks || 0);
-        const latestImpressions = Number(latest.overall?.impressions || 0);
-        const latestPosition = Number(latest.overall?.position || 0);
-        const statsRow = document.getElementById('gsc-stats-row');
-        statsRow.innerHTML = [
-            { label: 'Klikk (siste uke)', value: latestClicks, color: '#e0663e' },
-            { label: 'Visninger (siste uke)', value: latestImpressions, color: '#4ade80' },
-            { label: 'Snitt posisjon', value: latestPosition > 0 ? latestPosition.toFixed(1) : '—', color: '#a09a92',
-              note: latestPosition > 0 ? 'lavere = bedre' : '' },
+        const clicks = Number(latest.overall?.clicks || 0);
+        const impressions = Number(latest.overall?.impressions || 0);
+        const position = Number(latest.overall?.position || 0);
+        if (clicks + impressions === 0) return;
+
+        document.getElementById('gsc-panel').style.display = '';
+        document.getElementById('history-gsc-meta').textContent =
+            `${rows.length} ukers data · siste uke ${latest.range?.startDate} → ${latest.range?.endDate}`;
+
+        document.getElementById('gsc-stats-row').innerHTML = [
+            { label: 'Klikk', value: clicks, color: '#e0663e' },
+            { label: 'Visninger', value: impressions, color: '#4ade80' },
+            { label: 'Snitt posisjon', value: position > 0 ? position.toFixed(1) : '—', color: '#a09a92',
+              hint: position > 0 ? 'lavere = bedre' : '' },
         ].map(s => `
-            <div style="flex:1;min-width:120px;background:#1a1a1a;border-radius:8px;padding:0.8em 1em">
-                <div style="font-size:0.75em;color:#a09a92;margin-bottom:0.3em">${s.label}</div>
-                <div style="font-size:1.6em;font-weight:600;color:${s.color}">${s.value}</div>
-                ${s.note ? `<div style="font-size:0.7em;color:#666;margin-top:0.2em">${s.note}</div>` : ''}
+            <div class="stat-chip">
+                <div class="label">${s.label}</div>
+                <div class="value" style="color:${s.color}">${s.value}</div>
+                ${s.hint ? `<div class="hint">${s.hint}</div>` : ''}
             </div>`).join('');
 
-        // Keyword rankings table from latest snapshot
         const queries = (latest.queries || []).slice().sort((a, b) => b.impressions - a.impressions);
         if (queries.length > 0) {
             document.getElementById('gsc-keywords-panel').style.display = '';
             document.getElementById('gsc-keywords-body').innerHTML = queries.map(q => {
                 const pos = Number(q.position || 0);
-                const posStr = pos > 0 ? pos.toFixed(1) : '—';
                 const posColor = pos <= 3 ? '#4ade80' : pos <= 10 ? '#facc15' : pos <= 20 ? '#a09a92' : '#6b7280';
                 return `<tr>
-                    <td>${q.keys[0]}</td>
-                    <td class="num" style="color:${posColor};font-weight:600">${posStr}</td>
+                    <td>${esc(q.keys[0])}</td>
+                    <td class="num" style="color:${posColor};font-weight:600">${pos > 0 ? pos.toFixed(1) : '—'}</td>
                     <td class="num">${q.impressions}</td>
                     <td class="num">${q.clicks}</td>
                 </tr>`;
             }).join('');
         }
-
-        const ctx = document.getElementById('history-gsc-chart');
-        if (historyGscChart) historyGscChart.destroy();
-        historyGscChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels,
-                datasets: [
-                    { label: 'Klikk', data: clicks, borderColor: '#e0663e',
-                      backgroundColor: 'rgba(224,102,62,0.1)', fill: true, tension: 0.3 },
-                    { label: 'Visninger', data: impressions, borderColor: '#4ade80',
-                      backgroundColor: 'rgba(74,222,128,0.1)', fill: true, tension: 0.3 },
-                ],
-            },
-            options: historyChartOptions(),
-        });
     }
 
-    function historyChartOptions() {
+    function chartOptions() {
         return {
-            responsive: true,
-            maintainAspectRatio: false,
+            responsive: true, maintainAspectRatio: false,
             interaction: { mode: 'index', intersect: false },
             plugins: {
                 legend: { labels: { color: '#a09a92', font: { family: 'Inter', size: 12 } } },
-                tooltip: {
-                    backgroundColor: '#1a1a1a', titleColor: '#e8e4e0', bodyColor: '#e8e4e0',
-                    borderColor: '#2a2a2a', borderWidth: 1,
-                },
+                tooltip: { backgroundColor: '#1a1a1a', titleColor: '#e8e4e0', bodyColor: '#e8e4e0',
+                            borderColor: '#2a2a2a', borderWidth: 1 },
             },
             scales: {
                 x: { ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } }, grid: { color: '#2a2a2a' } },
@@ -639,18 +435,11 @@
     function renderDelta(id, current, previous) {
         const el = document.getElementById(id);
         if (!el) return;
-        if (!previous) {
-            el.textContent = current ? '— (ingen forrige periode)' : '';
-            el.className = 'delta flat';
-            return;
-        }
+        if (!previous) { el.textContent = ''; el.className = 'delta flat'; return; }
         const pct = ((current - previous) / previous) * 100;
         const rounded = Math.abs(pct) < 0.05 ? 0 : pct;
-        const arrow = rounded > 0 ? '▲' : rounded < 0 ? '▼' : '■';
-        const cls = rounded > 0 ? 'up' : rounded < 0 ? 'down' : 'flat';
-        const sign = rounded > 0 ? '+' : '';
-        el.textContent = `${arrow} ${sign}${rounded.toFixed(1)}% vs forrige periode`;
-        el.className = 'delta ' + cls;
+        el.textContent = `${rounded > 0 ? '▲' : rounded < 0 ? '▼' : '■'} ${rounded > 0 ? '+' : ''}${rounded.toFixed(1)}% vs forrige periode`;
+        el.className = 'delta ' + (rounded > 0 ? 'up' : rounded < 0 ? 'down' : 'flat');
     }
 
     function esc(str) {
