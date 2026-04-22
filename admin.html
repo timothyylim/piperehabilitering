@@ -256,6 +256,7 @@
     <div class="panel" id="history-gsc-panel" style="display:none">
         <h2>Historisk utvikling — Google Search Console (ukentlig)</h2>
         <div style="position:relative;height:280px"><canvas id="history-gsc-chart"></canvas></div>
+        <div style="display:flex;gap:1.5em;margin-top:1em;flex-wrap:wrap" id="gsc-stats-row"></div>
         <div class="sub" id="history-gsc-meta" style="margin-top:0.6em;color:var(--text-light);font-size:0.8em"></div>
     </div>
 </div>
@@ -557,6 +558,24 @@
         document.getElementById('history-gsc-meta').textContent =
             `${rows.length} ukers historikk · ${labels[0]} → ${labels[labels.length - 1]}`;
 
+        // Latest-week stat cards (clicks, impressions, avg position)
+        const latest = rows[rows.length - 1];
+        const latestClicks = Number(latest.overall?.clicks || 0);
+        const latestImpressions = Number(latest.overall?.impressions || 0);
+        const latestPosition = Number(latest.overall?.position || 0);
+        const statsRow = document.getElementById('gsc-stats-row');
+        statsRow.innerHTML = [
+            { label: 'Klikk (siste uke)', value: latestClicks, color: '#e0663e' },
+            { label: 'Visninger (siste uke)', value: latestImpressions, color: '#4ade80' },
+            { label: 'Snitt posisjon', value: latestPosition > 0 ? latestPosition.toFixed(1) : '—', color: '#a09a92',
+              note: latestPosition > 0 ? 'lavere = bedre' : '' },
+        ].map(s => `
+            <div style="flex:1;min-width:120px;background:#1a1a1a;border-radius:8px;padding:0.8em 1em">
+                <div style="font-size:0.75em;color:#a09a92;margin-bottom:0.3em">${s.label}</div>
+                <div style="font-size:1.6em;font-weight:600;color:${s.color}">${s.value}</div>
+                ${s.note ? `<div style="font-size:0.7em;color:#666;margin-top:0.2em">${s.note}</div>` : ''}
+            </div>`).join('');
+
         const ctx = document.getElementById('history-gsc-chart');
         if (historyGscChart) historyGscChart.destroy();
         historyGscChart = new Chart(ctx, {
@@ -565,22 +584,12 @@
                 labels,
                 datasets: [
                     { label: 'Klikk', data: clicks, borderColor: '#e0663e',
-                      backgroundColor: 'rgba(224,102,62,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
-                    { label: 'Visninger (impr.)', data: impressions, borderColor: '#4ade80',
-                      backgroundColor: 'rgba(74,222,128,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
-                    { label: 'Snitt posisjon', data: position, borderColor: '#a09a92',
-                      backgroundColor: 'rgba(160,154,146,0.0)', fill: false, tension: 0.3, yAxisID: 'y1', borderDash: [4, 4] },
+                      backgroundColor: 'rgba(224,102,62,0.1)', fill: true, tension: 0.3 },
+                    { label: 'Visninger', data: impressions, borderColor: '#4ade80',
+                      backgroundColor: 'rgba(74,222,128,0.1)', fill: true, tension: 0.3 },
                 ],
             },
-            options: {
-                ...historyChartOptions(),
-                scales: {
-                    x: { ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } }, grid: { color: '#2a2a2a' } },
-                    y: { beginAtZero: true, ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 }, precision: 0 }, grid: { color: '#2a2a2a' } },
-                    y1: { position: 'right', reverse: true, beginAtZero: false,
-                          ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 } }, grid: { drawOnChartArea: false } },
-                },
-            },
+            options: historyChartOptions(),
         });
     }
 
