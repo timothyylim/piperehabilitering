@@ -257,6 +257,13 @@
         <h2>Historisk utvikling — Google Search Console (ukentlig)</h2>
         <div style="position:relative;height:280px"><canvas id="history-gsc-chart"></canvas></div>
         <div style="display:flex;gap:1.5em;margin-top:1em;flex-wrap:wrap" id="gsc-stats-row"></div>
+        <div id="gsc-keywords-panel" style="margin-top:1.5em;display:none">
+            <h3 style="font-size:0.85em;font-weight:600;color:var(--text-light);margin-bottom:0.6em;text-transform:uppercase;letter-spacing:0.05em">Søkeord — siste uke</h3>
+            <table>
+                <thead><tr><th>Søkeord</th><th class="num">Posisjon</th><th class="num">Visninger</th><th class="num">Klikk</th></tr></thead>
+                <tbody id="gsc-keywords-body"></tbody>
+            </table>
+        </div>
         <div class="sub" id="history-gsc-meta" style="margin-top:0.6em;color:var(--text-light);font-size:0.8em"></div>
     </div>
 </div>
@@ -575,6 +582,23 @@
                 <div style="font-size:1.6em;font-weight:600;color:${s.color}">${s.value}</div>
                 ${s.note ? `<div style="font-size:0.7em;color:#666;margin-top:0.2em">${s.note}</div>` : ''}
             </div>`).join('');
+
+        // Keyword rankings table from latest snapshot
+        const queries = (latest.queries || []).slice().sort((a, b) => b.impressions - a.impressions);
+        if (queries.length > 0) {
+            document.getElementById('gsc-keywords-panel').style.display = '';
+            document.getElementById('gsc-keywords-body').innerHTML = queries.map(q => {
+                const pos = Number(q.position || 0);
+                const posStr = pos > 0 ? pos.toFixed(1) : '—';
+                const posColor = pos <= 3 ? '#4ade80' : pos <= 10 ? '#facc15' : pos <= 20 ? '#a09a92' : '#6b7280';
+                return `<tr>
+                    <td>${q.keys[0]}</td>
+                    <td class="num" style="color:${posColor};font-weight:600">${posStr}</td>
+                    <td class="num">${q.impressions}</td>
+                    <td class="num">${q.clicks}</td>
+                </tr>`;
+            }).join('');
+        }
 
         const ctx = document.getElementById('history-gsc-chart');
         if (historyGscChart) historyGscChart.destroy();
