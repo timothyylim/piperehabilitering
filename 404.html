@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,follow">
+    <title>Side ikke funnet | Piperehabilitering AS</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('/assets/fonts/inter-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        :root {
+            --bg: #000000;
+            --white: #111111;
+            --text: #e8e4e0;
+            --text-light: #a09a92;
+            --border: #2a2a2a;
+            --accent: #e0663e;
+            --accent-hover: #f07850;
+            --accent-light: rgba(224, 102, 62, 0.12);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.7;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent-hover); }
+
+        nav {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6em;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .logo:hover { opacity: 0.85; color: var(--text); }
+        .logo img { height: 52px; width: auto; filter: invert(1); }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .error-code {
+            font-size: 6em;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin: 0 0 0.2em;
+            letter-spacing: -0.04em;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin: 0 0 0.5em;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        p {
+            color: var(--text-light);
+            max-width: 420px;
+            margin: 0 0 2em;
+        }
+
+        .cta {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.85em 2.2em;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.2s;
+        }
+        .cta:hover {
+            background: var(--accent-hover);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        footer {
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            background: var(--white);
+        }
+        .footer-legal {
+            font-size: 0.82em;
+            color: var(--text-light);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.3em 0.6em;
+            margin-bottom: 0.3em;
+        }
+        .footer-legal .sep { color: var(--border); }
+        .footer-copy { font-size: 0.78em; color: var(--text-light); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo" aria-label="Tilbake til forsiden">
+            <img src="/assets/logo.png" alt="Piperehabilitering AS logo">Piperehabilitering AS
+        </a>
+    </nav>
+
+    <main>
+        <div class="error-code">404</div>
+        <h1>Siden ble ikke funnet</h1>
+        <p>Siden du leter etter finnes ikke eller har blitt flyttet. Gå tilbake til forsiden for å finne det du trenger.</p>
+        <a href="/" class="cta">Gå til forsiden</a>
+    </main>
+
+    <footer>
+        <div class="footer-legal">
+            <span>Piperehabilitering AS</span>
+            <span class="sep">·</span>
+            <span>Org.nr 935 662 834</span>
+            <span class="sep">·</span>
+            <span>MVA-registrert</span>
+            <span class="sep">·</span>
+            <span>Skien, Norge</span>
+        </div>
+        <div class="footer-copy">&copy; <span id="year"></span> Piperehabilitering AS. Alle rettigheter reservert.</div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
