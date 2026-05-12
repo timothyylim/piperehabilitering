@@ -690,7 +690,7 @@
             overflow: hidden;
             position: relative;
         }
-        .review-text:not(.expanded)::after {
+        .review-text.clamped:not(.expanded)::after {
             content: '';
             position: absolute;
             bottom: 0; left: 0; right: 0;
@@ -1301,6 +1301,7 @@
             var txt = card.querySelector('.review-text');
             if (!txt) return;
             if (txt.scrollHeight <= txt.clientHeight + 2) return;
+            txt.classList.add('clamped');
             var btn = document.createElement('button');
             btn.className = 'review-read-more';
             btn.textContent = 'Les mer';

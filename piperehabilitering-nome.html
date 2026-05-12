@@ -641,6 +641,7 @@
             var txt = card.querySelector('.review-text');
             if (!txt) return;
             if (txt.scrollHeight <= txt.clientHeight + 2) return;
+            txt.classList.add('clamped');
             var btn = document.createElement('button');
             btn.className = 'review-read-more';
             btn.textContent = 'Les mer';
