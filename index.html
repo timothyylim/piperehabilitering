@@ -625,7 +625,6 @@
             margin-top: 0.2rem;
         }
         .reviews-grid {
-            align-items: start;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.2rem;
@@ -687,7 +686,31 @@
             margin: 0;
             line-height: 1.55;
             font-size: 0.95rem;
+            max-height: 8.5em;
+            overflow: hidden;
+            position: relative;
         }
+        .review-text:not(.expanded)::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 2.5em;
+            background: linear-gradient(transparent, var(--white));
+            pointer-events: none;
+        }
+        .review-text.expanded { max-height: none; }
+        .review-text.expanded::after { display: none; }
+        .review-read-more {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 0;
+            font-family: inherit;
+            margin-top: -0.5em;
+        }
+        .review-read-more:hover { color: var(--text); }
         .reviews-link {
             text-align: center;
             margin-top: 2.2rem;
@@ -696,7 +719,7 @@
         @media (max-width: 760px) {
             .reviews-section { padding: 3rem 1rem; }
             .reviews-grid {
-            align-items: start; grid-template-columns: 1fr; gap: 1rem; }
+            grid-template-columns: 1fr; gap: 1rem; }
         }
 
         /* SERVICE AREAS NAV */
@@ -1272,6 +1295,19 @@
             a.addEventListener('click', () => {
                 hamburger.classList.remove('open');
                 navLinks.classList.remove('open');
+            });
+        });
+        document.querySelectorAll('.google-review').forEach(function(card) {
+            var txt = card.querySelector('.review-text');
+            if (!txt) return;
+            if (txt.scrollHeight <= txt.clientHeight + 2) return;
+            var btn = document.createElement('button');
+            btn.className = 'review-read-more';
+            btn.textContent = 'Les mer';
+            txt.parentNode.insertBefore(btn, txt.nextSibling);
+            btn.addEventListener('click', function() {
+                var expanded = txt.classList.toggle('expanded');
+                btn.textContent = expanded ? 'Vis mindre' : 'Les mer';
             });
         });
     </script>

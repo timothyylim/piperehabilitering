@@ -377,7 +377,6 @@
             font-size: 0.85rem;
         }
         .reviews-grid {
-            align-items: start;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.9rem;
@@ -445,7 +444,7 @@
         }
         @media (max-width: 600px) {
             .reviews-grid {
-            align-items: start; grid-template-columns: 1fr; }
+            grid-template-columns: 1fr; }
             .reviews-section { padding: 1.2em 1.3em; }
         }
     </style>
@@ -636,6 +635,19 @@
                 });
             }
         })();
+        document.querySelectorAll('.google-review').forEach(function(card) {
+            var txt = card.querySelector('.review-text');
+            if (!txt) return;
+            if (txt.scrollHeight <= txt.clientHeight + 2) return;
+            var btn = document.createElement('button');
+            btn.className = 'review-read-more';
+            btn.textContent = 'Les mer';
+            txt.parentNode.insertBefore(btn, txt.nextSibling);
+            btn.addEventListener('click', function() {
+                var expanded = txt.classList.toggle('expanded');
+                btn.textContent = expanded ? 'Vis mindre' : 'Les mer';
+            });
+        });
     </script>
 </body>
 </html>
