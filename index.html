@@ -625,6 +625,7 @@
             margin-top: 0.2rem;
         }
         .reviews-grid {
+            align-items: start;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.2rem;
@@ -694,7 +695,8 @@
         }
         @media (max-width: 760px) {
             .reviews-section { padding: 3rem 1rem; }
-            .reviews-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .reviews-grid {
+            align-items: start; grid-template-columns: 1fr; gap: 1rem; }
         }
 
         /* SERVICE AREAS NAV */

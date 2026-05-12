@@ -377,6 +377,7 @@
             font-size: 0.85rem;
         }
         .reviews-grid {
+            align-items: start;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.9rem;
@@ -443,7 +444,8 @@
             font-size: 0.85rem;
         }
         @media (max-width: 600px) {
-            .reviews-grid { grid-template-columns: 1fr; }
+            .reviews-grid {
+            align-items: start; grid-template-columns: 1fr; }
             .reviews-section { padding: 1.2em 1.3em; }
         }
     </style>
