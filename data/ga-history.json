@@ -1909,5 +1909,333 @@
         ]
       }
     ]
+  },
+  {
+    "capturedAt": "2026-05-18T07:40:48.012Z",
+    "range": {
+      "startDate": "2026-05-09",
+      "endDate": "2026-05-15"
+    },
+    "overall": [
+      {
+        "value": "24"
+      },
+      {
+        "value": "51"
+      },
+      {
+        "value": "31"
+      },
+      {
+        "value": "260.2257859677419"
+      },
+      {
+        "value": "0.4838709677419355"
+      },
+      {
+        "value": "0.5161290322580645"
+      }
+    ],
+    "pages": [
+      {
+        "dimensionValues": [
+          {
+            "value": "/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "51"
+          },
+          {
+            "value": "24"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "dimensionValues": [
+          {
+            "value": "google"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "27"
+          },
+          {
+            "value": "22"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(direct)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "qwant.com"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "devices": [
+      {
+        "dimensionValues": [
+          {
+            "value": "mobile"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "16"
+          },
+          {
+            "value": "20"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "desktop"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "7"
+          },
+          {
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "tablet"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "countries": [
+      {
+        "dimensionValues": [
+          {
+            "value": "Norway"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "20"
+          },
+          {
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Indonesia"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Malaysia"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      }
+    ],
+    "daily": [
+      {
+        "dimensionValues": [
+          {
+            "value": "20260509"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260510"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260511"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260512"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "10"
+          },
+          {
+            "value": "21"
+          },
+          {
+            "value": "12"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260513"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "4"
+          },
+          {
+            "value": "7"
+          },
+          {
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260514"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260515"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "4"
+          }
+        ]
+      }
+    ]
   }
 ]
