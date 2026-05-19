@@ -51,7 +51,7 @@
     <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" as="image" href="/assets/photos/piperehabilitering-skien-prosjekt-bolighus-400w.webp" type="image/webp" fetchpriority="high"
           imagesrcset="/assets/photos/piperehabilitering-skien-prosjekt-bolighus-400w.webp 400w, /assets/photos/piperehabilitering-skien-prosjekt-bolighus-800w.webp 800w, /assets/photos/piperehabilitering-skien-prosjekt-bolighus.webp 1075w"
-          imagesizes="(max-width: 860px) 100vw, 400px">
+          imagesizes="(max-width: 860px) calc(100vw - 4rem), 400px">
 
     <script type="application/ld+json">
     {
@@ -1042,7 +1042,7 @@
 
 <body>
     <nav>
-        <a href="/" class="logo" aria-label="Tilbake til forsiden"><img src="assets/logo.png" alt="Piperehabilitering AS logo" width="56" height="52">Piperehabilitering AS</a>
+        <a href="/" class="logo" aria-label="Tilbake til forsiden"><picture><source srcset="/assets/logo-140h.webp" type="image/webp"><img src="assets/logo.png" alt="Piperehabilitering AS logo" width="56" height="52"></picture>Piperehabilitering AS</a>
         <button class="hamburger" id="hamburger" aria-label="Meny">
             <span></span>
             <span></span>
@@ -1074,11 +1074,11 @@
                 <picture>
                     <source
                         srcset="/assets/photos/piperehabilitering-skien-prosjekt-bolighus-400w.webp 400w, /assets/photos/piperehabilitering-skien-prosjekt-bolighus-800w.webp 800w, /assets/photos/piperehabilitering-skien-prosjekt-bolighus.webp 1075w"
-                        sizes="(max-width: 860px) 100vw, 400px"
+                        sizes="(max-width: 860px) calc(100vw - 4rem), 400px"
                         type="image/webp">
                     <img src="/assets/photos/piperehabilitering-skien-prosjekt-bolighus-400w.jpg"
                         srcset="/assets/photos/piperehabilitering-skien-prosjekt-bolighus-400w.jpg 400w, /assets/photos/piperehabilitering-skien-prosjekt-bolighus-800w.jpg 800w, /assets/photos/piperehabilitering-skien-prosjekt-bolighus.jpg 1075w"
-                        sizes="(max-width: 860px) 100vw, 400px"
+                        sizes="(max-width: 860px) calc(100vw - 4rem), 400px"
                         alt="Piperehabilitering av tomannsbolig på Østre Tromøyvei, Kongshavn, stillas reist mot pipen i skumringen" width="400" height="521" fetchpriority="high">
                 </picture>
                 <figcaption class="hero-caption">Pågående prosjekt: <strong>Østre Tromøyvei, Kongshavn</strong>. Komplett piperehabilitering av tomannsbolig.</figcaption>
@@ -1319,18 +1319,20 @@
                 navLinks.classList.remove('open');
             });
         });
-        document.querySelectorAll('.google-review').forEach(function(card) {
-            var txt = card.querySelector('.review-text');
-            if (!txt) return;
-            if (txt.scrollHeight <= txt.clientHeight + 2) return;
-            txt.classList.add('clamped');
-            var btn = document.createElement('button');
-            btn.className = 'review-read-more';
-            btn.textContent = 'Les mer';
-            txt.parentNode.insertBefore(btn, txt.nextSibling);
-            btn.addEventListener('click', function() {
-                var expanded = txt.classList.toggle('expanded');
-                btn.textContent = expanded ? 'Vis mindre' : 'Les mer';
+        requestAnimationFrame(function() {
+            document.querySelectorAll('.google-review').forEach(function(card) {
+                var txt = card.querySelector('.review-text');
+                if (!txt) return;
+                if (txt.scrollHeight <= txt.clientHeight + 2) return;
+                txt.classList.add('clamped');
+                var btn = document.createElement('button');
+                btn.className = 'review-read-more';
+                btn.textContent = 'Les mer';
+                txt.parentNode.insertBefore(btn, txt.nextSibling);
+                btn.addEventListener('click', function() {
+                    var expanded = txt.classList.toggle('expanded');
+                    btn.textContent = expanded ? 'Vis mindre' : 'Les mer';
+                });
             });
         });
     </script>
