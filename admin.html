@@ -209,6 +209,12 @@
             <div class="alert-list" id="serp-alerts"></div>
         </div>
 
+        <div id="serp-trend-panel" style="display:none;margin-bottom:1.5em">
+            <div class="section-label">Utvikling</div>
+            <div style="position:relative;height:260px"><canvas id="serp-trend-chart"></canvas></div>
+            <div class="panel-meta" id="serp-trend-meta"></div>
+        </div>
+
         <div class="section-label">Prioriterte søkeord</div>
         <table style="margin-bottom:1.5em">
             <thead><tr><th>Søkeord</th><th class="num">Oss</th><th>Konkurrent</th><th class="num">Rank</th></tr></thead>
@@ -374,14 +380,16 @@
 
     async function loadHistoryCharts() {
         try {
-            const [gaRes, gscRes, serpRes] = await Promise.all([
+            const [gaRes, gscRes, serpRes, serpHistoryRes] = await Promise.all([
                 fetch('/data/ga-history.json', { cache: 'no-store' }).catch(() => null),
                 fetch('/data/gsc-history.json', { cache: 'no-store' }).catch(() => null),
                 fetch('/data/serp-latest.json', { cache: 'no-store' }).catch(() => null),
+                fetch('/data/serp-history.json', { cache: 'no-store' }).catch(() => null),
             ]);
             if (gaRes && gaRes.ok) maybeRenderGaHistory(await gaRes.json());
             if (gscRes && gscRes.ok) maybeRenderGscPanel(await gscRes.json());
             if (serpRes && serpRes.ok) maybeRenderSerpPanel(await serpRes.json());
+            if (serpHistoryRes && serpHistoryRes.ok) maybeRenderSerpTrend(await serpHistoryRes.json());
         } catch (e) {
             console.error('history fetch failed', e);
         }
@@ -513,6 +521,64 @@
 
         document.getElementById('serp-meta').innerHTML =
             `Sist oppdatert ${esc(data.date || '')} · ${data.keywords.length} søkeord · <a href="/data/serp-brief.md" style="color:var(--accent)">LLM-brief</a>`;
+    }
+
+    let serpTrendChart = null;
+
+    function maybeRenderSerpTrend(history) {
+        if (!Array.isArray(history) || history.length < 2) return;
+        const rows = history.slice().sort((a, b) => (a.date || a.capturedAt || '').localeCompare(b.date || b.capturedAt || ''));
+        const labels = rows.map(r => r.date || (r.capturedAt || '').slice(0, 10));
+        const ourScores = rows.map(r => Number(r.summary?.targetScore || 0));
+        const leaderScores = rows.map(r => Number(r.summary?.leader?.score || 0));
+        const skienRanks = rows.map(r => rankForQuery(r, 'piperehabilitering skien'));
+        const porsgrunnRanks = rows.map(r => rankForQuery(r, 'piperehabilitering porsgrunn'));
+
+        document.getElementById('serp-trend-panel').style.display = '';
+        document.getElementById('serp-trend-meta').textContent =
+            `${rows.length} SERP-målinger · ${labels[0]} → ${labels[labels.length - 1]} · posisjon: lavere er bedre`;
+
+        if (serpTrendChart) serpTrendChart.destroy();
+        serpTrendChart = new Chart(document.getElementById('serp-trend-chart'), {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [
+                    { label: 'Vår synlighet', data: ourScores, borderColor: '#e0663e',
+                      backgroundColor: 'rgba(224,102,62,0.08)', yAxisID: 'score', tension: 0.3 },
+                    { label: 'Leder score', data: leaderScores, borderColor: '#a09a92',
+                      backgroundColor: 'rgba(160,154,146,0.05)', yAxisID: 'score', tension: 0.3 },
+                    { label: 'Skien rank', data: skienRanks, borderColor: '#4ade80',
+                      backgroundColor: 'rgba(74,222,128,0.05)', yAxisID: 'rank', tension: 0.3, spanGaps: true },
+                    { label: 'Porsgrunn rank', data: porsgrunnRanks, borderColor: '#facc15',
+                      backgroundColor: 'rgba(250,204,21,0.05)', yAxisID: 'rank', tension: 0.3, spanGaps: true },
+                ],
+            },
+            options: serpChartOptions(),
+        });
+    }
+
+    function rankForQuery(snapshot, query) {
+        const kw = (snapshot.keywords || []).find(k => k.query === query);
+        return kw?.ourRank ? Number(kw.ourRank) : null;
+    }
+
+    function serpChartOptions() {
+        const opts = chartOptions();
+        opts.scales = {
+            x: opts.scales.x,
+            score: {
+                type: 'linear', position: 'left', beginAtZero: true,
+                ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 }, precision: 0 },
+                grid: { color: '#2a2a2a' },
+            },
+            rank: {
+                type: 'linear', position: 'right', reverse: true, min: 1, suggestedMax: 20,
+                ticks: { color: '#a09a92', font: { family: 'Inter', size: 11 }, precision: 0 },
+                grid: { drawOnChartArea: false },
+            },
+        };
+        return opts;
     }
 
     function chartOptions() {
