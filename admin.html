@@ -108,6 +108,21 @@
             font-size: 0.75em; font-weight: 600; color: var(--text-light);
             text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6em;
         }
+        .alert-list { display: grid; gap: 0.6rem; }
+        .alert-item {
+            border: 1px solid var(--border); border-left: 3px solid var(--text-light);
+            background: var(--bg); border-radius: 8px; padding: 0.8em 1em;
+            font-size: 0.9em;
+        }
+        .alert-item.high { border-left-color: var(--accent); }
+        .alert-item.medium { border-left-color: #facc15; }
+        .alert-item.low { border-left-color: var(--green); }
+        .rank-good { color: var(--green); font-weight: 700; }
+        .rank-ok { color: #facc15; font-weight: 700; }
+        .rank-weak { color: var(--text-light); font-weight: 600; }
+        .rank-miss { color: #6b7280; }
+        .delta-positive { color: var(--green); }
+        .delta-negative { color: var(--accent); }
 
         @media (max-width: 650px) {
             #dashboard { padding: 1rem; }
@@ -182,6 +197,30 @@
             </table>
         </div>
         <div class="panel-meta" id="history-gsc-meta"></div>
+    </div>
+
+    <!-- 5. Relative SEO monitor -->
+    <div class="panel" id="serp-panel" style="display:none">
+        <h2>Relativ SEO-posisjon</h2>
+        <div class="stat-row" id="serp-stats-row"></div>
+
+        <div id="serp-alerts-panel" style="display:none;margin-bottom:1.5em">
+            <div class="section-label">Varsler</div>
+            <div class="alert-list" id="serp-alerts"></div>
+        </div>
+
+        <div class="section-label">Prioriterte søkeord</div>
+        <table style="margin-bottom:1.5em">
+            <thead><tr><th>Søkeord</th><th class="num">Oss</th><th>Konkurrent</th><th class="num">Rank</th></tr></thead>
+            <tbody id="serp-keywords-body"></tbody>
+        </table>
+
+        <div class="section-label">Synlighet</div>
+        <table>
+            <thead><tr><th>Domene</th><th class="num">Score</th><th class="num">Endring</th><th class="num">Beste</th></tr></thead>
+            <tbody id="serp-visibility-body"></tbody>
+        </table>
+        <div class="panel-meta" id="serp-meta"></div>
     </div>
 
     <!-- 5. Breakdowns -->
@@ -335,12 +374,14 @@
 
     async function loadHistoryCharts() {
         try {
-            const [gaRes, gscRes] = await Promise.all([
+            const [gaRes, gscRes, serpRes] = await Promise.all([
                 fetch('/data/ga-history.json', { cache: 'no-store' }).catch(() => null),
                 fetch('/data/gsc-history.json', { cache: 'no-store' }).catch(() => null),
+                fetch('/data/serp-latest.json', { cache: 'no-store' }).catch(() => null),
             ]);
             if (gaRes && gaRes.ok) maybeRenderGaHistory(await gaRes.json());
             if (gscRes && gscRes.ok) maybeRenderGscPanel(await gscRes.json());
+            if (serpRes && serpRes.ok) maybeRenderSerpPanel(await serpRes.json());
         } catch (e) {
             console.error('history fetch failed', e);
         }
@@ -414,6 +455,64 @@
                 </tr>`;
             }).join('');
         }
+    }
+
+    function maybeRenderSerpPanel(data) {
+        if (!data || !Array.isArray(data.keywords) || !Array.isArray(data.visibilityScores)) return;
+        const panel = document.getElementById('serp-panel');
+        panel.style.display = '';
+
+        const target = data.summary || {};
+        const leader = target.leader || {};
+        document.getElementById('serp-stats-row').innerHTML = [
+            { label: 'Vår score', value: target.targetScore ?? 0, color: '#e0663e' },
+            { label: 'Synlighetsrank', value: target.targetVisibilityRank ? `#${target.targetVisibilityRank}` : '—', color: '#4ade80' },
+            { label: 'Leder', value: leader.domain || '—', color: '#a09a92', hint: leader.score ? `score ${leader.score}` : '' },
+        ].map(s => `
+            <div class="stat-chip">
+                <div class="label">${s.label}</div>
+                <div class="value" style="color:${s.color};font-size:${String(s.value).length > 12 ? '1.05em' : '1.6em'}">${esc(String(s.value))}</div>
+                ${s.hint ? `<div class="hint">${esc(s.hint)}</div>` : ''}
+            </div>`).join('');
+
+        const alerts = (data.alerts || []).slice(0, 6);
+        if (alerts.length) {
+            document.getElementById('serp-alerts-panel').style.display = '';
+            document.getElementById('serp-alerts').innerHTML = alerts.map(a =>
+                `<div class="alert-item ${esc(a.severity || 'low')}">${esc(a.message || '')}</div>`
+            ).join('');
+        }
+
+        const priority = data.keywords
+            .filter(k => k.priority === 'high' || ['piperehabilitering skien', 'piperehabilitering porsgrunn'].includes(k.query))
+            .slice(0, 10);
+        document.getElementById('serp-keywords-body').innerHTML = priority.map(k => {
+            const rank = Number(k.ourRank || 0);
+            const rankClass = rank && rank <= 3 ? 'rank-good' : rank && rank <= 10 ? 'rank-ok' : rank ? 'rank-weak' : 'rank-miss';
+            const comp = k.topCompetitor;
+            return `<tr>
+                <td>${esc(k.query)}</td>
+                <td class="num ${rankClass}">${rank ? `#${rank}` : '—'}</td>
+                <td>${comp ? esc(comp.domain) : '—'}</td>
+                <td class="num">${comp ? `#${comp.rank}` : '—'}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('serp-visibility-body').innerHTML = data.visibilityScores.slice(0, 10).map(s => {
+            const delta = s.delta;
+            const deltaText = delta === null || delta === undefined ? '—' : `${delta > 0 ? '+' : ''}${delta}`;
+            const deltaClass = delta > 0 ? 'delta-positive' : delta < 0 ? 'delta-negative' : '';
+            const isUs = s.domain === 'pipe-rehab.no';
+            return `<tr>
+                <td style="${isUs ? 'font-weight:700;color:var(--accent)' : ''}">${esc(s.domain)}</td>
+                <td class="num">${Number(s.score || 0).toLocaleString('nb')}</td>
+                <td class="num ${deltaClass}">${deltaText}</td>
+                <td class="num">#${s.bestRank || '—'}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('serp-meta').innerHTML =
+            `Sist oppdatert ${esc(data.date || '')} · ${data.keywords.length} søkeord · <a href="/data/serp-brief.md" style="color:var(--accent)">LLM-brief</a>`;
     }
 
     function chartOptions() {
