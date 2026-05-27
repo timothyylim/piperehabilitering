@@ -15,6 +15,9 @@
     }
   ],
   "routes": [
+    { "src": "/data/serp-latest\\.json", "status": 404, "dest": "/404.html" },
+    { "src": "/data/serp-history\\.json", "status": 404, "dest": "/404.html" },
+    { "src": "/data/serp-brief\\.md", "status": 404, "dest": "/404.html" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ],

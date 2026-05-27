@@ -407,16 +407,21 @@
 
     async function loadHistoryCharts() {
         try {
-            const [gaRes, gscRes, serpRes, serpHistoryRes] = await Promise.all([
+            const [gaRes, gscRes, serpRes] = await Promise.all([
                 fetch('/data/ga-history.json', { cache: 'no-store' }).catch(() => null),
                 fetch('/data/gsc-history.json', { cache: 'no-store' }).catch(() => null),
-                fetch('/data/serp-latest.json', { cache: 'no-store' }).catch(() => null),
-                fetch('/data/serp-history.json', { cache: 'no-store' }).catch(() => null),
+                fetch('/api/serp', {
+                    cache: 'no-store',
+                    headers: { 'X-Admin-Password': adminPassword },
+                }).catch(() => null),
             ]);
             if (gaRes && gaRes.ok) maybeRenderGaHistory(await gaRes.json());
             if (gscRes && gscRes.ok) maybeRenderGscPanel(await gscRes.json());
-            if (serpRes && serpRes.ok) maybeRenderSerpPanel(await serpRes.json());
-            if (serpHistoryRes && serpHistoryRes.ok) maybeRenderSerpTrend(await serpHistoryRes.json());
+            if (serpRes && serpRes.ok) {
+                const serp = await serpRes.json();
+                maybeRenderSerpPanel(serp.latest);
+                maybeRenderSerpTrend(serp.history);
+            }
         } catch (e) {
             console.error('history fetch failed', e);
         }
@@ -591,7 +596,7 @@
         }).join('');
 
         document.getElementById('serp-meta').innerHTML =
-            `Sist oppdatert ${esc(data.date || '')} · ${data.keywords.length} søkeord · <a href="/data/serp-brief.md" style="color:var(--accent)">LLM-brief</a>`;
+            `Sist oppdatert ${esc(data.date || '')} · ${data.keywords.length} søkeord · brief er tilgjengelig via lokal repo/API`;
     }
 
     function renderSerpVerdict(data) {

@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 Disallow: /api/
+Disallow: /data/serp-latest.json
+Disallow: /data/serp-history.json
+Disallow: /data/serp-brief.md
 
 Sitemap: https://www.pipe-rehab.no/sitemap.xml
