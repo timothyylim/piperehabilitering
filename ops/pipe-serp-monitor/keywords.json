@@ -1,0 +1,18 @@
+[
+  { "query": "piperehabilitering skien", "weight": 5, "priority": "high", "targetCity": "Skien", "intent": "local" },
+  { "query": "piperehabilitering porsgrunn", "weight": 5, "priority": "high", "targetCity": "Porsgrunn", "intent": "local" },
+  { "query": "piperehabilitering telemark", "weight": 4, "priority": "high", "targetCity": "Telemark", "intent": "regional" },
+  { "query": "piperehabilitering vestfold", "weight": 3, "priority": "medium", "targetCity": "Vestfold", "intent": "regional" },
+  { "query": "piperehabilitering arendal", "weight": 3, "priority": "medium", "targetCity": "Arendal", "intent": "local" },
+  { "query": "piperehabilitering larvik", "weight": 3, "priority": "medium", "targetCity": "Larvik", "intent": "local" },
+  { "query": "piperehabilitering pris", "weight": 4, "priority": "high", "intent": "commercial" },
+  { "query": "hva koster piperehabilitering", "weight": 4, "priority": "high", "intent": "commercial" },
+  { "query": "pipe rehabilitering", "weight": 3, "priority": "medium", "intent": "service" },
+  { "query": "foring pipe", "weight": 3, "priority": "medium", "intent": "service" },
+  { "query": "foring av pipe", "weight": 3, "priority": "medium", "intent": "service" },
+  { "query": "stålpipe montering", "weight": 3, "priority": "medium", "intent": "service" },
+  { "query": "kamerainspeksjon pipe", "weight": 2, "priority": "medium", "intent": "service" },
+  { "query": "rehabilitering av skorstein", "weight": 2, "priority": "medium", "intent": "service" },
+  { "query": "pipeinspeksjon", "weight": 2, "priority": "low", "intent": "service" }
+]
+

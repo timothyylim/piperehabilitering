@@ -1,0 +1,18 @@
+services:
+  pipe-serp-monitor:
+    build: .
+    image: pipe-serp-monitor:latest
+    container_name: pipe-serp-monitor
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+      - /home/tim/.ssh/github_pipe_rehab:/home/node/.ssh/github_pipe_rehab:ro
+      - /home/tim/.ssh/github_pipe_rehab.pub:/home/node/.ssh/github_pipe_rehab.pub:ro
+    env_file: .env
+    environment:
+      TZ: Europe/Oslo
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

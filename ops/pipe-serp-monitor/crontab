@@ -1,0 +1,4 @@
+# supercronic crontab — times are Europe/Oslo wall clock
+# Daily SERP monitor each morning
+# m h dom mon dow command
+15 6 * * * /app/entrypoint.sh
