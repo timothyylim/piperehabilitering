@@ -1,0 +1,5 @@
+# supercronic crontab — times are Europe/Oslo wall clock
+# (TZ set in compose.yml + tzdata in Dockerfile)
+# Daily review sync at 06:00 Oslo time
+# m h dom mon dow command
+0 6 * * * /app/entrypoint.sh

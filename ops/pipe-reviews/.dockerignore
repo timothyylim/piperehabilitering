@@ -1,0 +1,12 @@
+.git
+.gitignore
+.env
+.env.example
+data/
+*.md
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+deploy.sh
+compose.yml

@@ -1,0 +1,20 @@
+services:
+  pipe-reviews:
+    build: .
+    image: pipe-reviews:latest
+    container_name: pipe-reviews
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+      # Mount the GitHub deploy key from the host (read-only).
+      # Uid 1000 on host matches uid 1000 runner user in image.
+      - /home/tim/.ssh/github_pipe_rehab:/home/runner/.ssh/github_pipe_rehab:ro
+      - /home/tim/.ssh/github_pipe_rehab.pub:/home/runner/.ssh/github_pipe_rehab.pub:ro
+    env_file: .env
+    environment:
+      TZ: Europe/Oslo
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
