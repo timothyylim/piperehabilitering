@@ -123,6 +123,28 @@
         .rank-miss { color: #6b7280; }
         .delta-positive { color: var(--green); }
         .delta-negative { color: var(--accent); }
+        .serp-verdict {
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 8px; padding: 1em 1.1em; margin-bottom: 1.5em;
+        }
+        .serp-verdict-title { font-size: 1.05em; font-weight: 700; margin-bottom: 0.35em; }
+        .serp-verdict-text { color: var(--text-light); font-size: 0.92em; margin-bottom: 0.9em; }
+        .serp-pill-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .serp-pill {
+            border: 1px solid var(--border); border-radius: 999px;
+            padding: 0.35em 0.7em; font-size: 0.8em; color: var(--text-light);
+        }
+        .serp-pill.good { border-color: rgba(74,222,128,0.4); color: var(--green); }
+        .serp-pill.warn { border-color: rgba(250,204,21,0.45); color: #facc15; }
+        .serp-pill.bad { border-color: rgba(224,102,62,0.45); color: var(--accent); }
+        .serp-status {
+            display: inline-block; border-radius: 999px; padding: 0.22em 0.6em;
+            font-size: 0.78em; font-weight: 700;
+        }
+        .serp-status.good { background: rgba(74,222,128,0.12); color: var(--green); }
+        .serp-status.warn { background: rgba(250,204,21,0.12); color: #facc15; }
+        .serp-status.bad { background: rgba(224,102,62,0.12); color: var(--accent); }
+        .muted { color: var(--text-light); }
 
         @media (max-width: 650px) {
             #dashboard { padding: 1rem; }
@@ -203,9 +225,10 @@
     <div class="panel" id="serp-panel" style="display:none">
         <h2>Relativ SEO-posisjon</h2>
         <div class="stat-row" id="serp-stats-row"></div>
+        <div id="serp-verdict"></div>
 
         <div id="serp-alerts-panel" style="display:none;margin-bottom:1.5em">
-            <div class="section-label">Varsler</div>
+            <div class="section-label">Dette krever oppmerksomhet</div>
             <div class="alert-list" id="serp-alerts"></div>
         </div>
 
@@ -215,13 +238,13 @@
             <div class="panel-meta" id="serp-trend-meta"></div>
         </div>
 
-        <div class="section-label">Prioriterte søkeord</div>
+        <div class="section-label">Kjøpsnære søk</div>
         <table style="margin-bottom:1.5em">
-            <thead><tr><th>Søkeord</th><th class="num">Oss</th><th>Konkurrent</th><th class="num">Rank</th></tr></thead>
+            <thead><tr><th>Søkeord</th><th>Status</th><th class="num">Oss</th><th>Leder</th><th>Tiltak</th></tr></thead>
             <tbody id="serp-keywords-body"></tbody>
         </table>
 
-        <div class="section-label">Synlighet</div>
+        <div class="section-label">Hvem eier søkeresultatet akkurat nå</div>
         <table>
             <thead><tr><th>Domene</th><th class="num">Score</th><th class="num">Endring</th><th class="num">Beste</th></tr></thead>
             <tbody id="serp-visibility-body"></tbody>
@@ -487,9 +510,11 @@
         if (alerts.length) {
             document.getElementById('serp-alerts-panel').style.display = '';
             document.getElementById('serp-alerts').innerHTML = alerts.map(a =>
-                `<div class="alert-item ${esc(a.severity || 'low')}">${esc(a.message || '')}</div>`
+                `<div class="alert-item ${esc(a.severity || 'low')}">${esc(humanAlert(a))}</div>`
             ).join('');
         }
+
+        renderSerpVerdict(data);
 
         const priority = data.keywords
             .filter(k => k.priority === 'high' || ['piperehabilitering skien', 'piperehabilitering porsgrunn'].includes(k.query))
@@ -498,11 +523,13 @@
             const rank = Number(k.ourRank || 0);
             const rankClass = rank && rank <= 3 ? 'rank-good' : rank && rank <= 10 ? 'rank-ok' : rank ? 'rank-weak' : 'rank-miss';
             const comp = k.topCompetitor;
+            const status = keywordStatus(k);
             return `<tr>
                 <td>${esc(k.query)}</td>
+                <td><span class="serp-status ${status.kind}">${esc(status.label)}</span></td>
                 <td class="num ${rankClass}">${rank ? `#${rank}` : '—'}</td>
-                <td>${comp ? esc(comp.domain) : '—'}</td>
-                <td class="num">${comp ? `#${comp.rank}` : '—'}</td>
+                <td>${comp ? `${esc(comp.domain)} <span class="muted">#${comp.rank}</span>` : '—'}</td>
+                <td class="muted">${esc(actionForKeyword(k))}</td>
             </tr>`;
         }).join('');
 
@@ -523,10 +550,68 @@
             `Sist oppdatert ${esc(data.date || '')} · ${data.keywords.length} søkeord · <a href="/data/serp-brief.md" style="color:var(--accent)">LLM-brief</a>`;
     }
 
+    function renderSerpVerdict(data) {
+        const priority = (data.keywords || []).filter(k => k.priority === 'high');
+        const top3 = priority.filter(k => k.ourRank && k.ourRank <= 3).length;
+        const visible = priority.filter(k => k.ourRank && k.ourRank <= 10).length;
+        const missing = priority.filter(k => !k.ourRank || k.ourRank > 20).length;
+        const leader = data.summary?.leader?.domain || 'ukjent';
+        const ourScore = Number(data.summary?.targetScore || 0);
+        const leaderScore = Number(data.summary?.leader?.score || 0);
+        const gap = leaderScore ? leaderScore - ourScore : 0;
+        const verdict = top3 === priority.length
+            ? 'Vi leder på de viktigste kjøpssøket.'
+            : visible >= Math.ceil(priority.length / 2)
+                ? 'Vi er synlige, men ikke sterke nok på kjøpssøket.'
+                : 'Vi taper de viktigste kjøpssøket akkurat nå.';
+        const text = gap > 0
+            ? `${leader} leder med ${gap} poeng. Målet er å få Skien/Porsgrunn inn topp 3 og få pris-søkene inn topp 10.`
+            : 'Vi leder samlet synlighet i målingen.';
+
+        document.getElementById('serp-verdict').innerHTML = `
+            <div class="serp-verdict">
+                <div class="serp-verdict-title">${esc(verdict)}</div>
+                <div class="serp-verdict-text">${esc(text)}</div>
+                <div class="serp-pill-row">
+                    <span class="serp-pill ${top3 ? 'good' : 'bad'}">${top3}/${priority.length} topp 3</span>
+                    <span class="serp-pill ${visible >= priority.length ? 'good' : 'warn'}">${visible}/${priority.length} topp 10</span>
+                    <span class="serp-pill ${missing ? 'bad' : 'good'}">${missing} mangler topp 20</span>
+                </div>
+            </div>`;
+    }
+
+    function keywordStatus(k) {
+        if (k.ourRank && k.ourRank <= 3) return { kind: 'good', label: 'Bra' };
+        if (k.ourRank && k.ourRank <= 10) return { kind: 'warn', label: 'Synlig' };
+        return { kind: 'bad', label: 'Svak' };
+    }
+
+    function actionForKeyword(k) {
+        if (k.query.includes('pris') || k.query.includes('koster')) return 'Lag/prioriter prisside';
+        if (k.query.includes('skien') || k.query.includes('porsgrunn')) return 'Styrk lokal side + kataloger';
+        if (k.query.includes('telemark') || k.query.includes('vestfold')) return 'Styrk regionsside';
+        return 'Styrk tjenesteside';
+    }
+
+    function humanAlert(a) {
+        if (a.type === 'target_absent_top10') return `Vi er ikke topp 10 for "${a.query}".`;
+        if (a.type === 'priority_keyword_below_top3') return `Vi er ${a.rank ? '#' + a.rank : 'ikke synlige'} for "${a.query}" og bør være topp 3.`;
+        if (a.type === 'known_competitor_top3') return `${a.domain} er #${a.rank} for "${a.query}".`;
+        if (a.type === 'directory_outranks_target') return `${a.domain} ligger foran oss for "${a.query}".`;
+        return a.message || '';
+    }
+
     let serpTrendChart = null;
 
     function maybeRenderSerpTrend(history) {
-        if (!Array.isArray(history) || history.length < 2) return;
+        if (!Array.isArray(history) || history.length < 1) return;
+        if (history.length < 2) {
+            document.getElementById('serp-trend-panel').style.display = '';
+            document.getElementById('serp-trend-panel').querySelector('div[style]').innerHTML =
+                '<div class="serp-verdict-text" style="padding:1em 0">Trend starter etter neste daglige måling. Foreløpig finnes bare første datapunkt.</div>';
+            document.getElementById('serp-trend-meta').textContent = 'Neste måling kjøres automatisk 06:15 Oslo-tid.';
+            return;
+        }
         const rows = history.slice().sort((a, b) => (a.date || a.capturedAt || '').localeCompare(b.date || b.capturedAt || ''));
         const labels = rows.map(r => r.date || (r.capturedAt || '').slice(0, 10));
         const ourScores = rows.map(r => Number(r.summary?.targetScore || 0));
