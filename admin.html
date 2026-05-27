@@ -207,21 +207,7 @@
         <div style="position:relative;height:260px"><canvas id="daily-chart"></canvas></div>
     </div>
 
-    <!-- 4. Google search (hidden until data accrues) -->
-    <div class="panel" id="gsc-panel" style="display:none">
-        <h2>Google søk</h2>
-        <div class="stat-row" id="gsc-stats-row"></div>
-        <div id="gsc-keywords-panel" style="display:none">
-            <div class="section-label">Søkeord — siste uke</div>
-            <table>
-                <thead><tr><th>Søkeord</th><th class="num">Posisjon</th><th class="num">Visninger</th><th class="num">Klikk</th></tr></thead>
-                <tbody id="gsc-keywords-body"></tbody>
-            </table>
-        </div>
-        <div class="panel-meta" id="history-gsc-meta"></div>
-    </div>
-
-    <!-- 5. Relative SEO monitor -->
+    <!-- 4. Relative SEO monitor -->
     <div class="panel" id="serp-panel" style="display:none">
         <h2>Relativ SEO-posisjon</h2>
         <div class="stat-row" id="serp-stats-row"></div>
@@ -250,6 +236,24 @@
             <tbody id="serp-visibility-body"></tbody>
         </table>
         <div class="panel-meta" id="serp-meta"></div>
+    </div>
+
+    <!-- 5. Google demand (hidden until data accrues) -->
+    <div class="panel" id="gsc-panel" style="display:none">
+        <h2>Faktiske Google-visninger</h2>
+        <div class="stat-row" id="gsc-stats-row"></div>
+        <div class="serp-verdict">
+            <div class="serp-verdict-title" id="gsc-verdict-title">Hva Google allerede tester oss for</div>
+            <div class="serp-verdict-text" id="gsc-verdict-text"></div>
+        </div>
+        <div id="gsc-keywords-panel" style="display:none">
+            <div class="section-label">Muligheter fra Search Console</div>
+            <table>
+                <thead><tr><th>Søkeord</th><th>Status</th><th class="num">Posisjon</th><th class="num">Visninger</th><th>Tiltak</th></tr></thead>
+                <tbody id="gsc-keywords-body"></tbody>
+            </table>
+        </div>
+        <div class="panel-meta" id="history-gsc-meta"></div>
     </div>
 
     <!-- 5. Breakdowns -->
@@ -472,20 +476,60 @@
                 ${s.hint ? `<div class="hint">${s.hint}</div>` : ''}
             </div>`).join('');
 
-        const queries = (latest.queries || []).slice().sort((a, b) => b.impressions - a.impressions);
+        const queries = (latest.queries || [])
+            .filter(q => Number(q.impressions || 0) >= 5)
+            .sort((a, b) => opportunityScore(b) - opportunityScore(a))
+            .slice(0, 8);
+        const noClickImpressions = queries
+            .filter(q => Number(q.clicks || 0) === 0)
+            .reduce((sum, q) => sum + Number(q.impressions || 0), 0);
+        const bestOpportunity = queries.find(q => Number(q.clicks || 0) === 0) || queries[0];
+        document.getElementById('gsc-verdict-text').textContent = bestOpportunity
+            ? `${noClickImpressions} visninger i disse søkene ga ingen klikk. Største mulighet akkurat nå: "${bestOpportunity.keys[0]}".`
+            : 'Ingen tydelige søkeordmuligheter i siste GSC-snapshot ennå.';
+
         if (queries.length > 0) {
             document.getElementById('gsc-keywords-panel').style.display = '';
             document.getElementById('gsc-keywords-body').innerHTML = queries.map(q => {
                 const pos = Number(q.position || 0);
                 const posColor = pos <= 3 ? '#4ade80' : pos <= 10 ? '#facc15' : pos <= 20 ? '#a09a92' : '#6b7280';
+                const status = gscStatus(q);
                 return `<tr>
                     <td>${esc(q.keys[0])}</td>
+                    <td><span class="serp-status ${status.kind}">${esc(status.label)}</span></td>
                     <td class="num" style="color:${posColor};font-weight:600">${pos > 0 ? pos.toFixed(1) : '—'}</td>
                     <td class="num">${q.impressions}</td>
-                    <td class="num">${q.clicks}</td>
+                    <td class="muted">${esc(gscAction(q))}</td>
                 </tr>`;
             }).join('');
         }
+    }
+
+    function opportunityScore(q) {
+        const impressions = Number(q.impressions || 0);
+        const clicks = Number(q.clicks || 0);
+        const position = Number(q.position || 99);
+        const noClickBonus = clicks === 0 ? 20 : 0;
+        const nearPageOneBonus = position <= 20 ? 12 : 0;
+        return impressions + noClickBonus + nearPageOneBonus - clicks * 4;
+    }
+
+    function gscStatus(q) {
+        const clicks = Number(q.clicks || 0);
+        const pos = Number(q.position || 0);
+        if (clicks > 0) return { kind: 'good', label: 'Gir klikk' };
+        if (pos <= 10) return { kind: 'bad', label: 'Mangler klikk' };
+        if (pos <= 20) return { kind: 'warn', label: 'Nær side 1' };
+        return { kind: 'warn', label: 'Innholdsgap' };
+    }
+
+    function gscAction(q) {
+        const query = String(q.keys?.[0] || '').toLowerCase();
+        if (query.includes('pris') || query.includes('koster')) return 'Lag/prioriter prisside';
+        if (query.includes('norsk piperehabilitering')) return 'Sammenlign konkurrent';
+        if (query.includes('skien') || query.includes('porsgrunn') || query.includes('arendal')) return 'Styrk lokal landingsside';
+        if (Number(q.clicks || 0) === 0) return 'Forbedre tittel/metatekst';
+        return 'Følg med';
     }
 
     function maybeRenderSerpPanel(data) {
