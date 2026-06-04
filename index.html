@@ -1336,6 +1336,26 @@
             });
         });
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag('event', 'phone_click', {
+              event_category: 'contact',
+              event_label: el.getAttribute('href')
+            });
+          });
+        });
+        document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag('event', 'email_click', {
+              event_category: 'contact',
+              event_label: el.getAttribute('href')
+            });
+          });
+        });
+      });
+    </script>
 </body>
 
 </html>
