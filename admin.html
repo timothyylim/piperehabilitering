@@ -146,6 +146,13 @@
         .serp-status.bad { background: rgba(224,102,62,0.12); color: var(--accent); }
         .muted { color: var(--text-light); }
 
+        .badge {
+            display: inline-block; border-radius: 999px; padding: 0.22em 0.7em;
+            font-size: 0.8em; font-weight: 700; letter-spacing: 0.03em;
+        }
+        .badge.enabled { background: rgba(74,222,128,0.12); color: var(--green); }
+        .badge.paused  { background: rgba(224,102,62,0.12); color: var(--accent); }
+
         @media (max-width: 650px) {
             #dashboard { padding: 1rem; }
             .metrics { grid-template-columns: 1fr 1fr; }
@@ -256,7 +263,40 @@
         <div class="panel-meta" id="history-gsc-meta"></div>
     </div>
 
-    <!-- 5. Breakdowns -->
+    <!-- 6. Google Ads -->
+    <div class="panel" id="ads-panel" style="display:none">
+        <h2 style="display:flex;align-items:center;gap:0.6em">
+            Google Ads
+            <span class="badge" id="ads-campaign-badge"></span>
+        </h2>
+
+        <div class="stat-row" id="ads-stats-row"></div>
+
+        <div id="ads-top-terms-panel" style="display:none;margin-bottom:1.5em">
+            <div class="section-label">Beste søkeord</div>
+            <table>
+                <thead><tr><th>Søkeord</th><th class="num">Klikk</th><th class="num">Kostnad</th><th class="num">Conv.</th></tr></thead>
+                <tbody id="ads-top-terms-body"></tbody>
+            </table>
+        </div>
+
+        <div id="ads-waste-panel" style="display:none;margin-bottom:1.5em">
+            <div class="section-label">Bortkastede søkeord / automatiske handlinger</div>
+            <table>
+                <thead><tr><th>Søkeord</th><th class="num">Klikk</th><th class="num">Kostnad</th><th>Handling</th></tr></thead>
+                <tbody id="ads-waste-body"></tbody>
+            </table>
+        </div>
+
+        <div id="ads-actions-panel" style="display:none;margin-bottom:1em">
+            <div class="section-label">Automatiske handlinger denne uken</div>
+            <div class="alert-list" id="ads-actions-list"></div>
+        </div>
+
+        <div class="panel-meta" id="ads-meta"></div>
+    </div>
+
+    <!-- 7. Breakdowns -->
     <div class="two-col">
         <div class="panel" style="margin-bottom:0">
             <h2>Topp sider</h2>
@@ -425,6 +465,88 @@
         } catch (e) {
             console.error('history fetch failed', e);
         }
+        loadAdsPanel();
+    }
+
+    async function loadAdsPanel() {
+        // TODO: replace fallback with /api/ads-snapshot (password-gated, same pattern as /api/serp)
+        // when the pipe-ads-monitor service is deployed and the endpoint exists.
+        let data = null;
+        try {
+            const res = await fetch('/data/ads-latest.json', { cache: 'no-store' });
+            if (res.ok) data = await res.json();
+        } catch (e) {
+            console.error('ads fetch failed', e);
+        }
+        if (data) maybeRenderAdsPanel(data);
+    }
+
+    function maybeRenderAdsPanel(data) {
+        if (!data || !data.summary) return;
+        const panel = document.getElementById('ads-panel');
+        panel.style.display = '';
+
+        // Campaign status badge
+        const status = (data.campaign_status || '').toUpperCase();
+        const badge = document.getElementById('ads-campaign-badge');
+        badge.textContent = status || 'UKJENT';
+        badge.className = 'badge ' + (status === 'ENABLED' ? 'enabled' : 'paused');
+
+        // Summary stat chips
+        const s = data.summary;
+        const nok = v => 'NOK ' + Number(v || 0).toLocaleString('nb', { maximumFractionDigits: 0 });
+        const pct = v => Number(v || 0).toFixed(2) + '%';
+        document.getElementById('ads-stats-row').innerHTML = [
+            { label: 'Forbruk', value: nok(s.spend), color: '#e0663e' },
+            { label: 'Klikk', value: Number(s.clicks || 0).toLocaleString('nb'), color: '#4ade80' },
+            { label: 'CTR', value: pct(s.ctr), color: '#a09a92', hint: 'klikk/visning' },
+            { label: 'Konverteringer', value: Number(s.conversions || 0).toLocaleString('nb'), color: '#facc15' },
+            { label: 'Kost/konv.', value: nok(s.cost_per_conversion), color: '#a09a92' },
+        ].map(c => `
+            <div class="stat-chip">
+                <div class="label">${c.label}</div>
+                <div class="value" style="color:${c.color};font-size:${String(c.value).length > 9 ? '1.15em' : '1.6em'}">${esc(String(c.value))}</div>
+                ${c.hint ? `<div class="hint">${esc(c.hint)}</div>` : ''}
+            </div>`).join('');
+
+        // Top terms table
+        const topTerms = data.top_terms || [];
+        if (topTerms.length) {
+            document.getElementById('ads-top-terms-panel').style.display = '';
+            document.getElementById('ads-top-terms-body').innerHTML = topTerms.map(t => `<tr>
+                <td>${esc(t.term)}</td>
+                <td class="num">${Number(t.clicks || 0).toLocaleString('nb')}</td>
+                <td class="num">NOK ${Number(t.cost || 0).toLocaleString('nb', { maximumFractionDigits: 0 })}</td>
+                <td class="num">${Number(t.conversions || 0).toLocaleString('nb')}</td>
+            </tr>`).join('');
+        }
+
+        // Waste terms table
+        const wasteTerms = data.waste_terms || [];
+        if (wasteTerms.length) {
+            document.getElementById('ads-waste-panel').style.display = '';
+            document.getElementById('ads-waste-body').innerHTML = wasteTerms.map(t => `<tr>
+                <td>${esc(t.term)}</td>
+                <td class="num">${Number(t.clicks || 0).toLocaleString('nb')}</td>
+                <td class="num">NOK ${Number(t.cost || 0).toLocaleString('nb', { maximumFractionDigits: 0 })}</td>
+                <td class="muted">${esc(t.action || '')}</td>
+            </tr>`).join('');
+        }
+
+        // Auto-actions
+        const actions = data.auto_actions || [];
+        if (actions.length) {
+            document.getElementById('ads-actions-panel').style.display = '';
+            document.getElementById('ads-actions-list').innerHTML = actions.map(a =>
+                `<div class="alert-item low">${esc(a)}</div>`
+            ).join('');
+        }
+
+        // Meta timestamp
+        const period = data.period ? ` · periode: ${esc(data.period)}` : '';
+        const captured = data.capturedAt ? data.capturedAt.slice(0, 16).replace('T', ' ') : '';
+        document.getElementById('ads-meta').textContent =
+            (captured ? `Sist oppdatert ${captured}` : '') + period;
     }
 
     function maybeRenderGaHistory(history) {
