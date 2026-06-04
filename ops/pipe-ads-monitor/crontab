@@ -1,0 +1,4 @@
+# supercronic crontab — times are Europe/Oslo wall clock
+# Weekly Ads monitor on Tuesday morning (day after SERP monitor)
+# m h dom mon dow command
+0 8 * * 2 /app/entrypoint.sh

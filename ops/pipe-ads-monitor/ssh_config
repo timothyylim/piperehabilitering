@@ -1,0 +1,6 @@
+Host github-pipe-rehab
+  HostName github.com
+  User git
+  IdentityFile /home/appuser/.ssh/github_pipe_rehab
+  IdentitiesOnly yes
+  StrictHostKeyChecking accept-new

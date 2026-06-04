@@ -1,0 +1,19 @@
+services:
+  pipe-ads-monitor:
+    build: .
+    image: pipe-ads-monitor:latest
+    container_name: pipe-ads-monitor
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+      - /home/tim/.ssh/github_pipe_rehab:/home/appuser/.ssh/github_pipe_rehab:ro
+      - /home/tim/.ssh/github_pipe_rehab.pub:/home/appuser/.ssh/github_pipe_rehab.pub:ro
+      - /home/tim/google-ads/google-ads.yaml:/home/tim/google-ads/google-ads.yaml:ro
+    env_file: .env
+    environment:
+      TZ: Europe/Oslo
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
