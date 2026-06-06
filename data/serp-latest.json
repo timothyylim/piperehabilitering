@@ -1,6 +1,6 @@
 {
-  "capturedAt": "2026-06-05T04:15:25.970Z",
-  "date": "2026-06-05",
+  "capturedAt": "2026-06-06T04:15:26.511Z",
+  "date": "2026-06-06",
   "week": "2026-W23",
   "provider": "serper.dev",
   "request": {
@@ -21,7 +21,7 @@
         "hl": "no",
         "num": 20
       },
-      "ourRank": 6,
+      "ourRank": 5,
       "ourUrl": "https://www.pipe-rehab.no/",
       "topCompetitor": {
         "rank": 1,
@@ -55,7 +55,7 @@
           "link": "https://www.1881.no/pipe-og-skorsteinsrehabilitering/pipe-og-skorsteinsrehabilitering-telemark/pipe-og-skorsteinsrehabilitering-skien/norsk-piperehabilitering-as_105438553S1/"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "domain": "facebook.com",
           "title": "Norsk Piperehabilitering AS | Skien - Facebook",
           "link": "https://www.facebook.com/norskpiperehabiliteringas/?locale=nb_NO"
@@ -104,17 +104,17 @@
         },
         {
           "rank": 5,
-          "domain": "facebook.com",
-          "title": "Norsk Piperehabilitering AS | Skien - Facebook",
-          "link": "https://www.facebook.com/norskpiperehabiliteringas/?locale=nb_NO",
-          "snippet": "I hovedsak jobber vi med å rehabilitere skorsteiner og mur/puss rundt dette, montering av ildsteder, og stålpiper/stålskorsteniner. Arbeidsdagene er veldig ..."
-        },
-        {
-          "rank": 6,
           "domain": "pipe-rehab.no",
           "title": "Piperehabilitering AS: Piperehabilitering Skien & Porsgrunn – Fast ...",
           "link": "https://www.pipe-rehab.no/",
           "snippet": "Vi gir nytt liv til gamle piper. Sprekker, fukt og slitasje gjør pipen din til en risiko over tid. Vi fikser det raskt, ryddig og til fast pris."
+        },
+        {
+          "rank": 6,
+          "domain": "facebook.com",
+          "title": "Norsk Piperehabilitering AS | Skien - Facebook",
+          "link": "https://www.facebook.com/norskpiperehabiliteringas/?locale=nb_NO",
+          "snippet": "I hovedsak jobber vi med å rehabilitere skorsteiner og mur/puss rundt dette, montering av ildsteder, og stålpiper/stålskorsteniner. Arbeidsdagene er veldig ..."
         },
         {
           "rank": 7,
@@ -158,7 +158,7 @@
         "hl": "no",
         "num": 20
       },
-      "ourRank": 8,
+      "ourRank": 7,
       "ourUrl": "https://www.pipe-rehab.no/",
       "topCompetitor": {
         "rank": 1,
@@ -172,10 +172,10 @@
         "norskpiperehabilitering.no",
         "gulesider.no",
         "mittanbud.no",
-        "app.kaukus.no",
         "gbr.no",
+        "1881.no",
         "facebook.com",
-        "1881.no"
+        "ildstedet.no"
       ],
       "directoryHits": [
         {
@@ -191,16 +191,16 @@
           "link": "https://mittanbud.no/bedrift/348716"
         },
         {
+          "rank": 8,
+          "domain": "1881.no",
+          "title": "Norsk Piperehabilitering AS, Skien - 1881.no",
+          "link": "https://www.1881.no/pipe-og-skorsteinsrehabilitering/pipe-og-skorsteinsrehabilitering-telemark/pipe-og-skorsteinsrehabilitering-skien/norsk-piperehabilitering-as_105438553S1/"
+        },
+        {
           "rank": 9,
           "domain": "facebook.com",
           "title": "Norsk Piperehabilitering AS | Skien - Facebook",
           "link": "https://www.facebook.com/norskpiperehabiliteringas/?locale=nb_NO"
-        },
-        {
-          "rank": 10,
-          "domain": "1881.no",
-          "title": "Norsk Piperehabilitering AS, Skien - 1881.no",
-          "link": "https://www.1881.no/pipe-og-skorsteinsrehabilitering/pipe-og-skorsteinsrehabilitering-telemark/pipe-og-skorsteinsrehabilitering-skien/norsk-piperehabilitering-as_105438553S1/"
         }
       ],
       "topResults": [
@@ -241,24 +241,24 @@
         },
         {
           "rank": 6,
-          "domain": "app.kaukus.no",
-          "title": "Gbnr. 121/1276, Fredbovegen 39 - Piperehabilitering - Porsgrunn",
-          "link": "https://app.kaukus.no/porsgrunn/cases/28363/proposals",
-          "snippet": "Følg politikken i Porsgrunn. Se møter, politikere og saker fra kommunestyret og andre politiske utvalg ... 121/1276, Fredbovegen 39 - Piperehabilitering."
-        },
-        {
-          "rank": 7,
           "domain": "gbr.no",
           "title": "Nytt ildsted eller ny skorstein - Grenland Brann og redning",
           "link": "https://www.gbr.no/nytt-ildsted-eller-ny-skorstein/",
           "snippet": "For å unngå pipebrann, og i verste fall brann i boligen, er det viktig at skorstein og ildsted er montert riktig. Her vil du finne informasjon om lover og ..."
         },
         {
-          "rank": 8,
+          "rank": 7,
           "domain": "pipe-rehab.no",
           "title": "Piperehabilitering AS: Piperehabilitering Skien & Porsgrunn – Fast ...",
           "link": "https://www.pipe-rehab.no/",
           "snippet": "Piperehabilitering i Skien og Porsgrunn. Fast pris, gratis befaring, rask utførelse. Trygg pipe, trygt hjem. Ring oss i dag for en uforpliktende sjekk."
+        },
+        {
+          "rank": 8,
+          "domain": "1881.no",
+          "title": "Norsk Piperehabilitering AS, Skien - 1881.no",
+          "link": "https://www.1881.no/pipe-og-skorsteinsrehabilitering/pipe-og-skorsteinsrehabilitering-telemark/pipe-og-skorsteinsrehabilitering-skien/norsk-piperehabilitering-as_105438553S1/",
+          "snippet": "Norsk Piperehabilitering AS spesialiserer seg på rehabilitering av skorstein og piper. Nå også med kamerainspeksjon av din pipe. Vi er et raskt voksende firma ..."
         },
         {
           "rank": 9,
@@ -269,10 +269,10 @@
         },
         {
           "rank": 10,
-          "domain": "1881.no",
-          "title": "Norsk Piperehabilitering AS, Skien - 1881.no",
-          "link": "https://www.1881.no/pipe-og-skorsteinsrehabilitering/pipe-og-skorsteinsrehabilitering-telemark/pipe-og-skorsteinsrehabilitering-skien/norsk-piperehabilitering-as_105438553S1/",
-          "snippet": "Norsk Piperehabilitering AS spesialiserer seg på rehabilitering av skorstein og piper. Nå også med kamerainspeksjon av din pipe. Vi er et raskt voksende firma ..."
+          "domain": "ildstedet.no",
+          "title": "Når er det på tide med piperehabilitering? - Ildstedet",
+          "link": "https://ildstedet.no/piperehabilitering",
+          "snippet": "Sliter du med dårlig trekk eller fått fyringsforbud? Piperehabilitering kan være nødvendig. Les mer om hva det er og hvordan vi kan hjelpe."
         }
       ],
       "rawCount": 10
@@ -288,7 +288,7 @@
         "hl": "no",
         "num": 20
       },
-      "ourRank": 10,
+      "ourRank": 9,
       "ourUrl": "https://www.pipe-rehab.no/",
       "topCompetitor": {
         "rank": 1,
@@ -305,8 +305,7 @@
         "1881.no",
         "vtpipe.no",
         "vtpas.net",
-        "gulesider.no",
-        "virksomhet.brreg.no"
+        "gulesider.no"
       ],
       "directoryHits": [
         {
@@ -338,6 +337,12 @@
           "domain": "gulesider.no",
           "title": "Piperehabilitering Telemark | bedrifter | gulesider.no | side 1",
           "link": "https://www.gulesider.no/piperehabilitering+telemark/bedrifter"
+        },
+        {
+          "rank": 10,
+          "domain": "mittanbud.no",
+          "title": "NORSK PIPEREHABILITERING AS - Mittanbud",
+          "link": "https://mittanbud.no/bedrift/348716"
         }
       ],
       "topResults": [
@@ -399,17 +404,17 @@
         },
         {
           "rank": 9,
-          "domain": "virksomhet.brreg.no",
-          "title": "vestfold og telemark piperehabilitering as - Virksomhetsopplysninger",
-          "link": "https://virksomhet.brreg.no/nb/oppslag/underenheter/928732924",
-          "snippet": "VESTFOLD OG TELEMARK PIPEREHABILITERING AS. Underenhet av: VESTFOLD OG TELEMARK PIPEREHABILITERING AS, organisasjonsnummer: 928 710 777Org.nr 928 710 777 ..."
-        },
-        {
-          "rank": 10,
           "domain": "pipe-rehab.no",
           "title": "Piperehabilitering AS: Piperehabilitering Skien & Porsgrunn – Fast ...",
           "link": "https://www.pipe-rehab.no/",
           "snippet": "Trygg pipe, trygt hjem! Lokale håndverkere med base i Skien og Porsgrunn. Vi tar oppdrag i hele Telemark, Vestfold og Agder. Vi gir nytt liv til gamle piper."
+        },
+        {
+          "rank": 10,
+          "domain": "mittanbud.no",
+          "title": "NORSK PIPEREHABILITERING AS - Mittanbud",
+          "link": "https://mittanbud.no/bedrift/348716",
+          "snippet": "Vi i Norsk Piperehabilitering AS ønsker å gjøre alle kundene våre fornøyd. Hos oss får du 12 måneder med rentefri nedbetaling og 15 års garanti!"
         }
       ],
       "rawCount": 10
@@ -439,12 +444,12 @@
         "proff.no",
         "xn--ysteinpipeogildsted-u7b.no",
         "mittanbud.no",
-        "vtpipe.no",
-        "facebook.com",
         "saxvikpeis.no",
+        "vtpipe.no",
         "1881.no",
+        "varmefag.no",
         "alpha-pipe.com",
-        "gulesider.no"
+        "handverkerdrammen.no"
       ],
       "directoryHits": [
         {
@@ -460,22 +465,10 @@
           "link": "https://mittanbud.no/bedrift/3609359"
         },
         {
-          "rank": 6,
-          "domain": "facebook.com",
-          "title": "Vestfold og Telemark Piperehabilitering As | Svarstad - Facebook",
-          "link": "https://www.facebook.com/p/Vestfold-og-Telemark-Piperehabilitering-As-100090075848688/"
-        },
-        {
-          "rank": 8,
+          "rank": 7,
           "domain": "1881.no",
           "title": "Pipe- og skorsteinsrehabilitering Vestfold - 1881.no",
           "link": "https://www.1881.no/pipe-og-skorsteinsrehabilitering/pipe-og-skorsteinsrehabilitering-vestfold/"
-        },
-        {
-          "rank": 10,
-          "domain": "gulesider.no",
-          "title": "Piperehabilitering Vestfold | bedrifter | gulesider.no | side 1",
-          "link": "https://www.gulesider.no/piperehabilitering+vestfold/bedrifter"
         }
       ],
       "topResults": [
@@ -509,31 +502,31 @@
         },
         {
           "rank": 5,
-          "domain": "vtpipe.no",
-          "title": "Spesialister på rehabilitering av pipe i Larvik | Vestfold og Telemark ...",
-          "link": "https://www.vtpipe.no/",
-          "snippet": "Trenger du piperehabilitering? Vi leverer komplette og godkjente løsninger for pipe og ildsteder – tilpasset både eldre boliger og nye bygg. Vestfold og ..."
-        },
-        {
-          "rank": 6,
-          "domain": "facebook.com",
-          "title": "Vestfold og Telemark Piperehabilitering As | Svarstad - Facebook",
-          "link": "https://www.facebook.com/p/Vestfold-og-Telemark-Piperehabilitering-As-100090075848688/",
-          "snippet": "Har du dårlig trekk i pipa? Sprekk i pipa? Pipebrann? Fyringsforbud? Piperehablitering, stålpipe eller nytt tak? Etter flere år på markedet har vi jobbet opp et ..."
-        },
-        {
-          "rank": 7,
           "domain": "saxvikpeis.no",
           "title": "Rehabilitere Pipe i Tønsberg - Profesjonell utførelse",
           "link": "https://saxvikpeis.no/tjenester/rehabilitere-pipe/tonsberg",
           "snippet": "Vi tilbyr Rehabilitere Pipe i Tønsberg med over 20 års erfaring. Godkjent i over 25 kommuner. Gratis befaring og uforpliktende tilbud."
         },
         {
-          "rank": 8,
+          "rank": 6,
+          "domain": "vtpipe.no",
+          "title": "Spesialister på rehabilitering av pipe i Larvik | Vestfold og Telemark ...",
+          "link": "https://www.vtpipe.no/",
+          "snippet": "Trenger du piperehabilitering? Vi leverer komplette og godkjente løsninger for pipe og ildsteder – tilpasset både eldre boliger og nye bygg. Vestfold og ..."
+        },
+        {
+          "rank": 7,
           "domain": "1881.no",
           "title": "Pipe- og skorsteinsrehabilitering Vestfold - 1881.no",
           "link": "https://www.1881.no/pipe-og-skorsteinsrehabilitering/pipe-og-skorsteinsrehabilitering-vestfold/",
           "snippet": "Resultat - Pipe- og skorsteinsrehabilitering Vestfold ; Murmester Dag Arne Nilsen AS · 33 36 91 69 · Broen 5 D, ; Lauvstad Skifer Å Naturstein · 900 50 014 ..."
+        },
+        {
+          "rank": 8,
+          "domain": "varmefag.no",
+          "title": "Varmefag Tønsberg | Ekspert på peis og peisovn",
+          "link": "https://www.varmefag.no/butikker/tonsberg",
+          "snippet": "Vi tilbyr også komplette pipeløsninger, enten det gjelder piperehabilitering, ny pipe eller om du har problemer med trekk. Gratis befaring. Vi hjelper deg ..."
         },
         {
           "rank": 9,
@@ -544,10 +537,10 @@
         },
         {
           "rank": 10,
-          "domain": "gulesider.no",
-          "title": "Piperehabilitering Vestfold | bedrifter | gulesider.no | side 1",
-          "link": "https://www.gulesider.no/piperehabilitering+vestfold/bedrifter",
-          "snippet": "Piperehabilitering Vestfold - blikkenslager, takentreprenør, taktekking, blikkenslagerverksted, rehabilitering, takstein, takstige, beslag rundt pipe, ..."
+          "domain": "handverkerdrammen.no",
+          "title": "Piperehabilitering i Buskerud og Vestfold - Håndverker Drammen",
+          "link": "https://handverkerdrammen.no/guide/piperehabilitering/",
+          "snippet": "Trenger du piperehabilitering? Vi hjelper deg i Drammen, Oslo, Asker, Mjøndalen med stålforing, keramisk strømpe og glidestøp. Se pris, regler og metoder."
         }
       ],
       "rawCount": 10
@@ -563,7 +556,7 @@
         "hl": "no",
         "num": 20
       },
-      "ourRank": 6,
+      "ourRank": 4,
       "ourUrl": "https://www.pipe-rehab.no/piperehabilitering-arendal",
       "topCompetitor": {
         "rank": 1,
@@ -576,8 +569,8 @@
         "facebook.com",
         "alpha-pipe.com",
         "1881.no",
-        "varmefag.no",
         "ildstedet.no",
+        "varmefag.no",
         "gulesider.no",
         "mittanbud.no",
         "sognvarme.no",
@@ -633,10 +626,10 @@
         },
         {
           "rank": 4,
-          "domain": "varmefag.no",
-          "title": "Varmefag Arendal| Ekspert på peis, peisovn og pipe",
-          "link": "https://www.varmefag.no/butikker/arendal",
-          "snippet": "Vi leverer også komplette skorsteinsløsninger og utfører piperehabilitering. Vi hjelper deg hele veien fra valg av produkt til ferdig installasjon. Dette tilbyr ..."
+          "domain": "pipe-rehab.no",
+          "title": "Piperehabilitering Arendal | Fast pris og gratis befaring",
+          "link": "https://www.pipe-rehab.no/piperehabilitering-arendal",
+          "snippet": "Vi rehabiliterer, forer og inspiserer piper og skorsteiner for eneboliger, tomannsboliger og bygårder. Fast pris, gratis befaring. Tjenester i Arendal."
         },
         {
           "rank": 5,
@@ -647,10 +640,10 @@
         },
         {
           "rank": 6,
-          "domain": "pipe-rehab.no",
-          "title": "Piperehabilitering Arendal | Fast pris og gratis befaring",
-          "link": "https://www.pipe-rehab.no/piperehabilitering-arendal",
-          "snippet": "Vi rehabiliterer, forer og inspiserer piper og skorsteiner for eneboliger, tomannsboliger og bygårder. Fast pris, gratis befaring. Tjenester i Arendal."
+          "domain": "varmefag.no",
+          "title": "Varmefag Arendal| Ekspert på peis, peisovn og pipe",
+          "link": "https://www.varmefag.no/butikker/arendal",
+          "snippet": "Vi leverer også komplette skorsteinsløsninger og utfører piperehabilitering. Vi hjelper deg hele veien fra valg av produkt til ferdig installasjon. Dette tilbyr ..."
         },
         {
           "rank": 7,
@@ -830,14 +823,13 @@
       "competitorDomains": [
         "alfavarme.no",
         "smartvarme.no",
-        "totalpeis.no",
         "oppussingsguiden.no",
-        "saxvikpeis.no",
+        "totalpeis.no",
         "piperehabas.no",
         "peisogpipefag.no",
-        "byggebolig.no",
-        "murogpipeservice.no",
-        "lrforum.com"
+        "lrforum.com",
+        "saxvikpeis.no",
+        "murogpipeservice.no"
       ],
       "directoryHits": [],
       "topResults": [
@@ -852,50 +844,50 @@
           "rank": 2,
           "domain": "smartvarme.no",
           "title": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra)",
-          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOoo9qoZsOJlQk57OHfu3UH5P271qBcM0v7kYyeQ2P_mXBa95TRKG",
+          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOoou8xvyUneJ3TD5EhqelIWxB6kY_iKld3Fu29cKw4rRgFmlMVjV",
           "snippet": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra). kr 1 250,- Opprinnelig pris var: kr 1 250,-. kr 1 063,- Nåværende pris er: kr 1 063,-. ○På ..."
         },
         {
           "rank": 3,
-          "domain": "totalpeis.no",
-          "title": "Piperehabilitering pris | Hva koster det? - Totalpeis AS",
-          "link": "https://totalpeis.no/aktuelt/piperehabilitering-pris/",
-          "snippet": "Prisen på piperehabilitering varierer mye – men de fleste eneboliger på Østlandet ender mellom 25 000 og 60 000 kroner, avhengig av metode og omfang. I denne ..."
-        },
-        {
-          "rank": 4,
           "domain": "oppussingsguiden.no",
           "title": "Hva koster piperehabilitering? Prisguide (2026) - Oppussingsguiden",
           "link": "https://www.oppussingsguiden.no/pris/renovering/koster-piperehabilitering/",
           "snippet": "Piperehabilitering koster typisk mellom 15 000 og 80 000 kr for en standard boligpipe, avhengig av pipelengde, metode og tilstand."
         },
         {
+          "rank": 4,
+          "domain": "totalpeis.no",
+          "title": "Piperehabilitering pris | Hva koster det? - Totalpeis AS",
+          "link": "https://totalpeis.no/aktuelt/piperehabilitering-pris/",
+          "snippet": "Prisen på piperehabilitering varierer mye – men de fleste eneboliger på Østlandet ender mellom 25 000 og 60 000 kroner, avhengig av metode og omfang. I denne ..."
+        },
+        {
           "rank": 5,
+          "domain": "piperehabas.no",
+          "title": "Piperehabilitering til fast pris – trygt og effektivt",
+          "link": "https://piperehabas.no/piperehabilitering/",
+          "snippet": "18.300 kr ekskl. mva, og de fleste prosjekter havner typisk i området 18.000–24.000 kr ekskl. mva. Dette inkluderer normalt hele jobben fra inspeksjon til ..."
+        },
+        {
+          "rank": 6,
+          "domain": "peisogpipefag.no",
+          "title": "Piperehabilitering - Peis og Pipefag AS",
+          "link": "https://peisogpipefag.no/collections/piperehabilitering?srsltid=AfmBOoriEWX2VDNr9ij6Mz2Cwrgl1Gm6dBP5mOLQYjEDJQlyWHgjXAhY",
+          "snippet": "J4 200 Piperehabilitering T-Stykke rustfri stål. Vanlig pris 1.730,00 kr. Enhet pris. Utilgjengelig. Legg i handlekurv Legg i handlekurv. Se detaljer. Forrige"
+        },
+        {
+          "rank": 7,
+          "domain": "lrforum.com",
+          "title": "Pipe rehabilitering, priser - Åpen Post - LRforum",
+          "link": "https://www.lrforum.com/forum/topic/79663-pipe-rehabilitering-priser/",
+          "snippet": "50k for rehab med stålpipe er nok i overkant dyrt. som du nevner så har også leca innsatsrør for piper. en totalpris på ca 14-20k for begge ..."
+        },
+        {
+          "rank": 8,
           "domain": "saxvikpeis.no",
           "title": "Piperehabilitering — fast pris fra 18 000 kr - Saxvik Peis og Pipe",
           "link": "https://saxvikpeis.no/tjenester/rehabilitere-pipe",
           "snippet": "Hva koster det å rehabilitere pipe? Fra kr 18 000 inkl. mva. En typisk 10m pipe med 1 tilkobling ligger på kr 25 000–30 000. Pipelengde, antall tilkoblinger og ..."
-        },
-        {
-          "rank": 6,
-          "domain": "piperehabas.no",
-          "title": "Piperehabilitering med stålrør",
-          "link": "https://piperehabas.no/piperehabilitering/",
-          "snippet": "Pris på piperehabilitering med stålrør avhenger av tre hovedfaktorer: · Hos Piperehab AS starter prisene fra ca. 18.300 kr ekskl. · Det viktigste: Du får alltid ..."
-        },
-        {
-          "rank": 7,
-          "domain": "peisogpipefag.no",
-          "title": "Piperehabilitering - Peis og Pipefag AS",
-          "link": "https://peisogpipefag.no/collections/piperehabilitering?srsltid=AfmBOordXfJTjDauTa-VlctiY_IjU6PJMtMaGhPkHv8Nb4ijRWDv7Tc6",
-          "snippet": "J4 200 Piperehabilitering T-Stykke rustfri stål. Vanlig pris 1.730,00 kr. Enhet pris. Utilgjengelig. Legg i handlekurv Legg i handlekurv. Se detaljer. Forrige"
-        },
-        {
-          "rank": 8,
-          "domain": "byggebolig.no",
-          "title": "Søke og betale kommunen 6500,- når de har krevd at jeg fikser pipa??",
-          "link": "https://www.byggebolig.no/byggesoknad-saksbehandling/soke-og-betale-kommunen-6500-nar-de-har-krevd-at-jeg-fikser",
-          "snippet": "Rehabilitering av pipe er søknadspliktig og den kommunale saksbehandlingen er gebyrfinansiert. Heller ikke helt uvanlig med slikt pålegg på ..."
         },
         {
           "rank": 9,
@@ -903,16 +895,9 @@
           "title": "Aktuelt - Mur og Pipeservice AS",
           "link": "https://www.murogpipeservice.no/aktuelt",
           "snippet": "Rehabilitering av pipe med stålrør – pris. Les mer →. Nærbilde av en ... Piperehabilitering og pris – hvor mye koster det? Les mer →. En skinnende ..."
-        },
-        {
-          "rank": 10,
-          "domain": "lrforum.com",
-          "title": "Pipe rehabilitering, priser - Åpen Post - LRforum",
-          "link": "https://www.lrforum.com/forum/topic/79663-pipe-rehabilitering-priser/",
-          "snippet": "50k for rehab med stålpipe er nok i overkant dyrt. som du nevner så har også leca innsatsrør for piper. en totalpris på ca 14-20k for begge ..."
         }
       ],
-      "rawCount": 10
+      "rawCount": 9
     },
     {
       "query": "hva koster piperehabilitering",
@@ -929,8 +914,8 @@
       "topCompetitor": {
         "rank": 1,
         "domain": "alfavarme.no",
-        "title": "Rehab-Kalkulator - Alfa Varme",
-        "link": "https://alfavarme.no/piperehabilitering-kalkulator/",
+        "title": "Rehab-Kalkulator",
+        "link": "https://alfavarme.no/piperehabilitering-kalkulator/?amp",
         "snippet": "Hva koster det å rehabilitere en pipe? Bruk vår rehab-kalkulator, og finn enkelt ut hva dette koster. Prisgaranti på piperehabilitering!"
       },
       "competitorDomains": [
@@ -938,84 +923,84 @@
         "totalpeis.no",
         "oppussingsguiden.no",
         "piperehabas.no",
-        "smartvarme.no",
-        "ildstedet.no",
         "klikk.no",
+        "ildstedet.no",
         "byggebolig.no",
-        "lorentzenpeis.no",
-        "murogpipeservice.no"
+        "saxvikpeis.no",
+        "smartvarme.no",
+        "lorentzenpeis.no"
       ],
       "directoryHits": [],
       "topResults": [
         {
           "rank": 1,
           "domain": "alfavarme.no",
-          "title": "Rehab-Kalkulator - Alfa Varme",
-          "link": "https://alfavarme.no/piperehabilitering-kalkulator/",
+          "title": "Rehab-Kalkulator",
+          "link": "https://alfavarme.no/piperehabilitering-kalkulator/?amp",
           "snippet": "Hva koster det å rehabilitere en pipe? Bruk vår rehab-kalkulator, og finn enkelt ut hva dette koster. Prisgaranti på piperehabilitering!"
         },
         {
           "rank": 2,
           "domain": "totalpeis.no",
-          "title": "Piperehabilitering pris | Hva koster det? - Totalpeis AS",
+          "title": "Piperehabilitering pris | Hva koster det?",
           "link": "https://totalpeis.no/aktuelt/piperehabilitering-pris/",
           "snippet": "Prisen på piperehabilitering varierer mye – men de fleste eneboliger på Østlandet ender mellom 25 000 og 60 000 kroner, avhengig av metode og omfang. I denne ..."
         },
         {
           "rank": 3,
           "domain": "oppussingsguiden.no",
-          "title": "Hva koster piperehabilitering? Prisguide (2026) - Oppussingsguiden",
+          "title": "Piperehabilitering - Hva koster det? Se priser og sammenlign tilbud (2026)",
           "link": "https://www.oppussingsguiden.no/pris/renovering/koster-piperehabilitering/",
           "snippet": "Piperehabilitering koster typisk mellom 15 000 og 80 000 kr for en standard boligpipe, avhengig av pipelengde, metode og tilstand. Prisen beregnes per løpemeter ..."
         },
         {
           "rank": 4,
           "domain": "piperehabas.no",
-          "title": "Piperehabilitering med stålrør",
+          "title": "Piperehabilitering til fast pris – trygt og effektivt",
           "link": "https://piperehabas.no/piperehabilitering/",
           "snippet": "Hva koster piperehabilitering? Prisene hos Piperehab ligger normalt mellom 18.000 og 24.000 kroner ekskl. mva, avhengig av omfanget. Må ..."
         },
         {
           "rank": 5,
-          "domain": "smartvarme.no",
-          "title": "Hva koster piperehabilitering, og hva påvirker prisen? →",
-          "link": "https://smartvarme.no/hva-koster-piperehabilitering-og-hva-pavirker-prisen/?srsltid=AfmBOop99znMNdbqE-dNsyzXqLVt0ZVDz3x9EqbNnBmqNFOQyrz6o6yA",
-          "snippet": "Kort oppsummering: Prisen på piperehabilitering varierer avhengig av pipens høyde, dimensjon, metode, tilgjengelighet og valg av system."
+          "domain": "klikk.no",
+          "title": "Ny pipe: Dette kan koste deg over 100.000 kr",
+          "link": "https://www.klikk.no/bolig/hytte/ny-pipe-dette-kan-koste-deg-over-100000-kr-6992362",
+          "snippet": "En rehabilitering av pipa koster fra 25 000 til over 100 000 kroner. Det som påvirker prisen er lengden på pipeløpet, antall etasjer som pipa ..."
         },
         {
           "rank": 6,
           "domain": "ildstedet.no",
-          "title": "Når er det på tide med piperehabilitering? - Ildstedet",
+          "title": "Når er det på tide med piperehabilitering?",
           "link": "https://ildstedet.no/piperehabilitering",
           "snippet": "Prisen for piperehabilitering varierer avhengig av tilstanden til pipa og lengden på pipeløpet. Våre forhandlere gir alltid en nøyaktig vurdering etter befaring ..."
         },
         {
           "rank": 7,
-          "domain": "klikk.no",
-          "title": "Ny pipe: Dette kan koste deg over 100.000 kr - Klikk",
-          "link": "https://www.klikk.no/bolig/hytte/ny-pipe-dette-kan-koste-deg-over-100000-kr-6992362",
-          "snippet": "En rehabilitering av pipa koster fra 25 000 til over 100 000 kroner. Det som påvirker prisen er lengden på pipeløpet, antall etasjer som pipa ..."
-        },
-        {
-          "rank": 8,
           "domain": "byggebolig.no",
           "title": "Søke og betale kommunen 6500,- når de har krevd at jeg fikser pipa??",
           "link": "https://www.byggebolig.no/byggesoknad-saksbehandling/soke-og-betale-kommunen-6500-nar-de-har-krevd-at-jeg-fikser",
           "snippet": "Selskapene jeg har kontaktet sier at dette er søknadspliktig og koster 6500,-. ... Diskusjonen rundt hva kommunene skal leve av/gebyr kontra skatt ..."
         },
         {
+          "rank": 8,
+          "domain": "saxvikpeis.no",
+          "title": "Hva koster piperehabilitering i 2026? Komplett prisguide",
+          "link": "https://saxvikpeis.no/tjenester/rehabilitere-pipe/hva-koster-piperehabilitering",
+          "snippet": "Piperehabilitering koster typisk 25 000 – 50 000 kr. Vi viser hvordan prisen settes, hva som påvirker den og hva du får for pengene."
+        },
+        {
           "rank": 9,
+          "domain": "smartvarme.no",
+          "title": "Hva koster piperehabilitering, og hva påvirker prisen? →",
+          "link": "https://smartvarme.no/hva-koster-piperehabilitering-og-hva-pavirker-prisen/?srsltid=AfmBOorvtpzwcDXSXUxI3xBi_dwZiIzCe4_HzwYKmTNzruIHPyZQopNI",
+          "snippet": "Kort oppsummering: Prisen på piperehabilitering varierer avhengig av pipens høyde, dimensjon, metode, tilgjengelighet og valg av system."
+        },
+        {
+          "rank": 10,
           "domain": "lorentzenpeis.no",
           "title": "Piperehabilitering med stålrør — pris fra 18 000 kr | Prisguide 2026",
           "link": "https://www.lorentzenpeis.no/tjenester/rehabilitering-av-skorstein/hva-koster-piperehabilitering/",
           "snippet": "Piperehabilitering koster typisk 18 000 – 50 000 kr avhengig av pipehøyde, antall etasjer og pipens tilstand. Jobben innebærer å fôre den eksisterende ..."
-        },
-        {
-          "rank": 10,
-          "domain": "murogpipeservice.no",
-          "title": "Aktuelt - Mur og Pipeservice AS",
-          "link": "https://www.murogpipeservice.no/aktuelt",
-          "snippet": "Pipefornying pris – Hva koster det å renovere skorsteinen? Les mer →. Tak i ... Piperehabilitering og pris – hvor mye koster det? Les mer →. En ..."
         }
       ],
       "rawCount": 10
@@ -1036,7 +1021,7 @@
         "rank": 1,
         "domain": "smartvarme.no",
         "title": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra)",
-        "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOooYek1m0ugh88gq-mnteXW1byhWNkW7OKE0sX9xK5mT7jMf6b3s",
+        "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOoobVuzuII1WzFzaV5MmaRtxGmDCNkvEGk--VYt7o6WtEJoC23ar",
         "snippet": "Piperehabilitering av skorstein med stålrør er en rehabiliterings metode som oppgradere skorsteinens oppgraderingsvilkår, fra oppstillingsvilkår 1 til ..."
       },
       "competitorDomains": [
@@ -1048,7 +1033,7 @@
         "tolmer.no",
         "pipespesialisten.no",
         "piperep.no",
-        "ar-con.no"
+        "varmefag.no"
       ],
       "directoryHits": [],
       "topResults": [
@@ -1056,7 +1041,7 @@
           "rank": 1,
           "domain": "smartvarme.no",
           "title": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra)",
-          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOooYek1m0ugh88gq-mnteXW1byhWNkW7OKE0sX9xK5mT7jMf6b3s",
+          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOoobVuzuII1WzFzaV5MmaRtxGmDCNkvEGk--VYt7o6WtEJoC23ar",
           "snippet": "Piperehabilitering av skorstein med stålrør er en rehabiliterings metode som oppgradere skorsteinens oppgraderingsvilkår, fra oppstillingsvilkår 1 til ..."
         },
         {
@@ -1077,7 +1062,7 @@
           "rank": 4,
           "domain": "peisogpipefag.no",
           "title": "Piperehabilitering – steg for steg guide - Peis og Pipefag AS",
-          "link": "https://peisogpipefag.no/blogs/news/alt-du-trenger-a-vite-om-piperehabilitering?srsltid=AfmBOopVC_664inkstRWUOyyg2P_GzYFq5DX-4sdXz6AK7pIIRjwarTt",
+          "link": "https://peisogpipefag.no/blogs/news/alt-du-trenger-a-vite-om-piperehabilitering?srsltid=AfmBOopOe7BK3mPY_fxqQcR8aTvsQOeFV23XwOj8n_1PukzwfC0qP1fQ",
           "snippet": "Vi gir deg en nøye gjennomgang av piperehabilitering. Hva det er, hvorfor det er nødvendig, hvem som trenger det – og hvordan det gjøres, ..."
         },
         {
@@ -1110,10 +1095,10 @@
         },
         {
           "rank": 9,
-          "domain": "ar-con.no",
-          "title": "Piperehabilitering i Oslo og omegn - Arcon Entreprenør AS",
-          "link": "https://ar-con.no/tjenester/piperehabilitering-oslo-omegn",
-          "snippet": "Hos Arcon Entreprenør har vi lang erfaring med rehabilitering av piper i boliger, borettslag, næringsbygg og offentlige bygg. Vi sikrer at din skorstein ..."
+          "domain": "varmefag.no",
+          "title": "Piperehabilitering utført av Varmefag",
+          "link": "https://www.varmefag.no/inspirasjon-og-tips/rehabilitering-av-pipe",
+          "snippet": "Har du dårlig trekk, sotproblemer eller en eldre pipe? Piperehabilitering kan være løsningen. Varmefag utfører rehabilitering av piper over hele landet."
         }
       ],
       "rawCount": 9
@@ -1134,7 +1119,7 @@
         "rank": 1,
         "domain": "smartvarme.no",
         "title": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra)",
-        "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorK9mKpER_zLlWivFpdSYJ7idSv_Dg7hc5aFEc9S_DV8-Cciok0",
+        "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorpJtQbSKwxoS7x6fZfuJL2d1Bfk9Sw7rMBq_kGJlpfGu3NrSP6",
         "snippet": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra). kr 1 250,- Opprinnelig pris var: kr 1 250,-."
       },
       "competitorDomains": [
@@ -1155,7 +1140,7 @@
           "rank": 1,
           "domain": "smartvarme.no",
           "title": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra)",
-          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorK9mKpER_zLlWivFpdSYJ7idSv_Dg7hc5aFEc9S_DV8-Cciok0",
+          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorpJtQbSKwxoS7x6fZfuJL2d1Bfk9Sw7rMBq_kGJlpfGu3NrSP6",
           "snippet": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra). kr 1 250,- Opprinnelig pris var: kr 1 250,-."
         },
         {
@@ -1211,14 +1196,14 @@
           "rank": 9,
           "domain": "peisogpipefag.no",
           "title": "Piperehabilitering – steg for steg guide - Peis og Pipefag AS",
-          "link": "https://peisogpipefag.no/blogs/news/alt-du-trenger-a-vite-om-piperehabilitering?srsltid=AfmBOoo-UGSlF1b7ChIenerwk5p1Q1avUI88J2or2Xqoma_N7jFVDHTq",
+          "link": "https://peisogpipefag.no/blogs/news/alt-du-trenger-a-vite-om-piperehabilitering?srsltid=AfmBOorcv5_oHKhoOUfbjUuRk7Pgj87Qi6icpEua5VSsy4wFLO2jJ5tT",
           "snippet": "Vi gir deg en nøye gjennomgang av piperehabilitering. Hva det er, hvorfor det er nødvendig, hvem som trenger det – og hvordan det gjøres, ..."
         },
         {
           "rank": 10,
           "domain": "s-varme.no",
           "title": "Rehabiliteringsrør og -deler fra S-varme",
-          "link": "https://www.s-varme.no/piper/rehabiliteringsror-og-deler/c-49/c-449/?srsltid=AfmBOoqDTsKWcLo3efYLvUUhkMse25KxZL0xCCurs3b5lFIdWCZZVxiy",
+          "link": "https://www.s-varme.no/piper/rehabiliteringsror-og-deler/c-49/c-449/?srsltid=AfmBOopTHJvVjMBkcxT0T2xP730x9NyO96Cmaa-BovXlHwyEINhtOyqr",
           "snippet": "Skal du rehabilitere en gammel pipe? Her finner du piperør og -deler til piperehabilitering. Varmehandel AS Dyrskuvegen 4"
         }
       ],
@@ -1240,7 +1225,7 @@
         "rank": 1,
         "domain": "smartvarme.no",
         "title": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra)",
-        "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorNmAYd1l5Whw82rsfvlFUUn0sD3d0ogWU8ZP2LZUwqKvxaKDlb",
+        "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorvegd28nf7dsMbYkL-yMDT2quuudsATHRl3tpVF8C-rOBL6VUL",
         "snippet": "Piperehabilitering av skorstein med stålrør er en rehabiliterings metode som oppgradere skorsteinens oppgraderingsvilkår, fra oppstillingsvilkår 1 til…"
       },
       "competitorDomains": [
@@ -1249,8 +1234,8 @@
         "youtube.com",
         "byggebolig.no",
         "blikkogmur.no",
-        "alfavarme.no",
         "varmefag.no",
+        "alfavarme.no",
         "pipepeismontering.no",
         "peisogpipefag.no"
       ],
@@ -1260,7 +1245,7 @@
           "rank": 1,
           "domain": "smartvarme.no",
           "title": "Piperehabilitering-pakke stålforingsrør (legg til og trekk fra)",
-          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorNmAYd1l5Whw82rsfvlFUUn0sD3d0ogWU8ZP2LZUwqKvxaKDlb",
+          "link": "https://smartvarme.no/produkt/piperehabilitering-pakke-stalforingsror-legg-til-og-trekk-fra/?srsltid=AfmBOorvegd28nf7dsMbYkL-yMDT2quuudsATHRl3tpVF8C-rOBL6VUL",
           "snippet": "Piperehabilitering av skorstein med stålrør er en rehabiliterings metode som oppgradere skorsteinens oppgraderingsvilkår, fra oppstillingsvilkår 1 til…"
         },
         {
@@ -1293,17 +1278,17 @@
         },
         {
           "rank": 6,
-          "domain": "alfavarme.no",
-          "title": "Rehab-Kalkulator - Alfa Varme",
-          "link": "https://alfavarme.no/piperehabilitering-kalkulator/",
-          "snippet": "Hva koster det å rehabilitere en pipe? Bruk vår rehab-kalkulator, og finn enkelt ut hva dette koster. Prisgaranti på piperehabilitering!"
-        },
-        {
-          "rank": 7,
           "domain": "varmefag.no",
           "title": "Piperehabilitering utført av Varmefag",
           "link": "https://www.varmefag.no/inspirasjon-og-tips/rehabilitering-av-pipe",
           "snippet": "Har du dårlig trekk, sotproblemer eller en eldre pipe? Piperehabilitering kan være løsningen. Varmefag utfører rehabilitering av piper over hele landet."
+        },
+        {
+          "rank": 7,
+          "domain": "alfavarme.no",
+          "title": "Rehab-Kalkulator - Alfa Varme",
+          "link": "https://alfavarme.no/piperehabilitering-kalkulator/",
+          "snippet": "Hva koster det å rehabilitere en pipe? Bruk vår rehab-kalkulator, og finn enkelt ut hva dette koster. Prisgaranti på piperehabilitering!"
         },
         {
           "rank": 8,
@@ -1316,7 +1301,7 @@
           "rank": 9,
           "domain": "peisogpipefag.no",
           "title": "Piperehabilitering – steg for steg guide - Peis og Pipefag AS",
-          "link": "https://peisogpipefag.no/blogs/news/alt-du-trenger-a-vite-om-piperehabilitering?srsltid=AfmBOor2WqIXfGx750zTyu2_GbrNr0vlxQTVVxVWex0xX0OHaq3jMF1D",
+          "link": "https://peisogpipefag.no/blogs/news/alt-du-trenger-a-vite-om-piperehabilitering?srsltid=AfmBOopDr4lWQVkCbIqVLH3Op1UQKyR4HaRbZZ2eZgCx_tYnUP79mS5p",
           "snippet": "Hvor lang tid tar piperehabilitering? Ofte 1 dag, avhengig av pipe og adkomst. Må jeg søke kommunen for piperehabilitering? Ja. Men det ordner ..."
         }
       ],
@@ -1348,9 +1333,17 @@
         "tolmer.no",
         "feiermester.org",
         "saxvikpeis.no",
-        "ildstedet.no"
+        "ildstedet.no",
+        "facebook.com"
       ],
-      "directoryHits": [],
+      "directoryHits": [
+        {
+          "rank": 9,
+          "domain": "facebook.com",
+          "title": "I denne videoen viser vi klargjøring og montering av stålpipe fra ...",
+          "link": "https://www.facebook.com/pipeeksperten/videos/i-denne-videoen-viser-vi-klargj%C3%B8ring-og-montering-av-st%C3%A5lpipe-fra-himling-og-ut-/1396409301491879/"
+        }
+      ],
       "topResults": [
         {
           "rank": 1,
@@ -1364,14 +1357,14 @@
           "domain": "jotul.no",
           "title": "[PDF] MONTERINGSVEILEDNING - NVI 2000 Stålpipesystem - Jøtul",
           "link": "https://www.jotul.no/sites/norway/files/2019-05/Montasjeanvisning%20190122%20NO_1.pdf",
-          "snippet": "Ved montering av veggkonsoll inklusive forlenger – begynn med å montere sammen veggkonsoll og forleng- er med skruer og muttere i de faste hullene. Bemerk at."
+          "snippet": "Monter støttebeinet på baktilkoblingen, tilpass støtte- beinets lengde slik at målet mellom gulv og sentrum blir det samme som på kaminen. Tilpasningen kan ..."
         },
         {
           "rank": 3,
           "domain": "youtube.com",
           "title": "Nordpeis Stålpipe TL - Monteringsfilm - YouTube",
           "link": "https://www.youtube.com/watch?v=7aY7igaOr68",
-          "snippet": "Nordpeis Stålpipe TL - Monteringsfilm. 97K views · 11 years ago ... NVI2000-Monteringsanvisning.wmv. 5001238210•85K views · 7:41 · Go to ..."
+          "snippet": "This content isn't available. Nordpeis Stålpipe TL - Monteringsfilm ... Montering av isolert stålrørspipe i vår vinterhage. Terje's SAAB ..."
         },
         {
           "rank": 4,
@@ -1396,20 +1389,27 @@
         },
         {
           "rank": 7,
-          "domain": "ildstedet.no",
-          "title": "[PDF] MONTERINGSVEILEDNING - NVI 2000+ Combi Stålpipesystem",
-          "link": "https://ildstedet.no/content/2018/08/Monteringsanvisning-NVI2000-Combi-NOR-050722.pdf",
-          "snippet": "Ved montering med halviso- lerad modul som start, monteres en overgang fra halv til helisolert modul i første etasjeskille over ildstedet. NB. NVI 2000+combi må ..."
-        },
-        {
-          "rank": 8,
           "domain": "youtube.com",
           "title": "Jøtul Stålskorstein - YouTube",
           "link": "https://www.youtube.com/watch?v=TQJtyyM8Zmo",
           "snippet": "... montering fra koblingsstykket helt frem til de siste detaljene utvendig på taket. Her ser man tydelig hvor og hvordan alt monteres."
+        },
+        {
+          "rank": 8,
+          "domain": "ildstedet.no",
+          "title": "[PDF] MONTERINGSVEILEDNING - NVI 2000+ Combi Stålpipesystem",
+          "link": "https://ildstedet.no/content/2018/08/Monteringsanvisning-NVI2000-Combi-NOR-050722.pdf",
+          "snippet": "Sørg for å tape skjøten mellom isolasjonen. Ved montering mot brennbart materiale og løs ul- lisolasjon over 400 mm anbefaler vi bruk av en egen modul som ..."
+        },
+        {
+          "rank": 9,
+          "domain": "facebook.com",
+          "title": "I denne videoen viser vi klargjøring og montering av stålpipe fra ...",
+          "link": "https://www.facebook.com/pipeeksperten/videos/i-denne-videoen-viser-vi-klargj%C3%B8ring-og-montering-av-st%C3%A5lpipe-fra-himling-og-ut-/1396409301491879/",
+          "snippet": "Entreprenøren leverer ferdige kasser for gjennomføringene, og vi sørger for en effektiv og profesjonell montering av pipene fra himling og ..."
         }
       ],
-      "rawCount": 8
+      "rawCount": 9
     },
     {
       "query": "kamerainspeksjon pipe",
@@ -1426,93 +1426,93 @@
       "topCompetitor": {
         "rank": 1,
         "domain": "pipeeksperten.no",
-        "title": "Våre tjenester",
+        "title": "Våre tjenester - Pipe Eksperten AS",
         "link": "https://pipeeksperten.no/vare-tjenester-privatmarked/",
         "snippet": "Vi utfører kontroll av skorstein med blant annet kamerainspeksjon eller såkalt videokontroll. Her vil det meste av skorsteinens innvendige tilstand kunne ..."
       },
       "competitorDomains": [
         "pipeeksperten.no",
         "ragnsells.no",
-        "vestfold-rorfornying.no",
         "avlopseksperten.no",
-        "abcrorteknikk.no",
         "rehabiliteringpipe.no",
-        "rorapner.no",
         "tilsyn.no",
-        "spylevakta.no",
-        "ildstedvedlikehold.no"
+        "abcrorteknikk.no",
+        "gs-elektro.no",
+        "rorapner.no",
+        "vestfold-rorfornying.no",
+        "spylevakta.no"
       ],
       "directoryHits": [],
       "topResults": [
         {
           "rank": 1,
           "domain": "pipeeksperten.no",
-          "title": "Våre tjenester",
+          "title": "Våre tjenester - Pipe Eksperten AS",
           "link": "https://pipeeksperten.no/vare-tjenester-privatmarked/",
           "snippet": "Vi utfører kontroll av skorstein med blant annet kamerainspeksjon eller såkalt videokontroll. Her vil det meste av skorsteinens innvendige tilstand kunne ..."
         },
         {
           "rank": 2,
           "domain": "ragnsells.no",
-          "title": "Rørinspeksjon - kamerainspeksjon",
+          "title": "Rørinspeksjon - kamerainspeksjon - Ragn-Sells",
           "link": "https://www.ragnsells.no/tjenester/bedrift/suge-og-spyletjenester/rorinspeksjon/",
           "snippet": "Rørinspeksjon eller kamerainspeksjon foregår slik at et kamera føres inn i rørene og inspiserer disse innenfra. Dersom et rør ved gjentatte anledninger har ..."
         },
         {
           "rank": 3,
-          "domain": "vestfold-rorfornying.no",
-          "title": "Kamerainspeksjon av rør – slik fungerer det i praksis",
-          "link": "https://vestfold-rorfornying.no/kamerainspeksjon-av-ror-slik-fungerer-det/",
-          "snippet": "Kamerainspeksjon rør er en prosess der fagfolk bruker spesialutstyr for å kartlegge eller rehabilitere rørsystemet ditt – uten store inngrep i boligen."
-        },
-        {
-          "rank": 4,
           "domain": "avlopseksperten.no",
           "title": "Kamerainspeksjon av rør – se hva som egentlig skjer i rørene dine",
           "link": "https://avlopseksperten.no/kamerainspeksjon-av-ror-se-hva-som-egentlig-skjer-i-rorene-dine/",
           "snippet": "Når bør du bestille kamerainspeksjon? · Når vannet renner tregt, eller det stadig blir tett · Hvis det kommer vond lukt fra sluk eller vask · Når du opplever ..."
         },
         {
-          "rank": 5,
-          "domain": "abcrorteknikk.no",
-          "title": "Rørinspeksjon - Ring oss på 91 900 400",
-          "link": "https://abcrorteknikk.no/rorinspeksjon/",
-          "snippet": "Rørinspeksjon / kartlegging av rør. ABC Rørteknikk utfører rørinspeksjon av de fleste typer rør, med stake, kamera og selvgående kamera."
-        },
-        {
-          "rank": 6,
+          "rank": 4,
           "domain": "rehabiliteringpipe.no",
           "title": "Kamerainspeksjon av pipe: Få et gratis tilbud • Rask respons",
           "link": "https://www.rehabiliteringpipe.no/kamerainspeksjon-av-pipe/",
           "snippet": "Kamerainspeksjon av pipe er en metode for å dokumentere tilstanden på innsiden av pipeløpet. Et lite kamera på en fleksibel kabel senkes ned i pipa og sender ..."
         },
         {
-          "rank": 7,
-          "domain": "rorapner.no",
-          "title": "Rørinspeksjon/kamerainspeksjon - Høytrykk RØR ÅPNER",
-          "link": "https://rorapner.no/rorinspeksjon-kamerainspeksjon/",
-          "snippet": "Rørinspeksjon eller kamerainspeksjon som det også kalles, foregår ved at et kamera føres inn i rørene og inspiserer disse innenfra. Arbeidet foregår inntil ..."
-        },
-        {
-          "rank": 8,
+          "rank": 5,
           "domain": "tilsyn.no",
           "title": "https://tilsyn.no/videokontroll-av-skorsteiner/",
           "link": "https://tilsyn.no/videokontroll-av-skorsteiner/",
           "snippet": ""
         },
         {
+          "rank": 6,
+          "domain": "abcrorteknikk.no",
+          "title": "Rørinspeksjon - Ring oss på 91 900 400 - ABC Rørteknikk AS",
+          "link": "https://abcrorteknikk.no/rorinspeksjon/",
+          "snippet": "Rørinspeksjon / kartlegging av rør. ABC Rørteknikk utfører rørinspeksjon av de fleste typer rør, med stake, kamera og selvgående kamera."
+        },
+        {
+          "rank": 7,
+          "domain": "gs-elektro.no",
+          "title": "Pipe kamera - GS Elektro",
+          "link": "https://gs-elektro.no/product/kamerainspeksjon-katikis70-7-4mm-60m-5bar-digital-lengdemaaler-i-display-lcd-monitor-104002m/",
+          "snippet": "Hjem / Kamera Inspeksjon / Pipe kamera.. Pipe kamera, basisenhet Ø 7.4 mm, lengde 60 m. Pipe kamera. Logg inn for pris. Pipe kamera antall. Legg i handlekurv."
+        },
+        {
+          "rank": 8,
+          "domain": "rorapner.no",
+          "title": "Rørinspeksjon/kamerainspeksjon - Høytrykk RØR ÅPNER",
+          "link": "https://rorapner.no/rorinspeksjon-kamerainspeksjon/",
+          "snippet": "Rørinspeksjon eller kamerainspeksjon som det også kalles, foregår ved at et kamera føres inn i rørene og inspiserer disse innenfra. Arbeidet foregår inntil ..."
+        },
+        {
           "rank": 9,
-          "domain": "spylevakta.no",
-          "title": "Rørinspeksjon med kamera",
-          "link": "https://spylevakta.no/artikler/rorinspeksjon/kamerainspeksjon",
-          "snippet": "Kamerainspeksjon med kamera er en trygg og enkel måte å avdekke problemer i rør. I noen tilfeller holder det ikke bare å spyle rent. Er det røtter som har ..."
+          "domain": "vestfold-rorfornying.no",
+          "title": "Kamerainspeksjon av rør – slik fungerer det i praksis",
+          "link": "https://vestfold-rorfornying.no/kamerainspeksjon-av-ror-slik-fungerer-det/",
+          "snippet": "Kamerainspeksjon rør er en prosess der fagfolk bruker spesialutstyr for å kartlegge eller rehabilitere rørsystemet ditt – uten store inngrep i boligen."
         },
         {
           "rank": 10,
-          "domain": "ildstedvedlikehold.no",
-          "title": "Kamerakontroll av pipe | Oppdag sprekker, blokkering og avleiringer",
-          "link": "https://ildstedvedlikehold.no/kamerakontroll-av-pipe",
-          "snippet": "En kamerakontroll kan blant annet vise: Sprekker og skader i pipeløpet; Forskyvninger eller innsnevringer som påvirker trekk; Blokkeringer som reir, sotpropp ..."
+          "domain": "spylevakta.no",
+          "title": "Rørinspeksjon med kamera - Spylevakta",
+          "link": "https://spylevakta.no/artikler/rorinspeksjon/kamerainspeksjon",
+          "snippet": "Kamerainspeksjon med kamera er en trygg og enkel måte å avdekke problemer i rør. I noen tilfeller holder det ikke bare å spyle rent. Er det røtter som har ..."
         }
       ],
       "rawCount": 10
@@ -1539,18 +1539,18 @@
       "competitorDomains": [
         "feiermester.org",
         "oslomurmester.no",
-        "bergen.kommune.no",
-        "smartvarme.no",
-        "abbr.no",
-        "ildstedet.no",
-        "facebook.com",
         "tolmer.no",
+        "ildstedet.no",
+        "abbr.no",
+        "facebook.com",
         "nrbr.no",
-        "dibk.no"
+        "dibk.no",
+        "schiedel.com",
+        "regjeringen.no"
       ],
       "directoryHits": [
         {
-          "rank": 7,
+          "rank": 6,
           "domain": "facebook.com",
           "title": "Vi får en del spørsmål om rehabilitering av skorsteiner og piper. Her ...",
           "link": "https://www.facebook.com/nrbr.no/posts/vi-f%C3%A5r-en-del-sp%C3%B8rsm%C3%A5l-om-rehabilitering-av-skorsteiner-og-piper-her-gir-vi-deg-/3793176684046147/"
@@ -1573,17 +1573,17 @@
         },
         {
           "rank": 3,
-          "domain": "bergen.kommune.no",
-          "title": "Søke om rehabilitering eller oppføring av skorstein - Bergen kommune",
-          "link": "https://www.bergen.kommune.no/innbyggerhjelpen/brannvern-samfunnssikkerhet-og-beredskap/brann-og-redning/fyring-og-ildsted/soke-om-rehabilitering-eller-oppforing-av-skorstein",
-          "snippet": "Dersom du skal rehabilitere eksisterende skorstein eller oppføre en ny i eksisterende bygg, må du sende en søknad til brannvesenet. Dersom du skal rive en ..."
+          "domain": "tolmer.no",
+          "title": "Pipe- / Skorsteins- rehabilitering - Tolmer AS",
+          "link": "https://tolmer.no/rehabilitering/",
+          "snippet": "Undersøk din skorstein. Skorsteinens oppgave er å fjerne røkgassen slik at ny luft blir tilført ildstedet. Den skal være tett og skal kunne håndtere fuktigheten ..."
         },
         {
           "rank": 4,
-          "domain": "smartvarme.no",
-          "title": "Piperehabilitering i Bergen → - Smart Varme",
-          "link": "https://smartvarme.no/piperehabilitering-bergen/?srsltid=AfmBOooqfC5esYYfvrDnJDRiR1fuBWJpi2gY2OZ5SGAm4a7D2kxCwzLS",
-          "snippet": "Rehabilitering av skorstein med keramiske rør er en kjent og tradisjonelt meget anvendt metode for piperehabilitering. Ved bruk av keramiske foringsrør kan ..."
+          "domain": "ildstedet.no",
+          "title": "Når er det på tide med piperehabilitering? - Ildstedet",
+          "link": "https://ildstedet.no/piperehabilitering",
+          "snippet": "Er du usikker på om pipen trenger rehabilitering? Kontakt en Ildstedet-forhandler for en gratis befaring, og få pipe og skorstein vurdert av en fagperson."
         },
         {
           "rank": 5,
@@ -1594,38 +1594,38 @@
         },
         {
           "rank": 6,
-          "domain": "ildstedet.no",
-          "title": "Når er det på tide med piperehabilitering? - Ildstedet",
-          "link": "https://ildstedet.no/piperehabilitering",
-          "snippet": "Er du usikker på om pipen trenger rehabilitering? Kontakt en Ildstedet-forhandler for en gratis befaring, og få pipe og skorstein vurdert av en fagperson."
-        },
-        {
-          "rank": 7,
           "domain": "facebook.com",
           "title": "Vi får en del spørsmål om rehabilitering av skorsteiner og piper. Her ...",
           "link": "https://www.facebook.com/nrbr.no/posts/vi-f%C3%A5r-en-del-sp%C3%B8rsm%C3%A5l-om-rehabilitering-av-skorsteiner-og-piper-her-gir-vi-deg-/3793176684046147/",
           "snippet": "En løsning er å rive hele skorsteinen og bygge denne opp igjen i samme materiale som den opprinnelige. Men du kan også velge bare å rive ned det ..."
         },
         {
-          "rank": 8,
-          "domain": "tolmer.no",
-          "title": "Pipe- / Skorsteins- rehabilitering - Tolmer AS",
-          "link": "https://tolmer.no/rehabilitering/",
-          "snippet": "Undersøk din skorstein. Skorsteinens oppgave er å fjerne røkgassen slik at ny luft blir tilført ildstedet. Den skal være tett og skal kunne håndtere fuktigheten ..."
-        },
-        {
-          "rank": 9,
+          "rank": 7,
           "domain": "nrbr.no",
           "title": "Rehabilitering av skorsteiner - Nedre Romerike brann",
           "link": "https://nrbr.no/tilsyn-og-feiing/rehabilitering-av-skorsteiner/",
           "snippet": "En løsning er å rive hele skorsteinen og bygge denne opp igjen i samme materiale som den opprinnelige. Men du kan også velge bare å rive ned det som er dårlig ..."
         },
         {
-          "rank": 10,
+          "rank": 8,
           "domain": "dibk.no",
           "title": "Eksempler på byggearbeid på pipe - Direktoratet for byggkvalitet",
           "link": "https://www.dibk.no/bygge-eller-endre/arbeid-pa-eksisterende-bygg/pipe",
           "snippet": "Reparasjon av pipe/skorstein ... Arbeidene må oppfylle relevante krav i byggteknisk forskrift (TEK17). Bygge om eller forlenge pipe/skorstein."
+        },
+        {
+          "rank": 9,
+          "domain": "schiedel.com",
+          "title": "Skorsteinsrehabilitering | Systemer og produkter fra Schiedel",
+          "link": "https://www.schiedel.com/no/bruksomrader-bransjer/bruksomrader/renovering",
+          "snippet": "En rehabilitert skorstein gir bedre trekk, og som bidrar til mer stabil forbrenning og redusert sotdannelse. For fagfolk er skorsteinsrehabilitering en ..."
+        },
+        {
+          "rank": 10,
+          "domain": "regjeringen.no",
+          "title": "§ 20-1 bokstav f - Om rehabilitering av skorstein/piper - regjeringen.no",
+          "link": "https://www.regjeringen.no/no/dokumenter/-20-bokstav-f---departementet-besvarer-henvendelse-om-rehabilitering-av-skorstein-piper/id2670833/",
+          "snippet": "Oppføring, endring og reparasjon av bygningstekniske installasjoner er søknadspliktige tiltak etter pbl. § 20-1 bokstav f. og § 20-2 første ledd ..."
         }
       ],
       "rawCount": 10
@@ -1644,38 +1644,38 @@
       "ourUrl": null,
       "topCompetitor": {
         "rank": 1,
-        "domain": "varmefag.no",
-        "title": "Den beste tiden på året for å sjekke pipen din | Varmefag",
-        "link": "https://www.varmefag.no/inspirasjon-og-tips/den-beste-tiden-paa-aaret-for-aa-sjekke-pipen-din",
-        "snippet": "Etter fyringssesongen kommer våren – som er den beste tiden å sjekke pipen. Er du i tvil om alt er som det skal være, bør du få fagfolk på befaring."
+        "domain": "oslo.kommune.no",
+        "title": "Tilsyn og feiing - Ildsted og skorstein - Oslo kommune",
+        "link": "https://www.oslo.kommune.no/brannvern-ildsted-og-feiing/ildsted-og-skorstein/tilsyn-og-feiing/",
+        "snippet": "Kommunen skal feie og føre tilsyn med fyringsanlegg ved behov. Under tilsynet sjekker vi brannsikkerheten og kontrollerer om skorsteinen trenger feiing."
       },
       "competitorDomains": [
-        "varmefag.no",
         "oslo.kommune.no",
+        "varmefag.no",
         "feiermester.org",
         "tbrt.no",
-        "reddit.com",
         "rogbr.no",
-        "pipesjekk.no",
+        "reddit.com",
         "pipeeksperten.no",
-        "lovdata.no",
-        "rehabiliteringpipe.no"
+        "pipesjekk.no",
+        "brannmidt.no",
+        "kbr.no"
       ],
       "directoryHits": [],
       "topResults": [
         {
           "rank": 1,
-          "domain": "varmefag.no",
-          "title": "Den beste tiden på året for å sjekke pipen din | Varmefag",
-          "link": "https://www.varmefag.no/inspirasjon-og-tips/den-beste-tiden-paa-aaret-for-aa-sjekke-pipen-din",
-          "snippet": "Etter fyringssesongen kommer våren – som er den beste tiden å sjekke pipen. Er du i tvil om alt er som det skal være, bør du få fagfolk på befaring."
-        },
-        {
-          "rank": 2,
           "domain": "oslo.kommune.no",
           "title": "Tilsyn og feiing - Ildsted og skorstein - Oslo kommune",
           "link": "https://www.oslo.kommune.no/brannvern-ildsted-og-feiing/ildsted-og-skorstein/tilsyn-og-feiing/",
           "snippet": "Kommunen skal feie og føre tilsyn med fyringsanlegg ved behov. Under tilsynet sjekker vi brannsikkerheten og kontrollerer om skorsteinen trenger feiing."
+        },
+        {
+          "rank": 2,
+          "domain": "varmefag.no",
+          "title": "Den beste tiden på året for å sjekke pipen din | Varmefag",
+          "link": "https://www.varmefag.no/inspirasjon-og-tips/den-beste-tiden-paa-aaret-for-aa-sjekke-pipen-din",
+          "snippet": "Etter fyringssesongen kommer våren – som er den beste tiden å sjekke pipen. Er du i tvil om alt er som det skal være, bør du få fagfolk på befaring."
         },
         {
           "rank": 3,
@@ -1693,45 +1693,45 @@
         },
         {
           "rank": 5,
-          "domain": "reddit.com",
-          "title": "Pipeinspeksjon : r/HomeImprovement - Reddit",
-          "link": "https://www.reddit.com/r/HomeImprovement/comments/qfl8gt/fireplace_inspection/?tl=no",
-          "snippet": "Ny huseier og har nettopp fått en pipeinspeksjon. De sa at dette er usikkert å bruke før vi får det erstattet med en rustfri stålliner (for ..."
-        },
-        {
-          "rank": 6,
           "domain": "rogbr.no",
           "title": "Boligtilsyn og feiing - Rogaland brann og redning IKS",
           "link": "https://www.rogbr.no/brannforebyggende-avdeling/boligtilsyn-og-feiing",
           "snippet": "Rogaland brann og redning IKS (RBR) utfører lovpålagt boligtilsyn og feiing av piper og ildsteder for å redusere risikoen for brann og bidra til tryggere hjem ..."
         },
         {
-          "rank": 7,
-          "domain": "pipesjekk.no",
-          "title": "Pipesjekk | Kamerakontroll og feiing av piper i Oslo og omegn",
-          "link": "https://www.pipesjekk.no/",
-          "snippet": "Pipesjekk tilbyr kamerakontroll / videoinspeksjon av pipe, feiing og befaring av ildsted og skorstein. Tryggere fyring, bedre trekk og tydelig ..."
+          "rank": 6,
+          "domain": "reddit.com",
+          "title": "Pipeinspeksjon : r/HomeImprovement - Reddit",
+          "link": "https://www.reddit.com/r/HomeImprovement/comments/qfl8gt/fireplace_inspection/?tl=no",
+          "snippet": "Ny huseier og har nettopp fått en pipeinspeksjon. De sa at dette er usikkert å bruke før vi får det erstattet med en rustfri stålliner (for ..."
         },
         {
-          "rank": 8,
+          "rank": 7,
           "domain": "pipeeksperten.no",
           "title": "Våre tjenester - Pipe Eksperten AS",
           "link": "https://pipeeksperten.no/vare-tjenester-privatmarked/",
           "snippet": "Hovedsaklig jobber vi med større oppdrag for borettslag og sameier, men vi tar selvfølgelig også mindre oppdrag som rehabilitering av piper i eneboliger, ..."
         },
         {
+          "rank": 8,
+          "domain": "pipesjekk.no",
+          "title": "Pipesjekk | Kamerakontroll og feiing av piper i Oslo og omegn",
+          "link": "https://www.pipesjekk.no/",
+          "snippet": "Pipesjekk tilbyr kamerakontroll / videoinspeksjon av pipe, feiing og befaring av ildsted og skorstein. Tryggere fyring, bedre trekk og tydelig ..."
+        },
+        {
           "rank": 9,
-          "domain": "lovdata.no",
-          "title": "Forskrift om feiing og tilsyn med fyringsanlegg - Lovdata",
-          "link": "https://lovdata.no/forskrift/1998-01-15-33",
-          "snippet": "Formålet med forskriften er å sikre at fyringsanlegg er intakte, virker som forutsatt og ikke forårsaker brann eller andre skader. Del paragraf. § 1-2."
+          "domain": "brannmidt.no",
+          "title": "Boligtilsyn - Brann Midt IKS",
+          "link": "https://brannmidt.no/feile-og-tilsyn/boligtilsyn/",
+          "snippet": "Tilsynet omfatter følgende: Ildsted (er). Hvilke type ildsted(er) som er montert i boligen, og at den/de er montert etter monteringsanvisning."
         },
         {
           "rank": 10,
-          "domain": "rehabiliteringpipe.no",
-          "title": "Kamerainspeksjon av pipe: Få et gratis tilbud • Rask respons",
-          "link": "https://www.rehabiliteringpipe.no/kamerainspeksjon-av-pipe/",
-          "snippet": "En kamerainspeksjon gir deg et konkret svar uten graving, riving eller gjetting. Vi tilbyr kamerainspeksjon av piper i Telemark, Vestfold, Buskerud, Agder, ..."
+          "domain": "kbr.no",
+          "title": "Feiing og tilsyn - Kristiansandsregionen brann og redning IKS",
+          "link": "https://www.kbr.no/tjenester/feiing-og-tilsyn",
+          "snippet": "Kristiansandsregionen brann og redning (KBR) har ansvaret for å utføre tilsyn med fyringsanlegg samt feiing av skorsteiner i boliger og fritidsboliger i ..."
         }
       ],
       "rawCount": 10
@@ -1740,8 +1740,8 @@
   "visibilityScores": [
     {
       "domain": "smartvarme.no",
-      "score": 146,
-      "appearances": 6,
+      "score": 130,
+      "appearances": 5,
       "top3": 4,
       "bestRank": 1,
       "keywords": [
@@ -1752,8 +1752,8 @@
         },
         {
           "query": "hva koster piperehabilitering",
-          "rank": 5,
-          "score": 16
+          "rank": 9,
+          "score": 8
         },
         {
           "query": "pipe rehabilitering",
@@ -1769,15 +1769,10 @@
           "query": "foring av pipe",
           "rank": 1,
           "score": 30
-        },
-        {
-          "query": "rehabilitering av skorstein",
-          "rank": 4,
-          "score": 8
         }
       ],
       "previousScore": 146,
-      "delta": 0
+      "delta": -16
     },
     {
       "domain": "alfavarme.no",
@@ -1808,7 +1803,7 @@
         },
         {
           "query": "foring av pipe",
-          "rank": 6,
+          "rank": 7,
           "score": 6
         }
       ],
@@ -1910,15 +1905,15 @@
     },
     {
       "domain": "facebook.com",
-      "score": 92,
+      "score": 82,
       "appearances": 7,
       "top3": 1,
       "bestRank": 1,
       "keywords": [
         {
           "query": "piperehabilitering skien",
-          "rank": 5,
-          "score": 20
+          "rank": 6,
+          "score": 10
         },
         {
           "query": "piperehabilitering porsgrunn",
@@ -1931,11 +1926,6 @@
           "score": 16
         },
         {
-          "query": "piperehabilitering vestfold",
-          "rank": 6,
-          "score": 6
-        },
-        {
           "query": "piperehabilitering arendal",
           "rank": 1,
           "score": 30
@@ -1946,13 +1936,18 @@
           "score": 6
         },
         {
+          "query": "stålpipe montering",
+          "rank": 9,
+          "score": 6
+        },
+        {
           "query": "rehabilitering av skorstein",
-          "rank": 7,
+          "rank": 6,
           "score": 4
         }
       ],
-      "previousScore": 86,
-      "delta": 6
+      "previousScore": 92,
+      "delta": -10
     },
     {
       "domain": "pipefiks.no",
@@ -1972,13 +1967,13 @@
           "score": 50
         }
       ],
-      "previousScore": 86,
-      "delta": -6
+      "previousScore": 80,
+      "delta": 0
     },
     {
       "domain": "gulesider.no",
-      "score": 78,
-      "appearances": 6,
+      "score": 72,
+      "appearances": 5,
       "top3": 2,
       "bestRank": 3,
       "keywords": [
@@ -1998,11 +1993,6 @@
           "score": 8
         },
         {
-          "query": "piperehabilitering vestfold",
-          "rank": 10,
-          "score": 6
-        },
-        {
           "query": "piperehabilitering arendal",
           "rank": 7,
           "score": 6
@@ -2013,8 +2003,8 @@
           "score": 18
         }
       ],
-      "previousScore": 70,
-      "delta": 8
+      "previousScore": 78,
+      "delta": -6
     },
     {
       "domain": "1881.no",
@@ -2030,7 +2020,7 @@
         },
         {
           "query": "piperehabilitering porsgrunn",
-          "rank": 10,
+          "rank": 8,
           "score": 10
         },
         {
@@ -2040,7 +2030,7 @@
         },
         {
           "query": "piperehabilitering vestfold",
-          "rank": 8,
+          "rank": 7,
           "score": 6
         },
         {
@@ -2053,64 +2043,17 @@
       "delta": 0
     },
     {
-      "domain": "varmefag.no",
-      "score": 62,
-      "appearances": 4,
-      "top3": 2,
-      "bestRank": 1,
-      "keywords": [
-        {
-          "query": "piperehabilitering arendal",
-          "rank": 4,
-          "score": 12
-        },
-        {
-          "query": "piperehabilitering larvik",
-          "rank": 2,
-          "score": 24
-        },
-        {
-          "query": "foring av pipe",
-          "rank": 7,
-          "score": 6
-        },
-        {
-          "query": "pipeinspeksjon",
-          "rank": 1,
-          "score": 20
-        }
-      ],
-      "previousScore": 46,
-      "delta": 16
-    },
-    {
-      "domain": "totalpeis.no",
-      "score": 56,
-      "appearances": 2,
-      "top3": 2,
-      "bestRank": 2,
-      "keywords": [
-        {
-          "query": "piperehabilitering pris",
-          "rank": 3,
-          "score": 24
-        },
-        {
-          "query": "hva koster piperehabilitering",
-          "rank": 2,
-          "score": 32
-        }
-      ],
-      "previousScore": 48,
-      "delta": 8
-    },
-    {
       "domain": "ildstedet.no",
-      "score": 54,
-      "appearances": 5,
+      "score": 68,
+      "appearances": 6,
       "top3": 1,
       "bestRank": 2,
       "keywords": [
+        {
+          "query": "piperehabilitering porsgrunn",
+          "rank": 10,
+          "score": 10
+        },
         {
           "query": "piperehabilitering arendal",
           "rank": 5,
@@ -2128,48 +2071,94 @@
         },
         {
           "query": "stålpipe montering",
-          "rank": 7,
+          "rank": 8,
           "score": 6
         },
         {
           "query": "rehabilitering av skorstein",
-          "rank": 6,
-          "score": 4
+          "rank": 4,
+          "score": 8
         }
       ],
-      "previousScore": 64,
-      "delta": -10
+      "previousScore": 54,
+      "delta": 14
     },
     {
-      "domain": "byggebolig.no",
-      "score": 52,
-      "appearances": 4,
-      "top3": 1,
+      "domain": "varmefag.no",
+      "score": 64,
+      "appearances": 6,
+      "top3": 2,
       "bestRank": 2,
       "keywords": [
         {
-          "query": "piperehabilitering pris",
+          "query": "piperehabilitering vestfold",
           "rank": 8,
-          "score": 8
+          "score": 6
         },
         {
-          "query": "hva koster piperehabilitering",
-          "rank": 8,
-          "score": 8
+          "query": "piperehabilitering arendal",
+          "rank": 6,
+          "score": 6
         },
         {
-          "query": "foring pipe",
+          "query": "piperehabilitering larvik",
           "rank": 2,
           "score": 24
         },
         {
+          "query": "pipe rehabilitering",
+          "rank": 9,
+          "score": 6
+        },
+        {
           "query": "foring av pipe",
-          "rank": 4,
-          "score": 12
+          "rank": 6,
+          "score": 6
+        },
+        {
+          "query": "pipeinspeksjon",
+          "rank": 2,
+          "score": 16
         }
       ],
-      "previousScore": 58,
-      "delta": -6
+      "previousScore": 62,
+      "delta": 2
+    },
+    {
+      "domain": "pipe-rehab.no",
+      "score": 56,
+      "appearances": 5,
+      "top3": 0,
+      "bestRank": 4,
+      "keywords": [
+        {
+          "query": "piperehabilitering skien",
+          "rank": 5,
+          "score": 20
+        },
+        {
+          "query": "piperehabilitering porsgrunn",
+          "rank": 7,
+          "score": 10
+        },
+        {
+          "query": "piperehabilitering telemark",
+          "rank": 9,
+          "score": 8
+        },
+        {
+          "query": "piperehabilitering arendal",
+          "rank": 4,
+          "score": 12
+        },
+        {
+          "query": "piperehabilitering larvik",
+          "rank": 6,
+          "score": 6
+        }
+      ],
+      "previousScore": 40,
+      "delta": 16
     },
     {
       "domain": "piperep.no",
@@ -2198,6 +2187,48 @@
       "delta": 0
     },
     {
+      "domain": "totalpeis.no",
+      "score": 48,
+      "appearances": 2,
+      "top3": 1,
+      "bestRank": 2,
+      "keywords": [
+        {
+          "query": "piperehabilitering pris",
+          "rank": 4,
+          "score": 16
+        },
+        {
+          "query": "hva koster piperehabilitering",
+          "rank": 2,
+          "score": 32
+        }
+      ],
+      "previousScore": 56,
+      "delta": -8
+    },
+    {
+      "domain": "oppussingsguiden.no",
+      "score": 48,
+      "appearances": 2,
+      "top3": 2,
+      "bestRank": 3,
+      "keywords": [
+        {
+          "query": "piperehabilitering pris",
+          "rank": 3,
+          "score": 24
+        },
+        {
+          "query": "hva koster piperehabilitering",
+          "rank": 3,
+          "score": 24
+        }
+      ],
+      "previousScore": 40,
+      "delta": 8
+    },
+    {
       "domain": "youtube.com",
       "score": 48,
       "appearances": 3,
@@ -2220,7 +2251,43 @@
           "score": 18
         }
       ],
-      "previousScore": 42,
+      "previousScore": 48,
+      "delta": 0
+    },
+    {
+      "domain": "saxvikpeis.no",
+      "score": 46,
+      "appearances": 5,
+      "top3": 0,
+      "bestRank": 4,
+      "keywords": [
+        {
+          "query": "piperehabilitering vestfold",
+          "rank": 5,
+          "score": 12
+        },
+        {
+          "query": "piperehabilitering larvik",
+          "rank": 4,
+          "score": 12
+        },
+        {
+          "query": "piperehabilitering pris",
+          "rank": 8,
+          "score": 8
+        },
+        {
+          "query": "hva koster piperehabilitering",
+          "rank": 8,
+          "score": 8
+        },
+        {
+          "query": "stålpipe montering",
+          "rank": 6,
+          "score": 6
+        }
+      ],
+      "previousScore": 40,
       "delta": 6
     },
     {
@@ -2250,42 +2317,42 @@
       "delta": 0
     },
     {
-      "domain": "oppussingsguiden.no",
-      "score": 40,
-      "appearances": 2,
+      "domain": "byggebolig.no",
+      "score": 44,
+      "appearances": 3,
       "top3": 1,
-      "bestRank": 3,
+      "bestRank": 2,
       "keywords": [
         {
-          "query": "piperehabilitering pris",
-          "rank": 4,
-          "score": 16
+          "query": "hva koster piperehabilitering",
+          "rank": 7,
+          "score": 8
         },
         {
-          "query": "hva koster piperehabilitering",
-          "rank": 3,
+          "query": "foring pipe",
+          "rank": 2,
           "score": 24
+        },
+        {
+          "query": "foring av pipe",
+          "rank": 4,
+          "score": 12
         }
       ],
-      "previousScore": 48,
+      "previousScore": 52,
       "delta": -8
     },
     {
-      "domain": "saxvikpeis.no",
-      "score": 40,
-      "appearances": 4,
+      "domain": "piperehabas.no",
+      "score": 38,
+      "appearances": 3,
       "top3": 0,
       "bestRank": 4,
       "keywords": [
         {
-          "query": "piperehabilitering vestfold",
-          "rank": 7,
-          "score": 6
-        },
-        {
           "query": "piperehabilitering larvik",
-          "rank": 4,
-          "score": 12
+          "rank": 9,
+          "score": 6
         },
         {
           "query": "piperehabilitering pris",
@@ -2293,49 +2360,13 @@
           "score": 16
         },
         {
-          "query": "stålpipe montering",
-          "rank": 6,
-          "score": 6
+          "query": "hva koster piperehabilitering",
+          "rank": 4,
+          "score": 16
         }
       ],
-      "previousScore": 44,
-      "delta": -4
-    },
-    {
-      "domain": "pipe-rehab.no",
-      "score": 40,
-      "appearances": 5,
-      "top3": 0,
-      "bestRank": 6,
-      "keywords": [
-        {
-          "query": "piperehabilitering skien",
-          "rank": 6,
-          "score": 10
-        },
-        {
-          "query": "piperehabilitering porsgrunn",
-          "rank": 8,
-          "score": 10
-        },
-        {
-          "query": "piperehabilitering telemark",
-          "rank": 10,
-          "score": 8
-        },
-        {
-          "query": "piperehabilitering arendal",
-          "rank": 6,
-          "score": 6
-        },
-        {
-          "query": "piperehabilitering larvik",
-          "rank": 6,
-          "score": 6
-        }
-      ],
-      "previousScore": 40,
-      "delta": 0
+      "previousScore": 30,
+      "delta": 8
     },
     {
       "domain": "jotul.no",
@@ -2367,7 +2398,7 @@
       "keywords": [
         {
           "query": "piperehabilitering pris",
-          "rank": 7,
+          "rank": 6,
           "score": 8
         },
         {
@@ -2386,8 +2417,8 @@
           "score": 6
         }
       ],
-      "previousScore": 40,
-      "delta": -8
+      "previousScore": 32,
+      "delta": 0
     },
     {
       "domain": "nordpeis.com",
@@ -2443,56 +2474,30 @@
       "delta": 0
     },
     {
-      "domain": "piperehabas.no",
+      "domain": "tolmer.no",
       "score": 30,
       "appearances": 3,
-      "top3": 0,
-      "bestRank": 4,
+      "top3": 1,
+      "bestRank": 3,
       "keywords": [
         {
-          "query": "piperehabilitering larvik",
-          "rank": 9,
+          "query": "pipe rehabilitering",
+          "rank": 6,
           "score": 6
         },
         {
-          "query": "piperehabilitering pris",
-          "rank": 6,
-          "score": 8
-        },
-        {
-          "query": "hva koster piperehabilitering",
+          "query": "stålpipe montering",
           "rank": 4,
-          "score": 16
-        }
-      ],
-      "previousScore": 42,
-      "delta": -12
-    },
-    {
-      "domain": "vtpipe.no",
-      "score": 26,
-      "appearances": 3,
-      "top3": 0,
-      "bestRank": 5,
-      "keywords": [
-        {
-          "query": "piperehabilitering telemark",
-          "rank": 6,
-          "score": 8
-        },
-        {
-          "query": "piperehabilitering vestfold",
-          "rank": 5,
           "score": 12
         },
         {
-          "query": "piperehabilitering larvik",
-          "rank": 7,
-          "score": 6
+          "query": "rehabilitering av skorstein",
+          "rank": 3,
+          "score": 12
         }
       ],
-      "previousScore": 20,
-      "delta": 6
+      "previousScore": 22,
+      "delta": 8
     },
     {
       "domain": "pipeeksperten.no",
@@ -2508,7 +2513,7 @@
         },
         {
           "query": "pipeinspeksjon",
-          "rank": 8,
+          "rank": 7,
           "score": 4
         }
       ],
@@ -2537,30 +2542,46 @@
       "delta": 0
     },
     {
-      "domain": "tolmer.no",
-      "score": 22,
-      "appearances": 3,
-      "top3": 0,
-      "bestRank": 4,
+      "domain": "oslo.kommune.no",
+      "score": 20,
+      "appearances": 1,
+      "top3": 1,
+      "bestRank": 1,
       "keywords": [
         {
-          "query": "pipe rehabilitering",
+          "query": "pipeinspeksjon",
+          "rank": 1,
+          "score": 20
+        }
+      ],
+      "previousScore": 16,
+      "delta": 4
+    },
+    {
+      "domain": "vtpipe.no",
+      "score": 20,
+      "appearances": 3,
+      "top3": 0,
+      "bestRank": 6,
+      "keywords": [
+        {
+          "query": "piperehabilitering telemark",
+          "rank": 6,
+          "score": 8
+        },
+        {
+          "query": "piperehabilitering vestfold",
           "rank": 6,
           "score": 6
         },
         {
-          "query": "stålpipe montering",
-          "rank": 4,
-          "score": 12
-        },
-        {
-          "query": "rehabilitering av skorstein",
-          "rank": 8,
-          "score": 4
+          "query": "piperehabilitering larvik",
+          "rank": 7,
+          "score": 6
         }
       ],
-      "previousScore": 22,
-      "delta": 0
+      "previousScore": 26,
+      "delta": -6
     },
     {
       "domain": "xn--ysteinpipeogildsted-u7b.no",
@@ -2579,22 +2600,6 @@
       "delta": 0
     },
     {
-      "domain": "oslo.kommune.no",
-      "score": 16,
-      "appearances": 1,
-      "top3": 1,
-      "bestRank": 2,
-      "keywords": [
-        {
-          "query": "pipeinspeksjon",
-          "rank": 2,
-          "score": 16
-        }
-      ],
-      "previousScore": 20,
-      "delta": -4
-    },
-    {
       "domain": "ragnsells.no",
       "score": 16,
       "appearances": 1,
@@ -2611,44 +2616,23 @@
       "delta": 0
     },
     {
-      "domain": "murogpipeservice.no",
+      "domain": "klikk.no",
       "score": 16,
-      "appearances": 2,
+      "appearances": 1,
       "top3": 0,
-      "bestRank": 9,
+      "bestRank": 5,
       "keywords": [
-        {
-          "query": "piperehabilitering pris",
-          "rank": 9,
-          "score": 8
-        },
         {
           "query": "hva koster piperehabilitering",
-          "rank": 10,
-          "score": 8
+          "rank": 5,
+          "score": 16
         }
       ],
-      "previousScore": 16,
-      "delta": 0
+      "previousScore": 8,
+      "delta": 8
     },
     {
-      "domain": "bergen.kommune.no",
-      "score": 12,
-      "appearances": 1,
-      "top3": 1,
-      "bestRank": 3,
-      "keywords": [
-        {
-          "query": "rehabilitering av skorstein",
-          "rank": 3,
-          "score": 12
-        }
-      ],
-      "previousScore": 12,
-      "delta": 0
-    },
-    {
-      "domain": "vestfold-rorfornying.no",
+      "domain": "avlopseksperten.no",
       "score": 12,
       "appearances": 1,
       "top3": 1,
@@ -2692,8 +2676,8 @@
           "score": 12
         }
       ],
-      "previousScore": 6,
-      "delta": 6
+      "previousScore": 12,
+      "delta": 0
     },
     {
       "domain": "pipepeismontering.no",
@@ -2717,7 +2701,7 @@
       "delta": 0
     },
     {
-      "domain": "app.kaukus.no",
+      "domain": "gbr.no",
       "score": 10,
       "appearances": 1,
       "top3": 0,
@@ -2729,24 +2713,29 @@
           "score": 10
         }
       ],
-      "previousScore": null,
-      "delta": null
-    },
-    {
-      "domain": "gbr.no",
-      "score": 10,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 7,
-      "keywords": [
-        {
-          "query": "piperehabilitering porsgrunn",
-          "rank": 7,
-          "score": 10
-        }
-      ],
       "previousScore": 10,
       "delta": 0
+    },
+    {
+      "domain": "schiedel.com",
+      "score": 10,
+      "appearances": 2,
+      "top3": 0,
+      "bestRank": 6,
+      "keywords": [
+        {
+          "query": "foring pipe",
+          "rank": 6,
+          "score": 6
+        },
+        {
+          "query": "rehabilitering av skorstein",
+          "rank": 9,
+          "score": 4
+        }
+      ],
+      "previousScore": 6,
+      "delta": 4
     },
     {
       "domain": "skien.kommune.no",
@@ -2781,7 +2770,7 @@
       "delta": 0
     },
     {
-      "domain": "avlopseksperten.no",
+      "domain": "rehabiliteringpipe.no",
       "score": 8,
       "appearances": 1,
       "top3": 0,
@@ -2793,8 +2782,8 @@
           "score": 8
         }
       ],
-      "previousScore": 4,
-      "delta": 4
+      "previousScore": 8,
+      "delta": 0
     },
     {
       "domain": "tbrt.no",
@@ -2829,23 +2818,7 @@
       "delta": 0
     },
     {
-      "domain": "abcrorteknikk.no",
-      "score": 8,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 5,
-      "keywords": [
-        {
-          "query": "kamerainspeksjon pipe",
-          "rank": 5,
-          "score": 8
-        }
-      ],
-      "previousScore": 4,
-      "delta": 4
-    },
-    {
-      "domain": "reddit.com",
+      "domain": "rogbr.no",
       "score": 8,
       "appearances": 1,
       "top3": 0,
@@ -2861,35 +2834,30 @@
       "delta": 4
     },
     {
-      "domain": "rehabiliteringpipe.no",
+      "domain": "tilsyn.no",
       "score": 8,
-      "appearances": 2,
+      "appearances": 1,
       "top3": 0,
-      "bestRank": 6,
+      "bestRank": 5,
       "keywords": [
         {
           "query": "kamerainspeksjon pipe",
-          "rank": 6,
-          "score": 4
-        },
-        {
-          "query": "pipeinspeksjon",
-          "rank": 10,
-          "score": 4
+          "rank": 5,
+          "score": 8
         }
       ],
-      "previousScore": 12,
-      "delta": -4
+      "previousScore": 4,
+      "delta": 4
     },
     {
-      "domain": "klikk.no",
+      "domain": "lrforum.com",
       "score": 8,
       "appearances": 1,
       "top3": 0,
       "bestRank": 7,
       "keywords": [
         {
-          "query": "hva koster piperehabilitering",
+          "query": "piperehabilitering pris",
           "rank": 7,
           "score": 8
         }
@@ -2914,68 +2882,36 @@
       "delta": 0
     },
     {
+      "domain": "murogpipeservice.no",
+      "score": 8,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 9,
+      "keywords": [
+        {
+          "query": "piperehabilitering pris",
+          "rank": 9,
+          "score": 8
+        }
+      ],
+      "previousScore": 16,
+      "delta": -8
+    },
+    {
       "domain": "lorentzenpeis.no",
-      "score": 8,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 9,
-      "keywords": [
-        {
-          "query": "hva koster piperehabilitering",
-          "rank": 9,
-          "score": 8
-        }
-      ],
-      "previousScore": 8,
-      "delta": 0
-    },
-    {
-      "domain": "virksomhet.brreg.no",
-      "score": 8,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 9,
-      "keywords": [
-        {
-          "query": "piperehabilitering telemark",
-          "rank": 9,
-          "score": 8
-        }
-      ],
-      "previousScore": null,
-      "delta": null
-    },
-    {
-      "domain": "lrforum.com",
       "score": 8,
       "appearances": 1,
       "top3": 0,
       "bestRank": 10,
       "keywords": [
         {
-          "query": "piperehabilitering pris",
+          "query": "hva koster piperehabilitering",
           "rank": 10,
           "score": 8
         }
       ],
       "previousScore": 8,
       "delta": 0
-    },
-    {
-      "domain": "schiedel.com",
-      "score": 6,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 6,
-      "keywords": [
-        {
-          "query": "foring pipe",
-          "rank": 6,
-          "score": 6
-        }
-      ],
-      "previousScore": 10,
-      "delta": -4
     },
     {
       "domain": "pipespesialisten.no",
@@ -3006,24 +2942,8 @@
           "score": 6
         }
       ],
-      "previousScore": 12,
-      "delta": -6
-    },
-    {
-      "domain": "ar-con.no",
-      "score": 6,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 9,
-      "keywords": [
-        {
-          "query": "pipe rehabilitering",
-          "rank": 9,
-          "score": 6
-        }
-      ],
-      "previousScore": null,
-      "delta": null
+      "previousScore": 6,
+      "delta": 0
     },
     {
       "domain": "sognvarme.no",
@@ -3042,6 +2962,22 @@
       "delta": 0
     },
     {
+      "domain": "handverkerdrammen.no",
+      "score": 6,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 10,
+      "keywords": [
+        {
+          "query": "piperehabilitering vestfold",
+          "rank": 10,
+          "score": 6
+        }
+      ],
+      "previousScore": null,
+      "delta": null
+    },
+    {
       "domain": "s-varme.no",
       "score": 6,
       "appearances": 1,
@@ -3054,8 +2990,8 @@
           "score": 6
         }
       ],
-      "previousScore": null,
-      "delta": null
+      "previousScore": 6,
+      "delta": 0
     },
     {
       "domain": "varmeogmiljo.no",
@@ -3070,11 +3006,27 @@
           "score": 6
         }
       ],
-      "previousScore": null,
-      "delta": null
+      "previousScore": 6,
+      "delta": 0
     },
     {
-      "domain": "rogbr.no",
+      "domain": "abcrorteknikk.no",
+      "score": 4,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 6,
+      "keywords": [
+        {
+          "query": "kamerainspeksjon pipe",
+          "rank": 6,
+          "score": 4
+        }
+      ],
+      "previousScore": 8,
+      "delta": -4
+    },
+    {
+      "domain": "reddit.com",
       "score": 4,
       "appearances": 1,
       "top3": 0,
@@ -3090,23 +3042,7 @@
       "delta": -4
     },
     {
-      "domain": "pipesjekk.no",
-      "score": 4,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 7,
-      "keywords": [
-        {
-          "query": "pipeinspeksjon",
-          "rank": 7,
-          "score": 4
-        }
-      ],
-      "previousScore": 4,
-      "delta": 0
-    },
-    {
-      "domain": "rorapner.no",
+      "domain": "gs-elektro.no",
       "score": 4,
       "appearances": 1,
       "top3": 0,
@@ -3115,38 +3051,6 @@
         {
           "query": "kamerainspeksjon pipe",
           "rank": 7,
-          "score": 4
-        }
-      ],
-      "previousScore": 8,
-      "delta": -4
-    },
-    {
-      "domain": "tilsyn.no",
-      "score": 4,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 8,
-      "keywords": [
-        {
-          "query": "kamerainspeksjon pipe",
-          "rank": 8,
-          "score": 4
-        }
-      ],
-      "previousScore": null,
-      "delta": null
-    },
-    {
-      "domain": "lovdata.no",
-      "score": 4,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 9,
-      "keywords": [
-        {
-          "query": "pipeinspeksjon",
-          "rank": 9,
           "score": 4
         }
       ],
@@ -3158,27 +3062,11 @@
       "score": 4,
       "appearances": 1,
       "top3": 0,
-      "bestRank": 9,
+      "bestRank": 7,
       "keywords": [
         {
           "query": "rehabilitering av skorstein",
-          "rank": 9,
-          "score": 4
-        }
-      ],
-      "previousScore": 4,
-      "delta": 0
-    },
-    {
-      "domain": "spylevakta.no",
-      "score": 4,
-      "appearances": 1,
-      "top3": 0,
-      "bestRank": 9,
-      "keywords": [
-        {
-          "query": "kamerainspeksjon pipe",
-          "rank": 9,
+          "rank": 7,
           "score": 4
         }
       ],
@@ -3190,6 +3078,102 @@
       "score": 4,
       "appearances": 1,
       "top3": 0,
+      "bestRank": 8,
+      "keywords": [
+        {
+          "query": "rehabilitering av skorstein",
+          "rank": 8,
+          "score": 4
+        }
+      ],
+      "previousScore": 4,
+      "delta": 0
+    },
+    {
+      "domain": "pipesjekk.no",
+      "score": 4,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 8,
+      "keywords": [
+        {
+          "query": "pipeinspeksjon",
+          "rank": 8,
+          "score": 4
+        }
+      ],
+      "previousScore": 4,
+      "delta": 0
+    },
+    {
+      "domain": "rorapner.no",
+      "score": 4,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 8,
+      "keywords": [
+        {
+          "query": "kamerainspeksjon pipe",
+          "rank": 8,
+          "score": 4
+        }
+      ],
+      "previousScore": 4,
+      "delta": 0
+    },
+    {
+      "domain": "brannmidt.no",
+      "score": 4,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 9,
+      "keywords": [
+        {
+          "query": "pipeinspeksjon",
+          "rank": 9,
+          "score": 4
+        }
+      ],
+      "previousScore": null,
+      "delta": null
+    },
+    {
+      "domain": "vestfold-rorfornying.no",
+      "score": 4,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 9,
+      "keywords": [
+        {
+          "query": "kamerainspeksjon pipe",
+          "rank": 9,
+          "score": 4
+        }
+      ],
+      "previousScore": 12,
+      "delta": -8
+    },
+    {
+      "domain": "kbr.no",
+      "score": 4,
+      "appearances": 1,
+      "top3": 0,
+      "bestRank": 10,
+      "keywords": [
+        {
+          "query": "pipeinspeksjon",
+          "rank": 10,
+          "score": 4
+        }
+      ],
+      "previousScore": null,
+      "delta": null
+    },
+    {
+      "domain": "regjeringen.no",
+      "score": 4,
+      "appearances": 1,
+      "top3": 0,
       "bestRank": 10,
       "keywords": [
         {
@@ -3202,7 +3186,7 @@
       "delta": null
     },
     {
-      "domain": "ildstedvedlikehold.no",
+      "domain": "spylevakta.no",
       "score": 4,
       "appearances": 1,
       "top3": 0,
@@ -3214,8 +3198,8 @@
           "score": 4
         }
       ],
-      "previousScore": null,
-      "delta": null
+      "previousScore": 4,
+      "delta": 0
     }
   ],
   "alerts": [
@@ -3235,15 +3219,15 @@
       "severity": "high",
       "type": "priority_keyword_below_top3",
       "query": "piperehabilitering skien",
-      "rank": 6,
-      "message": "pipe-rehab.no is #6 for \"piperehabilitering skien\", below the top-3 target."
+      "rank": 5,
+      "message": "pipe-rehab.no is #5 for \"piperehabilitering skien\", below the top-3 target."
     },
     {
       "severity": "high",
       "type": "priority_keyword_below_top3",
       "query": "piperehabilitering porsgrunn",
-      "rank": 8,
-      "message": "pipe-rehab.no is #8 for \"piperehabilitering porsgrunn\", below the top-3 target."
+      "rank": 7,
+      "message": "pipe-rehab.no is #7 for \"piperehabilitering porsgrunn\", below the top-3 target."
     },
     {
       "severity": "medium",
@@ -3307,7 +3291,7 @@
       "query": "piperehabilitering skien",
       "domain": "proff.no",
       "rank": 1,
-      "targetRank": 6,
+      "targetRank": 5,
       "message": "proff.no outranks pipe-rehab.no for \"piperehabilitering skien\"."
     },
     {
@@ -3316,17 +3300,8 @@
       "query": "piperehabilitering skien",
       "domain": "1881.no",
       "rank": 4,
-      "targetRank": 6,
+      "targetRank": 5,
       "message": "1881.no outranks pipe-rehab.no for \"piperehabilitering skien\"."
-    },
-    {
-      "severity": "medium",
-      "type": "directory_outranks_target",
-      "query": "piperehabilitering skien",
-      "domain": "facebook.com",
-      "rank": 5,
-      "targetRank": 6,
-      "message": "facebook.com outranks pipe-rehab.no for \"piperehabilitering skien\"."
     },
     {
       "severity": "medium",
@@ -3334,7 +3309,7 @@
       "query": "piperehabilitering porsgrunn",
       "domain": "gulesider.no",
       "rank": 3,
-      "targetRank": 8,
+      "targetRank": 7,
       "message": "gulesider.no outranks pipe-rehab.no for \"piperehabilitering porsgrunn\"."
     },
     {
@@ -3343,7 +3318,7 @@
       "query": "piperehabilitering porsgrunn",
       "domain": "mittanbud.no",
       "rank": 5,
-      "targetRank": 8,
+      "targetRank": 7,
       "message": "mittanbud.no outranks pipe-rehab.no for \"piperehabilitering porsgrunn\"."
     },
     {
@@ -3352,7 +3327,7 @@
       "query": "piperehabilitering telemark",
       "domain": "proff.no",
       "rank": 1,
-      "targetRank": 10,
+      "targetRank": 9,
       "message": "proff.no outranks pipe-rehab.no for \"piperehabilitering telemark\"."
     },
     {
@@ -3361,7 +3336,7 @@
       "query": "piperehabilitering telemark",
       "domain": "mittanbud.no",
       "rank": 3,
-      "targetRank": 10,
+      "targetRank": 9,
       "message": "mittanbud.no outranks pipe-rehab.no for \"piperehabilitering telemark\"."
     },
     {
@@ -3370,7 +3345,7 @@
       "query": "piperehabilitering telemark",
       "domain": "facebook.com",
       "rank": 4,
-      "targetRank": 10,
+      "targetRank": 9,
       "message": "facebook.com outranks pipe-rehab.no for \"piperehabilitering telemark\"."
     },
     {
@@ -3379,7 +3354,7 @@
       "query": "piperehabilitering telemark",
       "domain": "1881.no",
       "rank": 5,
-      "targetRank": 10,
+      "targetRank": 9,
       "message": "1881.no outranks pipe-rehab.no for \"piperehabilitering telemark\"."
     },
     {
@@ -3388,7 +3363,7 @@
       "query": "piperehabilitering telemark",
       "domain": "gulesider.no",
       "rank": 8,
-      "targetRank": 10,
+      "targetRank": 9,
       "message": "gulesider.no outranks pipe-rehab.no for \"piperehabilitering telemark\"."
     },
     {
@@ -3413,28 +3388,10 @@
       "severity": "medium",
       "type": "directory_outranks_target",
       "query": "piperehabilitering vestfold",
-      "domain": "facebook.com",
-      "rank": 6,
-      "targetRank": null,
-      "message": "facebook.com outranks pipe-rehab.no for \"piperehabilitering vestfold\"."
-    },
-    {
-      "severity": "medium",
-      "type": "directory_outranks_target",
-      "query": "piperehabilitering vestfold",
       "domain": "1881.no",
-      "rank": 8,
+      "rank": 7,
       "targetRank": null,
       "message": "1881.no outranks pipe-rehab.no for \"piperehabilitering vestfold\"."
-    },
-    {
-      "severity": "medium",
-      "type": "directory_outranks_target",
-      "query": "piperehabilitering vestfold",
-      "domain": "gulesider.no",
-      "rank": 10,
-      "targetRank": null,
-      "message": "gulesider.no outranks pipe-rehab.no for \"piperehabilitering vestfold\"."
     },
     {
       "severity": "medium",
@@ -3442,7 +3399,7 @@
       "query": "piperehabilitering arendal",
       "domain": "facebook.com",
       "rank": 1,
-      "targetRank": 6,
+      "targetRank": 4,
       "message": "facebook.com outranks pipe-rehab.no for \"piperehabilitering arendal\"."
     },
     {
@@ -3451,7 +3408,7 @@
       "query": "piperehabilitering arendal",
       "domain": "1881.no",
       "rank": 3,
-      "targetRank": 6,
+      "targetRank": 4,
       "message": "1881.no outranks pipe-rehab.no for \"piperehabilitering arendal\"."
     },
     {
@@ -3475,9 +3432,18 @@
     {
       "severity": "medium",
       "type": "directory_outranks_target",
+      "query": "stålpipe montering",
+      "domain": "facebook.com",
+      "rank": 9,
+      "targetRank": null,
+      "message": "facebook.com outranks pipe-rehab.no for \"stålpipe montering\"."
+    },
+    {
+      "severity": "medium",
+      "type": "directory_outranks_target",
       "query": "rehabilitering av skorstein",
       "domain": "facebook.com",
-      "rank": 7,
+      "rank": 6,
       "targetRank": null,
       "message": "facebook.com outranks pipe-rehab.no for \"rehabilitering av skorstein\"."
     },
@@ -3491,16 +3457,16 @@
     {
       "severity": "low",
       "type": "new_domain_repeated_top5",
-      "domain": "ildstedet.no",
+      "domain": "saxvikpeis.no",
       "count": 2,
-      "message": "ildstedet.no appears top 5 for 2 monitored keywords."
+      "message": "saxvikpeis.no appears top 5 for 2 monitored keywords."
     },
     {
       "severity": "low",
       "type": "new_domain_repeated_top5",
-      "domain": "saxvikpeis.no",
-      "count": 2,
-      "message": "saxvikpeis.no appears top 5 for 2 monitored keywords."
+      "domain": "ildstedet.no",
+      "count": 3,
+      "message": "ildstedet.no appears top 5 for 3 monitored keywords."
     },
     {
       "severity": "low",
@@ -3513,8 +3479,15 @@
       "severity": "low",
       "type": "new_domain_repeated_top5",
       "domain": "smartvarme.no",
-      "count": 6,
-      "message": "smartvarme.no appears top 5 for 6 monitored keywords."
+      "count": 4,
+      "message": "smartvarme.no appears top 5 for 4 monitored keywords."
+    },
+    {
+      "severity": "low",
+      "type": "new_domain_repeated_top5",
+      "domain": "oppussingsguiden.no",
+      "count": 2,
+      "message": "oppussingsguiden.no appears top 5 for 2 monitored keywords."
     },
     {
       "severity": "low",
@@ -3526,9 +3499,9 @@
     {
       "severity": "low",
       "type": "new_domain_repeated_top5",
-      "domain": "oppussingsguiden.no",
+      "domain": "piperehabas.no",
       "count": 2,
-      "message": "oppussingsguiden.no appears top 5 for 2 monitored keywords."
+      "message": "piperehabas.no appears top 5 for 2 monitored keywords."
     },
     {
       "severity": "low",
@@ -3561,23 +3534,30 @@
     {
       "severity": "low",
       "type": "new_domain_repeated_top5",
+      "domain": "tolmer.no",
+      "count": 2,
+      "message": "tolmer.no appears top 5 for 2 monitored keywords."
+    },
+    {
+      "severity": "low",
+      "type": "new_domain_repeated_top5",
       "domain": "feiermester.org",
       "count": 3,
       "message": "feiermester.org appears top 5 for 3 monitored keywords."
     }
   ],
   "summary": {
-    "targetScore": 40,
-    "targetVisibilityRank": 19,
+    "targetScore": 56,
+    "targetVisibilityRank": 12,
     "leader": {
       "domain": "smartvarme.no",
-      "score": 146
+      "score": 130
     },
     "topCompetitors": [
       {
         "domain": "smartvarme.no",
-        "score": 146,
-        "delta": 0,
+        "score": 130,
+        "delta": -16,
         "bestRank": 1,
         "top3": 4
       },
@@ -3611,8 +3591,8 @@
       },
       {
         "domain": "facebook.com",
-        "score": 92,
-        "delta": 6,
+        "score": 82,
+        "delta": -10,
         "bestRank": 1,
         "top3": 1
       }
