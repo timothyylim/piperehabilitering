@@ -2878,5 +2878,333 @@
         ]
       }
     ]
+  },
+  {
+    "capturedAt": "2026-06-08T07:20:00.856Z",
+    "range": {
+      "startDate": "2026-05-30",
+      "endDate": "2026-06-05"
+    },
+    "overall": [
+      {
+        "value": "33"
+      },
+      {
+        "value": "41"
+      },
+      {
+        "value": "39"
+      },
+      {
+        "value": "42.170329025641024"
+      },
+      {
+        "value": "0.717948717948718"
+      },
+      {
+        "value": "0.28205128205128205"
+      }
+    ],
+    "pages": [
+      {
+        "dimensionValues": [
+          {
+            "value": "/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "41"
+          },
+          {
+            "value": "33"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "dimensionValues": [
+          {
+            "value": "google"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "30"
+          },
+          {
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(direct)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "9"
+          },
+          {
+            "value": "8"
+          }
+        ]
+      }
+    ],
+    "devices": [
+      {
+        "dimensionValues": [
+          {
+            "value": "mobile"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "20"
+          },
+          {
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "desktop"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "13"
+          },
+          {
+            "value": "14"
+          }
+        ]
+      }
+    ],
+    "countries": [
+      {
+        "dimensionValues": [
+          {
+            "value": "Norway"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "24"
+          },
+          {
+            "value": "30"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Lithuania"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Morocco"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Indonesia"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "daily": [
+      {
+        "dimensionValues": [
+          {
+            "value": "20260530"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260531"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260601"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260602"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "4"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260603"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "7"
+          },
+          {
+            "value": "9"
+          },
+          {
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260604"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "8"
+          },
+          {
+            "value": "10"
+          },
+          {
+            "value": "9"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260605"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "9"
+          },
+          {
+            "value": "10"
+          },
+          {
+            "value": "11"
+          }
+        ]
+      }
+    ]
   }
 ]
