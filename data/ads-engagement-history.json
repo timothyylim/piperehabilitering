@@ -1,1 +1,133 @@
-[]
+[
+  {
+    "capturedAt": "2026-06-10T05:42:18.139Z",
+    "range": {
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-07"
+    },
+    "summary": {
+      "sessions": "16",
+      "users": "15",
+      "engagementRate": "0.4375",
+      "bounceRate": "0.5625",
+      "avgDuration": "42.7591014375",
+      "pageviews": "19",
+      "conversions": "0"
+    },
+    "pages": [
+      {
+        "dimensionValues": [
+          {
+            "value": "/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "16"
+          },
+          {
+            "value": "0.4375"
+          },
+          {
+            "value": "42.7591014375"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      }
+    ],
+    "daily": [
+      {
+        "dimensionValues": [
+          {
+            "value": "20260601"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "0.5"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260602"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "0.33333333333333331"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260603"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "0.66666666666666663"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260604"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "0.4"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260605"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "0.33333333333333331"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      }
+    ]
+  }
+]
