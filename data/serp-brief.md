@@ -1,26 +1,26 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-06-15T04:15:28.023Z
+Captured: 2026-06-16T04:15:26.921Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 56 and ranks #12 among observed domains.
-Current visibility leader: smartvarme.no (138).
+pipe-rehab.no visibility score is 62 and ranks #11 among observed domains.
+Current visibility leader: smartvarme.no (130).
 
 ## Top Competitors
 
-- smartvarme.no: score 138 (+8), best rank #1, top-3 appearances 4
-- norskpiperehabilitering.no: score 128 (+20), best rank #1, top-3 appearances 3
-- alfavarme.no: score 116 (-6), best rank #1, top-3 appearances 3
+- smartvarme.no: score 130 (-8), best rank #1, top-3 appearances 4
+- alfavarme.no: score 122 (+6), best rank #1, top-3 appearances 3
+- norskpiperehabilitering.no: score 112 (-16), best rank #2, top-3 appearances 3
 - mittanbud.no: score 108 (+0), best rank #1, top-3 appearances 3
-- pipefiks.no: score 80 (-10), best rank #1, top-3 appearances 2
-- proff.no: score 80 (-10), best rank #1, top-3 appearances 2
+- proff.no: score 90 (+10), best rank #1, top-3 appearances 2
+- pipefiks.no: score 80 (+0), best rank #1, top-3 appearances 2
 
 ## Priority Keywords
 
-- piperehabilitering skien: pipe-rehab.no #5; top competitor norskpiperehabilitering.no #1
+- piperehabilitering skien: pipe-rehab.no #5; top competitor proff.no #1
 - piperehabilitering porsgrunn: pipe-rehab.no #6; top competitor pipefiks.no #1
 - piperehabilitering telemark: pipe-rehab.no #9; top competitor proff.no #1
 - piperehabilitering pris: pipe-rehab.no not top 20; top competitor alfavarme.no #1
@@ -48,8 +48,8 @@ Current visibility leader: smartvarme.no (138).
 - [high] pipe-rehab.no is not top 10 for "hva koster piperehabilitering".
 - [high] pipe-rehab.no is #5 for "piperehabilitering skien", below the top-3 target.
 - [high] pipe-rehab.no is #6 for "piperehabilitering porsgrunn", below the top-3 target.
-- [medium] norskpiperehabilitering.no is #1 for "piperehabilitering skien".
-- [medium] proff.no is #2 for "piperehabilitering skien".
+- [medium] proff.no is #1 for "piperehabilitering skien".
+- [medium] norskpiperehabilitering.no is #2 for "piperehabilitering skien".
 - [medium] norskpiperehabilitering.no is #2 for "piperehabilitering porsgrunn".
 - [medium] gulesider.no is #3 for "piperehabilitering porsgrunn".
 - [medium] proff.no is #1 for "piperehabilitering telemark".
