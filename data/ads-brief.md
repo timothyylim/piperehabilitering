@@ -1,15 +1,15 @@
 # Pipe Rehab Ads Brief
 
-Captured: 2026-06-09T06:00:08.572Z
+Captured: 2026-06-16T06:00:08.131Z
 Period: last 7 days
-Week: 2026-W24
+Week: 2026-W25
 
 ## Campaign Summary
 
-- Spend: NOK 244 (+244)
-- Clicks: 27 (+27)
-- Impressions: 322 (+322)
-- CTR: 8.39 (+8.39)%
+- Spend: NOK 327 (+83)
+- Clicks: 34 (+7)
+- Impressions: 351 (+29)
+- CTR: 9.69 (+1.30)%
 - Conversions: 0.0 (+0.0)
 - Cost/conversion: n/a (0 conversions)
 
@@ -32,11 +32,8 @@ Week: 2026-W24
 ## Week-over-Week Changes
 
 New terms (not seen last week, > NOK 5 spend):
-  - "piperehabilitering skien"  NOK 30
-  - "piperehabilitering"  NOK 26
-  - "pris på stålrør i pipe"  NOK 10
-  - "rehabilitering av pipe"  NOK 10
-  - "montere stålpipe i gammel pipe"  NOK 10
-  - "stålrør i gammel pipe"  NOK 10
-  - "piperehabilitering as"  NOK 10
-  - "rehabilitering av pipe med stålrør pris"  NOK 10
+  - "skorstein rehabilitering"  NOK 9
+Dropped terms (spent last week, absent this week, > NOK 5):
+  - "pris på stålrør i pipe"  NOK 10 last week
+  - "pipeforing pris"  NOK 10 last week
+  - "piperehabilitering vestfold"  NOK 10 last week
