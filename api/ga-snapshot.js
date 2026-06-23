@@ -42,8 +42,11 @@ function currentWeekRange() {
     return { startDate: fmtDate(start), endDate: fmtDate(end) };
 }
 
+// Conversion key-events tracked on the site (tel:/mailto: clicks → leads).
+const CONVERSION_EVENTS = ['phone_click', 'email_click'];
+
 async function fetchRangeSnapshot(client, range) {
-    const [overall, pages, sources, devices, countries, daily] = await Promise.all([
+    const [overall, pages, sources, devices, countries, daily, conversions] = await Promise.all([
         gaFetch(client, {
             dateRanges: [range],
             metrics: [
@@ -88,7 +91,25 @@ async function fetchRangeSnapshot(client, range) {
             metrics: [{ name: 'totalUsers' }, { name: 'screenPageViews' }, { name: 'sessions' }],
             orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }],
         }),
+        gaFetch(client, {
+            dateRanges: [range],
+            dimensions: [{ name: 'eventName' }],
+            metrics: [{ name: 'eventCount' }],
+            dimensionFilter: {
+                filter: {
+                    fieldName: 'eventName',
+                    inListFilter: { values: CONVERSION_EVENTS },
+                },
+            },
+        }),
     ]);
+
+    // Normalize conversions to a fixed shape so every event is present (0 if absent).
+    const convCounts = Object.fromEntries(CONVERSION_EVENTS.map((e) => [e, 0]));
+    for (const row of conversions.rows || []) {
+        convCounts[row.dimensionValues[0].value] = Number(row.metricValues[0].value);
+    }
+    convCounts.total = CONVERSION_EVENTS.reduce((sum, e) => sum + convCounts[e], 0);
 
     return {
         capturedAt: new Date().toISOString(),
@@ -99,6 +120,7 @@ async function fetchRangeSnapshot(client, range) {
         devices: devices.rows || [],
         countries: countries.rows || [],
         daily: daily.rows || [],
+        conversions: convCounts,
     };
 }
 
