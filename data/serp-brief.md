@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-06-25T04:15:27.650Z
+Captured: 2026-06-26T04:15:22.796Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 78 and ranks #7 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (156).
+pipe-rehab.no visibility score is 66 and ranks #9 among observed domains.
+Current visibility leader: norskpiperehabilitering.no (150).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 156 (+18), best rank #1, top-3 appearances 4
-- smartvarme.no: score 142 (-8), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 150 (-6), best rank #1, top-3 appearances 4
+- smartvarme.no: score 146 (+4), best rank #1, top-3 appearances 4
 - proff.no: score 104 (+0), best rank #1, top-3 appearances 3
-- mittanbud.no: score 100 (-18), best rank #3, top-3 appearances 3
-- facebook.com: score 98 (+0), best rank #1, top-3 appearances 2
-- alfavarme.no: score 92 (-22), best rank #1, top-3 appearances 2
+- mittanbud.no: score 104 (+4), best rank #2, top-3 appearances 2
+- facebook.com: score 96 (-2), best rank #1, top-3 appearances 2
+- alfavarme.no: score 86 (-6), best rank #1, top-3 appearances 2
 
 ## Priority Keywords
 
@@ -28,7 +28,7 @@ Current visibility leader: norskpiperehabilitering.no (156).
 
 ## Wins
 
-- piperehabilitering arendal: #2
+- No top-3 monitored wins this snapshot.
 
 ## Misses
 
@@ -55,7 +55,7 @@ Current visibility leader: norskpiperehabilitering.no (156).
 - [medium] mittanbud.no is #3 for "piperehabilitering porsgrunn".
 - [medium] proff.no is #1 for "piperehabilitering telemark".
 - [medium] norskpiperehabilitering.no is #2 for "piperehabilitering telemark".
-- [medium] mittanbud.no is #3 for "piperehabilitering telemark".
+- [medium] vtpipe.no is #3 for "piperehabilitering telemark".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering skien".
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering skien".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
