@@ -1,38 +1,39 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-06-26T04:15:22.796Z
+Captured: 2026-06-27T04:15:26.802Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 66 and ranks #9 among observed domains.
+pipe-rehab.no visibility score is 66 and ranks #11 among observed domains.
 Current visibility leader: norskpiperehabilitering.no (150).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 150 (-6), best rank #1, top-3 appearances 4
-- smartvarme.no: score 146 (+4), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 150 (+0), best rank #1, top-3 appearances 4
+- smartvarme.no: score 124 (-22), best rank #1, top-3 appearances 4
+- facebook.com: score 108 (+12), best rank #1, top-3 appearances 2
 - proff.no: score 104 (+0), best rank #1, top-3 appearances 3
-- mittanbud.no: score 104 (+4), best rank #2, top-3 appearances 2
-- facebook.com: score 96 (-2), best rank #1, top-3 appearances 2
-- alfavarme.no: score 86 (-6), best rank #1, top-3 appearances 2
+- mittanbud.no: score 98 (-6), best rank #2, top-3 appearances 2
+- vtpipe.no: score 82 (+0), best rank #1, top-3 appearances 3
 
 ## Priority Keywords
 
 - piperehabilitering skien: pipe-rehab.no #4; top competitor norskpiperehabilitering.no #1
 - piperehabilitering porsgrunn: pipe-rehab.no #5; top competitor norskpiperehabilitering.no #1
-- piperehabilitering telemark: pipe-rehab.no #7; top competitor proff.no #1
-- piperehabilitering pris: pipe-rehab.no not top 20; top competitor smartvarme.no #1
+- piperehabilitering telemark: pipe-rehab.no #8; top competitor proff.no #1
+- piperehabilitering pris: pipe-rehab.no not top 20; top competitor totalpeis.no #1
 - hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor alfavarme.no #1
 
 ## Wins
 
-- No top-3 monitored wins this snapshot.
+- piperehabilitering arendal: #3
 
 ## Misses
 
 - piperehabilitering vestfold: not top 20
+- piperehabilitering larvik: not top 20
 - piperehabilitering pris: not top 20
 - hva koster piperehabilitering: not top 20
 - pipe rehabilitering: not top 20
