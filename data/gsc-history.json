@@ -7189,5 +7189,744 @@
         "position": 6.5
       }
     ]
+  },
+  {
+    "capturedAt": "2026-07-06T06:18:41.178Z",
+    "range": {
+      "startDate": "2026-06-27",
+      "endDate": "2026-07-03"
+    },
+    "overall": {
+      "clicks": 5,
+      "impressions": 1096,
+      "ctr": 0.004562043795620438,
+      "position": 25.092153284671532
+    },
+    "queries": [
+      {
+        "keys": [
+          "piperehabilitering"
+        ],
+        "clicks": 1,
+        "impressions": 98,
+        "ctr": 0.01020408163265306,
+        "position": 2.9489795918367347
+      },
+      {
+        "keys": [
+          "piperehabilitering telemark"
+        ],
+        "clicks": 1,
+        "impressions": 9,
+        "ctr": 0.1111111111111111,
+        "position": 7.444444444444445
+      },
+      {
+        "keys": [
+          "anbefalt firma for piperehabilitering"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 29.7
+      },
+      {
+        "keys": [
+          "chimney"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "foring pipe"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "hva koster piperehabilitering"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 35.875
+      },
+      {
+        "keys": [
+          "kronereduksjon kragerø"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "mur og pipeservice"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 49
+      },
+      {
+        "keys": [
+          "norsk piperehabilitering as"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 38.5
+      },
+      {
+        "keys": [
+          "pipe innsats"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 35.75
+      },
+      {
+        "keys": [
+          "pipe rehabilitering"
+        ],
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 23.76
+      },
+      {
+        "keys": [
+          "pipe rehabilitering vestfold"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 12.363636363636363
+      },
+      {
+        "keys": [
+          "pipefornying pris"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "pipemuring"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "piper haugesund"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "piperehabilitering arendal"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 4.565217391304348
+      },
+      {
+        "keys": [
+          "piperehabilitering as"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 2.25
+      },
+      {
+        "keys": [
+          "piperehabilitering barstadvika"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "keys": [
+          "piperehabilitering brattvåg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "piperehabilitering brevik"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 22.5
+      },
+      {
+        "keys": [
+          "piperehabilitering bryggja"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 47.857142857142854
+      },
+      {
+        "keys": [
+          "piperehabilitering daugstadvegen"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11.714285714285714
+      },
+      {
+        "keys": [
+          "piperehabilitering drammen"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 37.22222222222222
+      },
+      {
+        "keys": [
+          "piperehabilitering fredrikstad"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "piperehabilitering gol"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "keys": [
+          "piperehabilitering hallingdal"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 28.857142857142858
+      },
+      {
+        "keys": [
+          "piperehabilitering hamar"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 20.933333333333334
+      },
+      {
+        "keys": [
+          "piperehabilitering hemsedal"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "piperehabilitering hessa"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 42.5
+      },
+      {
+        "keys": [
+          "piperehabilitering hildre"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 53.333333333333336
+      },
+      {
+        "keys": [
+          "piperehabilitering horten"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 23.363636363636363
+      },
+      {
+        "keys": [
+          "piperehabilitering kinn"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 7.285714285714286
+      },
+      {
+        "keys": [
+          "piperehabilitering kongsberg"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 20.875
+      },
+      {
+        "keys": [
+          "piperehabilitering kopervik"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 18.25
+      },
+      {
+        "keys": [
+          "piperehabilitering kristiansund"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 39.857142857142854
+      },
+      {
+        "keys": [
+          "piperehabilitering langevåg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 40.166666666666664
+      },
+      {
+        "keys": [
+          "piperehabilitering larvik"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 6.636363636363637
+      },
+      {
+        "keys": [
+          "piperehabilitering lillehammer"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 18.555555555555557
+      },
+      {
+        "keys": [
+          "piperehabilitering molde"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 43.333333333333336
+      },
+      {
+        "keys": [
+          "piperehabilitering nesbyen"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "piperehabilitering oslo"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 47.785714285714285
+      },
+      {
+        "keys": [
+          "piperehabilitering porsgrunn"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 7.608695652173913
+      },
+      {
+        "keys": [
+          "piperehabilitering pris"
+        ],
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 25.424242424242426
+      },
+      {
+        "keys": [
+          "piperehabilitering pris barstadvika"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 22.4
+      },
+      {
+        "keys": [
+          "piperehabilitering pris brattvåg"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 29.444444444444443
+      },
+      {
+        "keys": [
+          "piperehabilitering pris bryggja"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 33.81818181818182
+      },
+      {
+        "keys": [
+          "piperehabilitering pris daugstadvegen"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 14.75
+      },
+      {
+        "keys": [
+          "piperehabilitering pris haram"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 26.666666666666668
+      },
+      {
+        "keys": [
+          "piperehabilitering pris hessa"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 21.4
+      },
+      {
+        "keys": [
+          "piperehabilitering pris hildre"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 26.25
+      }
+    ],
+    "pages": [
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/"
+        ],
+        "clicks": 3,
+        "impressions": 859,
+        "ctr": 0.0034924330616996507,
+        "position": 28.533178114086148
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-drangedal"
+        ],
+        "clicks": 1,
+        "impressions": 12,
+        "ctr": 0.08333333333333333,
+        "position": 50
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-skien"
+        ],
+        "clicks": 1,
+        "impressions": 27,
+        "ctr": 0.037037037037037035,
+        "position": 33.81481481481482
+      },
+      {
+        "keys": [
+          "http://www.pipe-rehab.no/"
+        ],
+        "clicks": 0,
+        "impressions": 177,
+        "ctr": 0,
+        "position": 14.022598870056497
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-arendal"
+        ],
+        "clicks": 0,
+        "impressions": 82,
+        "ctr": 0,
+        "position": 38.02439024390244
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-bamble"
+        ],
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 39.96296296296296
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-kragero"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 19.615384615384617
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-larvik"
+        ],
+        "clicks": 0,
+        "impressions": 83,
+        "ctr": 0,
+        "position": 38.25301204819277
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-nome"
+        ],
+        "clicks": 0,
+        "impressions": 103,
+        "ctr": 0,
+        "position": 62.87378640776699
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-notodden"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 45.27272727272727
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-porsgrunn"
+        ],
+        "clicks": 0,
+        "impressions": 50,
+        "ctr": 0,
+        "position": 49.72
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-sandefjord"
+        ],
+        "clicks": 0,
+        "impressions": 53,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-siljan"
+        ],
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 77.77777777777777
+      },
+      {
+        "keys": [
+          "https://www.pipe-rehab.no/piperehabilitering-tonsberg"
+        ],
+        "clicks": 0,
+        "impressions": 51,
+        "ctr": 0,
+        "position": 29.92156862745098
+      }
+    ],
+    "countries": [
+      {
+        "keys": [
+          "nor"
+        ],
+        "clicks": 5,
+        "impressions": 1049,
+        "ctr": 0.004766444232602479,
+        "position": 25.897998093422306
+      },
+      {
+        "keys": [
+          "are"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "deu"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "esp"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 31.5
+      },
+      {
+        "keys": [
+          "fra"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "gbr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "isl"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "ita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "jpn"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 5.666666666666667
+      },
+      {
+        "keys": [
+          "kor"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "mar"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.25
+      },
+      {
+        "keys": [
+          "nld"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "swe"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "twn"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "usa"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 6.2727272727272725
+      },
+      {
+        "keys": [
+          "vnm"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      }
+    ]
   }
 ]
