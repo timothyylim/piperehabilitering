@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-07-14T04:15:28.274Z
+Captured: 2026-07-15T04:15:27.928Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
 pipe-rehab.no visibility score is 90 and ranks #6 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (144).
+Current visibility leader: norskpiperehabilitering.no (136).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 144 (+0), best rank #1, top-3 appearances 3
-- smartvarme.no: score 138 (+8), best rank #1, top-3 appearances 4
-- vtpipe.no: score 94 (+12), best rank #1, top-3 appearances 3
-- facebook.com: score 92 (-6), best rank #1, top-3 appearances 1
-- proff.no: score 92 (-12), best rank #1, top-3 appearances 2
-- alfavarme.no: score 88 (-6), best rank #1, top-3 appearances 3
+- norskpiperehabilitering.no: score 136 (-8), best rank #1, top-3 appearances 3
+- smartvarme.no: score 130 (-8), best rank #1, top-3 appearances 4
+- vtpipe.no: score 102 (+8), best rank #1, top-3 appearances 3
+- facebook.com: score 94 (+2), best rank #1, top-3 appearances 1
+- proff.no: score 92 (+0), best rank #1, top-3 appearances 2
+- mittanbud.no: score 86 (+6), best rank #3, top-3 appearances 2
 
 ## Priority Keywords
 
@@ -54,8 +54,8 @@ Current visibility leader: norskpiperehabilitering.no (144).
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering porsgrunn".
 - [medium] mittanbud.no is #3 for "piperehabilitering porsgrunn".
 - [medium] proff.no is #1 for "piperehabilitering telemark".
-- [medium] norskpiperehabilitering.no is #2 for "piperehabilitering telemark".
-- [medium] vtpipe.no is #3 for "piperehabilitering telemark".
+- [medium] vtpipe.no is #2 for "piperehabilitering telemark".
+- [medium] norskpiperehabilitering.no is #3 for "piperehabilitering telemark".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering skien".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
 - [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
