@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-07-16T04:15:25.288Z
+Captured: 2026-07-17T04:15:26.387Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 96 and ranks #3 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (156).
+pipe-rehab.no visibility score is 96 and ranks #4 among observed domains.
+Current visibility leader: norskpiperehabilitering.no (144).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 156 (+20), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 144 (-12), best rank #1, top-3 appearances 3
 - smartvarme.no: score 130 (+0), best rank #1, top-3 appearances 4
-- facebook.com: score 92 (-2), best rank #1, top-3 appearances 1
-- vtpipe.no: score 88 (-14), best rank #1, top-3 appearances 3
-- totalpeis.no: score 86 (+16), best rank #1, top-3 appearances 2
-- alfavarme.no: score 84 (+2), best rank #3, top-3 appearances 3
+- vtpipe.no: score 98 (+10), best rank #1, top-3 appearances 3
+- proff.no: score 92 (+12), best rank #1, top-3 appearances 2
+- alfavarme.no: score 86 (+2), best rank #2, top-3 appearances 3
+- mittanbud.no: score 82 (+2), best rank #3, top-3 appearances 3
 
 ## Priority Keywords
 
@@ -28,8 +28,8 @@ Current visibility leader: norskpiperehabilitering.no (156).
 
 ## Wins
 
-- piperehabilitering arendal: #2
-- piperehabilitering larvik: #2
+- piperehabilitering arendal: #1
+- piperehabilitering larvik: #3
 
 ## Misses
 
@@ -64,7 +64,7 @@ Current visibility leader: norskpiperehabilitering.no (156).
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering telemark".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering telemark".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
-- [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering vestfold".
+- [medium] proff.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 
 ## Recommended Next Actions
 
