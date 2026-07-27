@@ -5194,5 +5194,398 @@
       "email_click": 0,
       "total": 0
     }
+  },
+  {
+    "capturedAt": "2026-07-27T07:23:17.740Z",
+    "range": {
+      "startDate": "2026-07-18",
+      "endDate": "2026-07-24"
+    },
+    "overall": [
+      {
+        "value": "21"
+      },
+      {
+        "value": "25"
+      },
+      {
+        "value": "23"
+      },
+      {
+        "value": "17.271446608695655"
+      },
+      {
+        "value": "0.82608695652173914"
+      },
+      {
+        "value": "0.17391304347826086"
+      }
+    ],
+    "pages": [
+      {
+        "dimensionValues": [
+          {
+            "value": "/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "13"
+          },
+          {
+            "value": "13"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/piperehabilitering-skien"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "7"
+          },
+          {
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/piperehabilitering-bamble"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/piperehabilitering-kragero"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/piperehabilitering-notodden"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "dimensionValues": [
+          {
+            "value": "(direct)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "14"
+          },
+          {
+            "value": "12"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "google"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "9"
+          },
+          {
+            "value": "9"
+          }
+        ]
+      }
+    ],
+    "devices": [
+      {
+        "dimensionValues": [
+          {
+            "value": "mobile"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "13"
+          },
+          {
+            "value": "13"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "desktop"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "8"
+          },
+          {
+            "value": "10"
+          }
+        ]
+      }
+    ],
+    "countries": [
+      {
+        "dimensionValues": [
+          {
+            "value": "Norway"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "11"
+          },
+          {
+            "value": "12"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United Arab Emirates"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Afghanistan"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Armenia"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Germany"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Thailand"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "daily": [
+      {
+        "dimensionValues": [
+          {
+            "value": "20260718"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260719"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "8"
+          },
+          {
+            "value": "9"
+          },
+          {
+            "value": "8"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260720"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260721"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260722"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260723"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "20260724"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      }
+    ],
+    "conversions": {
+      "phone_click": 0,
+      "email_click": 0,
+      "total": 0
+    }
   }
 ]
