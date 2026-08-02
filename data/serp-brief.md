@@ -1,18 +1,18 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-08-01T04:15:19.634Z
+Captured: 2026-08-02T04:15:19.779Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 90 and ranks #6 among observed domains.
+pipe-rehab.no visibility score is 96 and ranks #5 among observed domains.
 Current visibility leader: norskpiperehabilitering.no (136).
 
 ## Top Competitors
 
 - norskpiperehabilitering.no: score 136 (+0), best rank #1, top-3 appearances 3
-- smartvarme.no: score 130 (-8), best rank #1, top-3 appearances 4
+- smartvarme.no: score 130 (+0), best rank #1, top-3 appearances 4
 - vtpipe.no: score 102 (+0), best rank #1, top-3 appearances 3
 - proff.no: score 98 (+0), best rank #1, top-3 appearances 3
 - facebook.com: score 92 (+0), best rank #1, top-3 appearances 1
@@ -29,7 +29,7 @@ Current visibility leader: norskpiperehabilitering.no (136).
 ## Wins
 
 - piperehabilitering arendal: #2
-- piperehabilitering larvik: #3
+- piperehabilitering larvik: #2
 
 ## Misses
 
