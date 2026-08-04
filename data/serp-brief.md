@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-08-03T04:15:22.150Z
+Captured: 2026-08-04T04:15:22.076Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 90 and ranks #5 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (130).
+pipe-rehab.no visibility score is 96 and ranks #5 among observed domains.
+Current visibility leader: smartvarme.no (138).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 130 (-6), best rank #1, top-3 appearances 3
-- smartvarme.no: score 130 (+0), best rank #1, top-3 appearances 4
+- smartvarme.no: score 138 (+8), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 136 (+6), best rank #1, top-3 appearances 3
 - vtpipe.no: score 102 (+0), best rank #1, top-3 appearances 3
-- proff.no: score 92 (-6), best rank #1, top-3 appearances 2
-- pipefiks.no: score 90 (+0), best rank #2, top-3 appearances 2
-- facebook.com: score 86 (-6), best rank #1, top-3 appearances 1
+- proff.no: score 98 (+6), best rank #1, top-3 appearances 3
+- pipefiks.no: score 96 (+6), best rank #2, top-3 appearances 3
+- facebook.com: score 92 (+6), best rank #1, top-3 appearances 1
 
 ## Priority Keywords
 
@@ -29,7 +29,7 @@ Current visibility leader: norskpiperehabilitering.no (130).
 ## Wins
 
 - piperehabilitering arendal: #2
-- piperehabilitering larvik: #3
+- piperehabilitering larvik: #2
 
 ## Misses
 
@@ -63,8 +63,8 @@ Current visibility leader: norskpiperehabilitering.no (130).
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering telemark".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering telemark".
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering telemark".
-- [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering vestfold".
+- [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 
 ## Recommended Next Actions
 
