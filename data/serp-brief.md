@@ -1,28 +1,28 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-08-13T04:15:27.175Z
+Captured: 2026-08-14T04:15:25.842Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 90 and ranks #6 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (130).
+pipe-rehab.no visibility score is 90 and ranks #5 among observed domains.
+Current visibility leader: norskpiperehabilitering.no (144).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 130 (-12), best rank #1, top-3 appearances 3
-- smartvarme.no: score 130 (+0), best rank #1, top-3 appearances 4
-- mittanbud.no: score 110 (+24), best rank #1, top-3 appearances 2
-- vtpipe.no: score 102 (+0), best rank #1, top-3 appearances 3
-- proff.no: score 98 (+6), best rank #1, top-3 appearances 3
-- pipefiks.no: score 90 (-6), best rank #2, top-3 appearances 2
+- norskpiperehabilitering.no: score 144 (+14), best rank #1, top-3 appearances 3
+- smartvarme.no: score 122 (-8), best rank #1, top-3 appearances 4
+- mittanbud.no: score 104 (-6), best rank #1, top-3 appearances 2
+- proff.no: score 98 (+0), best rank #1, top-3 appearances 3
+- pipefiks.no: score 90 (+0), best rank #2, top-3 appearances 2
+- oppussingsguiden.no: score 88 (+26), best rank #2, top-3 appearances 2
 
 ## Priority Keywords
 
 - piperehabilitering skien: pipe-rehab.no #4; top competitor norskpiperehabilitering.no #1
 - piperehabilitering porsgrunn: pipe-rehab.no #5; top competitor norskpiperehabilitering.no #1
-- piperehabilitering telemark: pipe-rehab.no #6; top competitor proff.no #1
+- piperehabilitering telemark: pipe-rehab.no #7; top competitor proff.no #1
 - piperehabilitering pris: pipe-rehab.no not top 20; top competitor totalpeis.no #1
 - hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor totalpeis.no #1
 
@@ -54,17 +54,17 @@ Current visibility leader: norskpiperehabilitering.no (130).
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering porsgrunn".
 - [medium] mittanbud.no is #3 for "piperehabilitering porsgrunn".
 - [medium] proff.no is #1 for "piperehabilitering telemark".
-- [medium] vtpipe.no is #2 for "piperehabilitering telemark".
-- [medium] norskpiperehabilitering.no is #3 for "piperehabilitering telemark".
+- [medium] norskpiperehabilitering.no is #2 for "piperehabilitering telemark".
+- [medium] vtpipe.no is #3 for "piperehabilitering telemark".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering skien".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
 - [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering telemark".
-- [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering telemark".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering telemark".
+- [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering telemark".
+- [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering telemark".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
-- [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering vestfold".
 
 ## Recommended Next Actions
 
