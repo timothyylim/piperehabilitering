@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-08-16T04:15:26.886Z
+Captured: 2026-08-17T04:15:26.424Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 90 and ranks #5 among observed domains.
+pipe-rehab.no visibility score is 90 and ranks #6 among observed domains.
 Current visibility leader: norskpiperehabilitering.no (150).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 150 (+6), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 150 (+0), best rank #1, top-3 appearances 4
 - smartvarme.no: score 130 (+0), best rank #1, top-3 appearances 4
-- mittanbud.no: score 104 (+0), best rank #1, top-3 appearances 2
-- proff.no: score 98 (+0), best rank #1, top-3 appearances 3
-- pipefiks.no: score 90 (+0), best rank #2, top-3 appearances 2
-- totalpeis.no: score 86 (+6), best rank #1, top-3 appearances 2
+- pipefiks.no: score 100 (+10), best rank #2, top-3 appearances 2
+- mittanbud.no: score 94 (-10), best rank #1, top-3 appearances 2
+- totalpeis.no: score 92 (+6), best rank #1, top-3 appearances 2
+- proff.no: score 88 (-10), best rank #1, top-3 appearances 3
 
 ## Priority Keywords
 
@@ -50,7 +50,7 @@ Current visibility leader: norskpiperehabilitering.no (150).
 - [high] pipe-rehab.no is #4 for "piperehabilitering skien", below the top-3 target.
 - [high] pipe-rehab.no is #5 for "piperehabilitering porsgrunn", below the top-3 target.
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering skien".
-- [medium] proff.no is #2 for "piperehabilitering skien".
+- [medium] proff.no is #3 for "piperehabilitering skien".
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering porsgrunn".
 - [medium] mittanbud.no is #3 for "piperehabilitering porsgrunn".
 - [medium] proff.no is #1 for "piperehabilitering telemark".
