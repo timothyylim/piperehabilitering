@@ -1,15 +1,15 @@
 # Pipe Rehab Ads Brief
 
-Captured: 2026-08-11T06:00:09.085Z
+Captured: 2026-08-18T06:00:09.034Z
 Period: last 7 days
-Week: 2026-W33
+Week: 2026-W34
 
 ## Campaign Summary
 
-- Spend: NOK 141 (+35)
-- Clicks: 16 (+5)
-- Impressions: 557 (+133)
-- CTR: 2.87 (+0.28)%
+- Spend: NOK 284 (+143)
+- Clicks: 30 (+14)
+- Impressions: 563 (+6)
+- CTR: 5.33 (+2.46)%
 - Conversions: 0.0 (+0.0)
 - Cost/conversion: n/a (0 conversions)
 
@@ -32,5 +32,6 @@ Week: 2026-W33
 ## Week-over-Week Changes
 
 New terms (not seen last week, > NOK 5 spend):
-  - "leca pipe rehabilitering"  NOK 10
-  - "piperehabilitering telemark"  NOK 9
+  - "piperehabilitering porsgrunn"  NOK 10
+Dropped terms (spent last week, absent this week, > NOK 5):
+  - "leca pipe rehabilitering"  NOK 10 last week
