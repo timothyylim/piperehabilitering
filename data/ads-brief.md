@@ -1,15 +1,15 @@
 # Pipe Rehab Ads Brief
 
-Captured: 2026-09-01T06:00:09.663Z
+Captured: 2026-09-08T06:00:08.873Z
 Period: last 7 days
-Week: 2026-W36
+Week: 2026-W37
 
 ## Campaign Summary
 
-- Spend: NOK 251 (-62)
-- Clicks: 27 (-7)
-- Impressions: 461 (-66)
-- CTR: 5.86 (-0.59)%
+- Spend: NOK 495 (+244)
+- Clicks: 52 (+25)
+- Impressions: 631 (+170)
+- CTR: 8.24 (+2.38)%
 - Conversions: 0.0 (+0.0)
 - Cost/conversion: n/a (0 conversions)
 
@@ -32,7 +32,11 @@ Week: 2026-W36
 ## Week-over-Week Changes
 
 New terms (not seen last week, > NOK 5 spend):
-  - "montere stålrør i pipe"  NOK 10
+  - "rehabilitering av piper"  NOK 20
+  - "piperenovering pris"  NOK 10
+  - "pris rehabilitering pipe"  NOK 10
+  - "montere stålpipe i gammel pipe"  NOK 10
+  - "piperehabilitering telemark"  NOK 10
+  - "keramisk rør i pipe"  NOK 10
 Dropped terms (spent last week, absent this week, > NOK 5):
-  - "rehabilitering teglsteinspipe"  NOK 10 last week
-  - "rehabilitere pipe"  NOK 10 last week
+  - "pipe fornying"  NOK 10 last week
