@@ -1,40 +1,40 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-09-19T04:15:27.510Z
+Captured: 2026-09-20T04:15:30.299Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 134 and ranks #3 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (140).
+pipe-rehab.no visibility score is 110 and ranks #3 among observed domains.
+Current visibility leader: norskpiperehabilitering.no (144).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 140 (+0), best rank #1, top-3 appearances 3
-- smartvarme.no: score 138 (-16), best rank #1, top-3 appearances 4
-- alfavarme.no: score 96 (+0), best rank #2, top-3 appearances 3
-- proff.no: score 94 (+8), best rank #2, top-3 appearances 2
-- mittanbud.no: score 90 (-8), best rank #3, top-3 appearances 3
-- oppussingsguiden.no: score 86 (+6), best rank #2, top-3 appearances 3
+- norskpiperehabilitering.no: score 144 (+4), best rank #1, top-3 appearances 3
+- smartvarme.no: score 138 (+0), best rank #1, top-3 appearances 4
+- proff.no: score 94 (+0), best rank #2, top-3 appearances 2
+- alfavarme.no: score 92 (-4), best rank #1, top-3 appearances 2
+- facebook.com: score 90 (+10), best rank #2, top-3 appearances 1
+- oppussingsguiden.no: score 88 (+2), best rank #2, top-3 appearances 3
 
 ## Priority Keywords
 
 - piperehabilitering skien: pipe-rehab.no #4; top competitor norskpiperehabilitering.no #1
-- piperehabilitering porsgrunn: pipe-rehab.no #4; top competitor norskpiperehabilitering.no #1
+- piperehabilitering porsgrunn: pipe-rehab.no #5; top competitor norskpiperehabilitering.no #1
 - piperehabilitering telemark: pipe-rehab.no #1; top competitor proff.no #2
 - piperehabilitering pris: pipe-rehab.no not top 20; top competitor smartvarme.no #1
-- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor totalpeis.no #1
+- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor alfavarme.no #1
 
 ## Wins
 
 - piperehabilitering telemark: #1
 - piperehabilitering arendal: #1
-- piperehabilitering larvik: #2
 
 ## Misses
 
 - piperehabilitering vestfold: not top 20
+- piperehabilitering larvik: not top 20
 - piperehabilitering pris: not top 20
 - hva koster piperehabilitering: not top 20
 - pipe rehabilitering: not top 20
@@ -49,23 +49,23 @@ Current visibility leader: norskpiperehabilitering.no (140).
 - [high] pipe-rehab.no is not top 10 for "piperehabilitering pris".
 - [high] pipe-rehab.no is not top 10 for "hva koster piperehabilitering".
 - [high] pipe-rehab.no is #4 for "piperehabilitering skien", below the top-3 target.
-- [high] pipe-rehab.no is #4 for "piperehabilitering porsgrunn", below the top-3 target.
+- [high] pipe-rehab.no is #5 for "piperehabilitering porsgrunn", below the top-3 target.
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering skien".
 - [medium] proff.no is #2 for "piperehabilitering skien".
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering porsgrunn".
 - [medium] gulesider.no is #3 for "piperehabilitering porsgrunn".
 - [medium] proff.no is #2 for "piperehabilitering telemark".
-- [medium] mittanbud.no is #3 for "piperehabilitering telemark".
+- [medium] norskpiperehabilitering.no is #3 for "piperehabilitering telemark".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering skien".
 - [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
+- [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering vestfold".
-- [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering vestfold".
-- [medium] facebook.com outranks pipe-rehab.no for "foring pipe".
-- [low] pipefiks.no appears top 5 for 3 monitored keywords.
-- [low] prso.no appears top 5 for 3 monitored keywords.
+- [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering vestfold".
+- [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering larvik".
+- [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering larvik".
 
 ## Recommended Next Actions
 
