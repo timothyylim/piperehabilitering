@@ -1,27 +1,27 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-09-21T04:15:29.698Z
+Captured: 2026-09-22T04:15:28.721Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 110 and ranks #3 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (148).
+pipe-rehab.no visibility score is 100 and ranks #5 among observed domains.
+Current visibility leader: norskpiperehabilitering.no (154).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 148 (+4), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 154 (+6), best rank #1, top-3 appearances 4
 - smartvarme.no: score 138 (+0), best rank #1, top-3 appearances 4
-- alfavarme.no: score 98 (+6), best rank #1, top-3 appearances 2
-- proff.no: score 94 (+0), best rank #2, top-3 appearances 2
-- facebook.com: score 90 (+0), best rank #2, top-3 appearances 1
-- pipefiks.no: score 90 (+8), best rank #2, top-3 appearances 2
+- alfavarme.no: score 104 (+6), best rank #1, top-3 appearances 2
+- proff.no: score 104 (+10), best rank #2, top-3 appearances 2
+- pipefiks.no: score 90 (+0), best rank #2, top-3 appearances 2
+- oppussingsguiden.no: score 88 (+0), best rank #2, top-3 appearances 3
 
 ## Priority Keywords
 
 - piperehabilitering skien: pipe-rehab.no #4; top competitor norskpiperehabilitering.no #1
-- piperehabilitering porsgrunn: pipe-rehab.no #5; top competitor norskpiperehabilitering.no #1
+- piperehabilitering porsgrunn: pipe-rehab.no #6; top competitor norskpiperehabilitering.no #1
 - piperehabilitering telemark: pipe-rehab.no #1; top competitor proff.no #2
 - piperehabilitering pris: pipe-rehab.no not top 20; top competitor smartvarme.no #1
 - hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor alfavarme.no #1
@@ -49,7 +49,7 @@ Current visibility leader: norskpiperehabilitering.no (148).
 - [high] pipe-rehab.no is not top 10 for "piperehabilitering pris".
 - [high] pipe-rehab.no is not top 10 for "hva koster piperehabilitering".
 - [high] pipe-rehab.no is #4 for "piperehabilitering skien", below the top-3 target.
-- [high] pipe-rehab.no is #5 for "piperehabilitering porsgrunn", below the top-3 target.
+- [high] pipe-rehab.no is #6 for "piperehabilitering porsgrunn", below the top-3 target.
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering skien".
 - [medium] proff.no is #2 for "piperehabilitering skien".
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering porsgrunn".
@@ -59,13 +59,13 @@ Current visibility leader: norskpiperehabilitering.no (148).
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering skien".
 - [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
+- [medium] proff.no outranks pipe-rehab.no for "piperehabilitering porsgrunn".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering larvik".
-- [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering larvik".
 
 ## Recommended Next Actions
 
