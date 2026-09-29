@@ -1,15 +1,15 @@
 # Pipe Rehab Ads Brief
 
-Captured: 2026-09-22T06:00:10.306Z
+Captured: 2026-09-29T06:00:10.660Z
 Period: last 7 days
-Week: 2026-W39
+Week: 2026-W40
 
 ## Campaign Summary
 
-- Spend: NOK 234 (-140)
-- Clicks: 24 (-16)
-- Impressions: 390 (-139)
-- CTR: 6.15 (-1.41)%
+- Spend: NOK 263 (+29)
+- Clicks: 27 (+3)
+- Impressions: 490 (+100)
+- CTR: 5.51 (-0.64)%
 - Conversions: 0.0 (+0.0)
 - Cost/conversion: n/a (0 conversions)
 
@@ -23,7 +23,7 @@ Week: 2026-W39
 
 ## New Negative Keyword Candidates (manual review)
 
-- None identified.
+- "pipefiks"  NOK 9.57  1 clicks  0 conv  (below NOK 20.0 threshold)
 
 ## Auto-Applied Changes This Run
 
@@ -32,8 +32,7 @@ Week: 2026-W39
 ## Week-over-Week Changes
 
 New terms (not seen last week, > NOK 5 spend):
-  - "reparere pipe innvendig"  NOK 19
+  - "skorsteinsrehabilitering pris"  NOK 10
+  - "piperehabilitering porsgrunn"  NOK 10
 Dropped terms (spent last week, absent this week, > NOK 5):
-  - "stålrør pipe pris"  NOK 20 last week
-  - "stålforing pipe"  NOK 10 last week
-  - "piperenovering"  NOK 10 last week
+  - "reparere pipe innvendig"  NOK 19 last week
