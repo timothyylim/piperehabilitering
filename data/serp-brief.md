@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-09-28T04:15:31.089Z
+Captured: 2026-09-29T04:15:31.291Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 110 and ranks #3 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (142).
+pipe-rehab.no visibility score is 134 and ranks #2 among observed domains.
+Current visibility leader: norskpiperehabilitering.no (148).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 142 (-12), best rank #1, top-3 appearances 4
-- smartvarme.no: score 138 (+0), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 148 (+6), best rank #1, top-3 appearances 4
+- smartvarme.no: score 130 (-8), best rank #1, top-3 appearances 4
 - proff.no: score 100 (+0), best rank #2, top-3 appearances 3
+- oppussingsguiden.no: score 88 (+8), best rank #2, top-3 appearances 2
 - facebook.com: score 86 (+0), best rank #2, top-3 appearances 1
-- alfavarme.no: score 84 (+0), best rank #2, top-3 appearances 2
-- oppussingsguiden.no: score 80 (+0), best rank #2, top-3 appearances 2
+- pipefiks.no: score 76 (+0), best rank #2, top-3 appearances 2
 
 ## Priority Keywords
 
@@ -30,11 +30,11 @@ Current visibility leader: norskpiperehabilitering.no (142).
 
 - piperehabilitering telemark: #1
 - piperehabilitering arendal: #1
+- piperehabilitering larvik: #2
 
 ## Misses
 
 - piperehabilitering vestfold: not top 20
-- piperehabilitering larvik: not top 20
 - piperehabilitering pris: not top 20
 - hva koster piperehabilitering: not top 20
 - pipe rehabilitering: not top 20
@@ -63,9 +63,9 @@ Current visibility leader: norskpiperehabilitering.no (142).
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering vestfold".
-- [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering larvik".
-- [medium] gulesider.no outranks pipe-rehab.no for "piperehabilitering larvik".
-- [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering larvik".
+- [medium] facebook.com outranks pipe-rehab.no for "stålpipe montering".
+- [low] pipefiks.no appears top 5 for 2 monitored keywords.
+- [low] oppdragstorget.no appears top 5 for 4 monitored keywords.
 
 ## Recommended Next Actions
 
