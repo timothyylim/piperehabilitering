@@ -1,6 +1,6 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-10-02T04:15:30.137Z
+Captured: 2026-10-03T04:15:31.228Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
