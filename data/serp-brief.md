@@ -1,6 +1,6 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-10-10T04:15:29.353Z
+Captured: 2026-10-11T04:15:34.696Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
@@ -11,12 +11,12 @@ Current visibility leader: pipe-rehab.no (150).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 148 (+0), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 144 (-4), best rank #1, top-3 appearances 3
 - smartvarme.no: score 130 (+0), best rank #1, top-3 appearances 4
-- pipefiks.no: score 102 (+8), best rank #2, top-3 appearances 2
+- pipefiks.no: score 102 (+0), best rank #2, top-3 appearances 2
 - proff.no: score 100 (+0), best rank #2, top-3 appearances 3
-- oppdragstorget.no: score 88 (+8), best rank #3, top-3 appearances 1
-- facebook.com: score 84 (+0), best rank #4, top-3 appearances 0
+- mittanbud.no: score 82 (+0), best rank #2, top-3 appearances 1
+- oppussingsguiden.no: score 82 (+0), best rank #2, top-3 appearances 2
 
 ## Priority Keywords
 
@@ -61,9 +61,9 @@ Current visibility leader: pipe-rehab.no (150).
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] facebook.com outranks pipe-rehab.no for "stålpipe montering".
-- [medium] facebook.com outranks pipe-rehab.no for "rehabilitering av skorstein".
 - [low] pipefiks.no appears top 5 for 3 monitored keywords.
-- [low] oppdragstorget.no appears top 5 for 4 monitored keywords.
+- [low] oppdragstorget.no appears top 5 for 3 monitored keywords.
+- [low] prso.no appears top 5 for 2 monitored keywords.
 - [low] smartvarme.no appears top 5 for 4 monitored keywords.
 - [low] oppussingsguiden.no appears top 5 for 3 monitored keywords.
 - [low] lorentzenpeis.no appears top 5 for 2 monitored keywords.
