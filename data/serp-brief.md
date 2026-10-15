@@ -1,6 +1,6 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-10-14T04:15:30.754Z
+Captured: 2026-10-15T04:15:30.754Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
@@ -11,11 +11,11 @@ Current visibility leader: pipe-rehab.no (150).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 148 (+0), best rank #1, top-3 appearances 4
-- smartvarme.no: score 138 (+8), best rank #1, top-3 appearances 4
-- pipefiks.no: score 98 (+2), best rank #2, top-3 appearances 2
-- proff.no: score 90 (-10), best rank #2, top-3 appearances 3
-- mittanbud.no: score 82 (+0), best rank #2, top-3 appearances 1
+- norskpiperehabilitering.no: score 140 (-8), best rank #1, top-3 appearances 3
+- smartvarme.no: score 138 (+0), best rank #1, top-3 appearances 4
+- pipefiks.no: score 102 (+4), best rank #2, top-3 appearances 2
+- proff.no: score 100 (+10), best rank #2, top-3 appearances 3
+- mittanbud.no: score 90 (+8), best rank #2, top-3 appearances 2
 - oppussingsguiden.no: score 82 (+0), best rank #2, top-3 appearances 2
 
 ## Priority Keywords
@@ -51,22 +51,22 @@ Current visibility leader: pipe-rehab.no (150).
 - [high] pipe-rehab.no is not top 10 for "hva koster piperehabilitering".
 - [high] pipe-rehab.no is #4 for "piperehabilitering skien", below the top-3 target.
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering skien".
-- [medium] proff.no is #3 for "piperehabilitering skien".
+- [medium] proff.no is #2 for "piperehabilitering skien".
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering porsgrunn".
 - [medium] proff.no is #2 for "piperehabilitering telemark".
-- [medium] norskpiperehabilitering.no is #3 for "piperehabilitering telemark".
+- [medium] mittanbud.no is #3 for "piperehabilitering telemark".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering skien".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] facebook.com outranks pipe-rehab.no for "stålpipe montering".
-- [medium] facebook.com outranks pipe-rehab.no for "rehabilitering av skorstein".
 - [low] pipefiks.no appears top 5 for 3 monitored keywords.
 - [low] prso.no appears top 5 for 3 monitored keywords.
-- [low] oppdragstorget.no appears top 5 for 2 monitored keywords.
 - [low] smartvarme.no appears top 5 for 4 monitored keywords.
 - [low] oppussingsguiden.no appears top 5 for 3 monitored keywords.
+- [low] lorentzenpeis.no appears top 5 for 2 monitored keywords.
+- [low] totalpeis.no appears top 5 for 2 monitored keywords.
 
 ## Recommended Next Actions
 
