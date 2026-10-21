@@ -10,8 +10,23 @@ REPO_DIR=/workspace/piperehabilitering
 REMOTE=git@github-pipe-rehab:timothyylim/piperehabilitering.git
 
 mkdir -p /data /workspace
+exec 9>/data/sync.lock
+flock -n 9 || { echo "Review sync already running; skipping"; exit 0; }
+
 log() { echo "$(date -u -Iseconds) $*" >> "$LOG"; }
 
+# Persist outcome so a running scheduler is not mistaken for a healthy sync.
+finish() {
+  code=$?
+  if [ "$code" -eq 0 ]; then
+    date -u -Iseconds > /data/last-success
+    printf 'success\n' > /data/last-status
+  else
+    printf 'failed (exit %s)\n' "$code" > /data/last-status
+    log "FAILED exit=$code; see run.log and container logs"
+  fi
+}
+trap finish EXIT
 log "start"
 
 # Clone fresh or fast-forward existing clone.

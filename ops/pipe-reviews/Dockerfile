@@ -11,7 +11,7 @@ ARG SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/${S
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-      curl ca-certificates tini git openssh-client tzdata \
+      curl ca-certificates tini git openssh-client tzdata util-linux \
  && curl -fsSL "${SUPERCRONIC_URL}" -o /usr/local/bin/supercronic \
  && chmod +x /usr/local/bin/supercronic \
  && apt-get purge -y curl \

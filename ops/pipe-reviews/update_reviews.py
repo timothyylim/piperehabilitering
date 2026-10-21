@@ -20,6 +20,8 @@ The script never commits — the wrapping entrypoint.sh handles git.
 """
 
 from __future__ import annotations
+import fcntl
+import time
 import hashlib
 import html
 import json
@@ -29,7 +31,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any
 
 NORWEGIAN_MONTHS = [
@@ -51,8 +53,63 @@ def fetch_place(api_key: str, place_id: str) -> dict[str, Any]:
         "X-Goog-Api-Key": api_key,
         "X-Goog-FieldMask": "id,displayName,rating,userRatingCount,reviews,googleMapsUri",
     })
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as exc:
+        # Google explains billing/API restrictions in the response body, not
+        # the HTTP status. Never log request headers or credentials.
+        try:
+            error = json.loads(exc.read()).get("error", {})
+            message = str(error.get("message", exc.reason)).replace(api_key, "[redacted]")
+            reasons = [d.get("reason", "") for d in error.get("details", [])
+                       if isinstance(d, dict) and d.get("reason")]
+        except (ValueError, AttributeError):
+            message, reasons = str(exc.reason), []
+        raise RuntimeError(
+            f"Google Places HTTP {exc.code}: {message}; reasons={','.join(reasons)}"
+        ) from None
+
+
+CACHE_TTL = 24 * 60 * 60
+MONTHLY_REQUEST_LIMIT = 40
+
+
+def cached_place(api_key: str, place_id: str, cache_dir: pathlib.Path) -> dict[str, Any]:
+    """One shared fetch per 24 hours, including failures; 40 attempts/month max."""
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    with (cache_dir / "fetch.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        state_path = cache_dir / "fetch-state.json"
+        cache_path = cache_dir / "place.json"
+        def read(path):
+            if not path.exists():
+                return {}
+            # Fail closed on corrupt state rather than silently resetting quota.
+            return json.loads(path.read_text())
+        def write(path, value):
+            tmp = path.with_suffix(".tmp")
+            tmp.write_text(json.dumps(value, ensure_ascii=False))
+            tmp.replace(path)
+        now = time.time()
+        cached = read(cache_path)
+        if cached.get("place_id") == place_id and 0 <= now - cached.get("fetched_at", 0) < CACHE_TTL:
+            print("Using cached Google reviews (no API request)")
+            return cached["place"]
+        state = read(state_path)
+        if state.get("last_attempt") and now - state["last_attempt"] < CACHE_TTL:
+            raise RuntimeError("Google review fetch cooldown active; keeping published reviews")
+        month = datetime.fromtimestamp(now, timezone.utc).strftime("%Y-%m")
+        attempts = state.get("attempts", 0) if state.get("month") == month else 0
+        if attempts >= MONTHLY_REQUEST_LIMIT:
+            raise RuntimeError("Monthly Google review request limit reached; keeping published reviews")
+        write(state_path, {"month": month, "attempts": attempts + 1, "last_attempt": now})
+        place = fetch_place(api_key, place_id)
+        if not isinstance(place, dict) or "userRatingCount" not in place:
+            raise RuntimeError("Incomplete Google Places response; keeping published reviews")
+        write(cache_path, {"place_id": place_id, "fetched_at": now, "place": place})
+        print("Fetched fresh Google reviews (one API request)")
+        return place
 
 
 # -----------------------------------------------------------------------------
@@ -264,7 +321,11 @@ def main() -> int:
         sys.stderr.write(f"repo path does not exist: {repo}\n")
         return 2
 
-    place = fetch_place(api_key, place_id)
+    try:
+        place = cached_place(api_key, place_id, pathlib.Path(os.environ.get("REVIEWS_CACHE_DIR", "/data/reviews-cache")))
+    except (RuntimeError, urllib.error.URLError, ValueError, OSError) as exc:
+        print(f"Review sync failed: {exc}", file=sys.stderr)
+        return 1
     all_reviews = place.get("reviews", []) or []
     filtered = [r for r in all_reviews if int(r.get("rating", 0)) >= MIN_STARS]
     filtered.sort(key=lambda r: r.get("publishTime", ""), reverse=True)
