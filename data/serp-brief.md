@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-10-26T05:15:34.372Z
+Captured: 2026-10-27T05:15:29.887Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
 pipe-rehab.no visibility score is 126 and ranks #3 among observed domains.
-Current visibility leader: norskpiperehabilitering.no (168).
+Current visibility leader: norskpiperehabilitering.no (156).
 
 ## Top Competitors
 
-- norskpiperehabilitering.no: score 168 (-6), best rank #1, top-3 appearances 5
-- smartvarme.no: score 144 (-30), best rank #1, top-3 appearances 4
-- prso.no: score 98 (-6), best rank #1, top-3 appearances 3
-- proff.no: score 92 (+0), best rank #2, top-3 appearances 3
-- oppussingsguiden.no: score 84 (+0), best rank #1, top-3 appearances 2
-- pipefiks.no: score 82 (+6), best rank #2, top-3 appearances 2
+- norskpiperehabilitering.no: score 156 (-12), best rank #1, top-3 appearances 4
+- smartvarme.no: score 144 (+0), best rank #1, top-3 appearances 4
+- prso.no: score 98 (+0), best rank #1, top-3 appearances 3
+- alfavarme.no: score 86 (+10), best rank #1, top-3 appearances 2
+- proff.no: score 86 (-6), best rank #2, top-3 appearances 2
+- pipefiks.no: score 82 (+0), best rank #2, top-3 appearances 2
 
 ## Priority Keywords
 
@@ -24,7 +24,7 @@ Current visibility leader: norskpiperehabilitering.no (168).
 - piperehabilitering porsgrunn: pipe-rehab.no #3; top competitor norskpiperehabilitering.no #1
 - piperehabilitering telemark: pipe-rehab.no #4; top competitor prso.no #1
 - piperehabilitering pris: pipe-rehab.no not top 20; top competitor smartvarme.no #1
-- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor oppussingsguiden.no #1
+- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor alfavarme.no #1
 
 ## Wins
 
