@@ -1,15 +1,15 @@
 # Pipe Rehab Ads Brief
 
-Captured: 2026-10-20T06:00:12.464Z
+Captured: 2026-10-27T07:00:13.038Z
 Period: last 7 days
-Week: 2026-W43
+Week: 2026-W44
 
 ## Campaign Summary
 
-- Spend: NOK 403 (+90)
-- Clicks: 42 (+10)
-- Impressions: 479 (-104)
-- CTR: 8.77 (+3.28)%
+- Spend: NOK 555 (+152)
+- Clicks: 60 (+18)
+- Impressions: 510 (+31)
+- CTR: 11.76 (+2.99)%
 - Conversions: 0.0 (+0.0)
 - Cost/conversion: n/a (0 conversions)
 
@@ -32,10 +32,5 @@ Week: 2026-W43
 ## Week-over-Week Changes
 
 New terms (not seen last week, > NOK 5 spend):
-  - "piperehabilitering sør øst as"  NOK 19
-Dropped terms (spent last week, absent this week, > NOK 5):
-  - "piperenovering pris"  NOK 10 last week
-  - "renovering pipe"  NOK 10 last week
-  - "norsk pipe rehabilitering"  NOK 10 last week
-  - "rolf arne dahl pipe rehabilitering as"  NOK 10 last week
-  - "piperehabilitering tønsberg"  NOK 8 last week
+  - "rehabilitering pipeløp"  NOK 10
+  - "hva koster rehabilitering av pipe"  NOK 10
