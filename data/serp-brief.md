@@ -1,41 +1,40 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-10-30T05:15:38.443Z
+Captured: 2026-10-31T05:15:37.226Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 90 and ranks #4 among observed domains.
+pipe-rehab.no visibility score is 142 and ranks #2 among observed domains.
 Current visibility leader: google.com (196).
 
 ## Top Competitors
 
-- google.com: score 196, best rank #4, top-3 appearances 0
-- norskpiperehabilitering.no: score 162 (-6), best rank #1, top-3 appearances 5
-- smartvarme.no: score 130 (-14), best rank #1, top-3 appearances 4
-- prso.no: score 88 (-10), best rank #1, top-3 appearances 3
-- pipefiks.no: score 70 (-20), best rank #2, top-3 appearances 2
-- lorentzenpeis.no: score 64 (-6), best rank #1, top-3 appearances 2
+- google.com: score 196 (+0), best rank #4, top-3 appearances 0
+- smartvarme.no: score 130 (+0), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 118 (-44), best rank #1, top-3 appearances 3
+- prso.no: score 98 (+10), best rank #1, top-3 appearances 3
+- pipefiks.no: score 96 (+26), best rank #1, top-3 appearances 2
+- lorentzenpeis.no: score 56 (-8), best rank #2, top-3 appearances 2
 
 ## Priority Keywords
 
-- piperehabilitering skien: pipe-rehab.no not top 20; top competitor norskpiperehabilitering.no #1
+- piperehabilitering skien: pipe-rehab.no #4; top competitor pipefiks.no #1
 - piperehabilitering porsgrunn: pipe-rehab.no #3; top competitor norskpiperehabilitering.no #1
-- piperehabilitering telemark: pipe-rehab.no not top 20; top competitor prso.no #1
+- piperehabilitering telemark: pipe-rehab.no #2; top competitor prso.no #1
 - piperehabilitering pris: pipe-rehab.no not top 20; top competitor smartvarme.no #1
-- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor lorentzenpeis.no #1
+- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor totalpeis.no #1
 
 ## Wins
 
 - piperehabilitering porsgrunn: #3
+- piperehabilitering telemark: #2
 - piperehabilitering arendal: #1
 - piperehabilitering larvik: #1
 
 ## Misses
 
-- piperehabilitering skien: not top 20
-- piperehabilitering telemark: not top 20
 - piperehabilitering vestfold: not top 20
 - piperehabilitering pris: not top 20
 - hva koster piperehabilitering: not top 20
@@ -48,26 +47,22 @@ Current visibility leader: google.com (196).
 
 ## Alerts
 
-- [high] pipe-rehab.no is not top 10 for "piperehabilitering skien".
-- [high] pipe-rehab.no is not top 10 for "piperehabilitering telemark".
 - [high] pipe-rehab.no is not top 10 for "piperehabilitering pris".
 - [high] pipe-rehab.no is not top 10 for "hva koster piperehabilitering".
-- [high] pipe-rehab.no is absent for "piperehabilitering skien", below the top-3 target.
-- [medium] norskpiperehabilitering.no is #1 for "piperehabilitering skien".
-- [medium] proff.no is #2 for "piperehabilitering skien".
+- [high] pipe-rehab.no is #4 for "piperehabilitering skien", below the top-3 target.
+- [medium] norskpiperehabilitering.no is #2 for "piperehabilitering skien".
+- [medium] proff.no is #3 for "piperehabilitering skien".
 - [medium] norskpiperehabilitering.no is #1 for "piperehabilitering porsgrunn".
-- [medium] norskpiperehabilitering.no is #2 for "piperehabilitering telemark".
 - [medium] proff.no is #3 for "piperehabilitering telemark".
 - [medium] proff.no outranks pipe-rehab.no for "piperehabilitering skien".
-- [medium] proff.no outranks pipe-rehab.no for "piperehabilitering telemark".
 - [low] pipefiks.no appears top 5 for 2 monitored keywords.
-- [low] google.com appears top 5 for 30 monitored keywords.
+- [low] google.com appears top 5 for 26 monitored keywords.
 - [low] prso.no appears top 5 for 3 monitored keywords.
 - [low] smartvarme.no appears top 5 for 4 monitored keywords.
 - [low] oppussingsguiden.no appears top 5 for 2 monitored keywords.
 - [low] lorentzenpeis.no appears top 5 for 2 monitored keywords.
-- [low] alfavarme.no appears top 5 for 2 monitored keywords.
-- [low] youtube.com appears top 5 for 2 monitored keywords.
+- [low] piperep.no appears top 5 for 2 monitored keywords.
+- [low] feiermester.org appears top 5 for 2 monitored keywords.
 
 ## Recommended Next Actions
 
