@@ -1,22 +1,22 @@
 # Pipe Rehab SERP Brief
 
-Captured: 2026-11-02T05:15:33.215Z
+Captured: 2026-11-03T05:15:33.363Z
 Provider: serper.dev
 Market: Google Norway (gl=no, hl=no)
 
 ## Overall Standing
 
-pipe-rehab.no visibility score is 146 and ranks #1 among observed domains.
-Current visibility leader: pipe-rehab.no (146).
+pipe-rehab.no visibility score is 142 and ranks #2 among observed domains.
+Current visibility leader: smartvarme.no (144).
 
 ## Top Competitors
 
-- smartvarme.no: score 144 (+6), best rank #1, top-3 appearances 4
-- norskpiperehabilitering.no: score 136 (-4), best rank #1, top-3 appearances 2
+- smartvarme.no: score 144 (+0), best rank #1, top-3 appearances 4
+- norskpiperehabilitering.no: score 140 (+4), best rank #1, top-3 appearances 3
 - prso.no: score 98 (+0), best rank #1, top-3 appearances 3
-- facebook.com: score 96 (+12), best rank #3, top-3 appearances 2
-- proff.no: score 92 (+18), best rank #2, top-3 appearances 3
+- proff.no: score 92 (+0), best rank #2, top-3 appearances 3
 - mittanbud.no: score 86 (+0), best rank #2, top-3 appearances 2
+- pipefiks.no: score 80 (+4), best rank #2, top-3 appearances 2
 
 ## Priority Keywords
 
@@ -24,7 +24,7 @@ Current visibility leader: pipe-rehab.no (146).
 - piperehabilitering porsgrunn: pipe-rehab.no #3; top competitor norskpiperehabilitering.no #1
 - piperehabilitering telemark: pipe-rehab.no #2; top competitor prso.no #1
 - piperehabilitering pris: pipe-rehab.no not top 20; top competitor smartvarme.no #1
-- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor totalpeis.no #1
+- hva koster piperehabilitering: pipe-rehab.no not top 20; top competitor lorentzenpeis.no #1
 
 ## Wins
 
@@ -42,6 +42,7 @@ Current visibility leader: pipe-rehab.no (146).
 - foring pipe: not top 20
 - foring av pipe: not top 20
 - stålpipe montering: not top 20
+- kamerainspeksjon pipe: not top 20
 - rehabilitering av skorstein: not top 20
 
 ## Alerts
@@ -58,14 +59,14 @@ Current visibility leader: pipe-rehab.no (146).
 - [medium] facebook.com outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] 1881.no outranks pipe-rehab.no for "piperehabilitering vestfold".
 - [medium] mittanbud.no outranks pipe-rehab.no for "piperehabilitering vestfold".
-- [medium] facebook.com outranks pipe-rehab.no for "foring pipe".
 - [medium] facebook.com outranks pipe-rehab.no for "stålpipe montering".
-- [medium] 1881.no outranks pipe-rehab.no for "kamerainspeksjon pipe".
 - [medium] facebook.com outranks pipe-rehab.no for "rehabilitering av skorstein".
 - [low] pipefiks.no appears top 5 for 2 monitored keywords.
 - [low] prso.no appears top 5 for 3 monitored keywords.
-- [low] oppdragstorget.no appears top 5 for 2 monitored keywords.
 - [low] smartvarme.no appears top 5 for 4 monitored keywords.
+- [low] lorentzenpeis.no appears top 5 for 2 monitored keywords.
+- [low] oppussingsguiden.no appears top 5 for 2 monitored keywords.
+- [low] alfavarme.no appears top 5 for 3 monitored keywords.
 
 ## Recommended Next Actions
 
