@@ -1,15 +1,15 @@
 # Pipe Rehab Ads Brief
 
-Captured: 2026-11-03T07:00:15.682Z
+Captured: 2026-11-10T07:00:07.414Z
 Period: last 7 days
-Week: 2026-W45
+Week: 2026-W46
 
 ## Campaign Summary
 
-- Spend: NOK 283 (-272)
-- Clicks: 31 (-29)
-- Impressions: 462 (-48)
-- CTR: 6.71 (-5.05)%
+- Spend: NOK 341 (+58)
+- Clicks: 35 (+4)
+- Impressions: 530 (+68)
+- CTR: 6.60 (-0.11)%
 - Conversions: 0.0 (+0.0)
 - Cost/conversion: n/a (0 conversions)
 
@@ -23,7 +23,7 @@ Week: 2026-W45
 
 ## New Negative Keyword Candidates (manual review)
 
-- "pipefiks as"  NOK 9.89  1 clicks  0 conv  (below NOK 20.0 threshold)
+- None identified.
 
 ## Auto-Applied Changes This Run
 
@@ -32,8 +32,8 @@ Week: 2026-W45
 ## Week-over-Week Changes
 
 New terms (not seen last week, > NOK 5 spend):
-  - "pipefiks as"  NOK 10
+  - "piperehabilitering as"  NOK 10
 Dropped terms (spent last week, absent this week, > NOK 5):
-  - "piperehabilitering as"  NOK 28 last week
-  - "piperehabilitering sør øst as"  NOK 10 last week
-  - "piperehabilitering telemark"  NOK 10 last week
+  - "piperehab as"  NOK 18 last week
+  - "pipefiks as"  NOK 10 last week
+  - "rehabilitering pipeløp"  NOK 10 last week
